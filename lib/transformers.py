@@ -116,7 +116,7 @@ def build_records(tmp_records):
                 hint=None,
             ))
 
-        if relationship not in VALID_RELATIONSHIPS:
+        if relationship.upper() not in VALID_RELATIONSHIPS:
             faults.append(Fault(
                 level=Level.DANG,
                 reason='unexpected relationship',
