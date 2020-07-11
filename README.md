@@ -8,12 +8,12 @@ https://iabtechlab.com/wp-content/uploads/2019/03/IAB-OpenRTB-Ads.txt-Public-Spe
 - [x] validate relationship
 - [x] validate record format
 - [x] validate variable type (contact/subdomain)
-- [x] validate domains format
+- [x] follow and merge subdomains ads.txt
 - [x] ignore comments
 
 todo:
 
-- [ ] follow and merge subdomains ads.txt
+- [ ] find duplicates
 - [ ] keep comments
 - [ ] domain name misspelling checking
 - [ ] certification id verification

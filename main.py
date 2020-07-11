@@ -5,31 +5,16 @@ doc_ver: 1.0.2
 """
 import argparse
 import json
-import re
-from collections import namedtuple
-from dataclasses import dataclass
-from enum import Enum
-from itertools import takewhile
-from typing import List
+import time
+from urllib.parse import urlparse
 
 import requests
 import typedload
 
-from lib import validators
+from lib.entities import Record
+from lib.transformers import tokenize, build_records, build_variables
 
-
-class Level(Enum):
-    INFO = 1
-    WARN = 2
-    DANG = 3
-
-
-# Available relationships (see below)
-VALID_RELATIONSHIPS = {'DIRECT', 'RESELLER'}
-# Available variables
-VALID_VARIABLES = {'CONTACT', 'SUBDOMAIN'}
-
-Input = namedtuple('Input', 'tokens size')
+# RECORDS
 
 '''
 domain:
@@ -74,13 +59,8 @@ current certification authority is the Trustworthy
 Accountability Group (aka TAG), and the TAGID
 would be included here [11].
 '''
-Record = namedtuple('Record',
-                    ['domain',
-                     'publisher_id',
-                     'relationship',
-                     'certification_id',
-                     'num_faults',
-                     'faults'])
+
+# VARIABLES
 
 '''
 contact:
@@ -102,148 +82,28 @@ process. Only root domains should refer crawlers
 to subdomains. Subdomains should not refer to
 other subdomains. 
 '''
-Variable = namedtuple('Variable', 'key value num_faults faults')
+
+results = []
 
 
-# Mutable data structure
-@dataclass
-class OutputRecord:
-    type: str
-    data: object
-    duplicated: bool
+def recursive_parser(url):
+    print('Location:', url)
 
+    scheme, netloc, *rest = urlparse(url)
 
-Fault = namedtuple('Fault', 'level reason hint')
-
-
-def strip_comments(cs):
-    """
-    Takes a string and removes comments.
-    :param cs: str - Comment tokens
-    :return: str - Parsed line
-    """
-
-    def go(cs_):
-        return lambda s: ''.join(
-            takewhile(lambda c: c not in cs_, s)
-        ).strip()
-
-    return lambda txt: '\n'.join(map(
-        go(cs),
-        txt.splitlines()
-    ))
-
-
-def tokenize(string):
-    """
-    Takes a string and return an Input.
-    :param string: str - Line to parse
-    :return: Input - Input that contains tokens
-    """
-    string_ = strip_comments('#')(string)
-    tokens_ = re.split(',|=', string_)
-    tokens_ = [token.strip() for token in tokens_]
-
-    return Input(tokens_, len(tokens_))
-
-
-def build_variables(tmp_variables):
-    variables: List[Variable] = []
-    for key, value in tmp_variables:
-        faults: List[Fault] = []
-
-        if key.upper() not in VALID_VARIABLES:
-            faults.append(Fault(
-                level=Level.DANG,
-                reason='unexpected variable',
-                hint=VALID_VARIABLES,
-            ))
-
-        if key.upper() == 'SUBDOMAIN':
-            if not value.islower():
-                faults.append(Fault(
-                    level=Level.WARN,
-                    reason='domain must be in lower case',
-                    hint=value.lower(),
-                ))
-
-            if not validators.domain(value):
-                faults.append(Fault(
-                    level=Level.DANG,
-                    reason='unexpected format',
-                    hint=None
-                ))
-
-        variable = Variable(
-            key=key,
-            value=value,
-            num_faults=len(faults),
-            faults=faults,
-        )
-
-        variables.append(variable)
-
-    return variables
-
-
-def build_records(tmp_records):
-    records: List[Record] = []
-
-    for domain, publisher_id, relationship, *cid in tmp_records:
-        faults: List[Fault] = []
-
-        if not domain.islower():
-            faults.append(Fault(
-                level=Level.WARN,
-                reason='domain must be in lower case',
-                hint=domain.lower(),
-            ))
-
-        # check domain format
-        if not validators.domain(domain):
-            faults.append(Fault(
-                level=Level.DANG,
-                reason=f'unexpected format',
-                hint=None,
-            ))
-
-        if relationship not in VALID_RELATIONSHIPS:
-            faults.append(Fault(
-                level=Level.DANG,
-                reason='unexpected relationship',
-                hint=VALID_RELATIONSHIPS,
-            ))
-
-        certification_id = cid[0] if cid else None
-
-        record = Record(
-            domain=domain,
-            publisher_id=publisher_id,
-            relationship=relationship,
-            certification_id=certification_id,
-            num_faults=len(faults),
-            faults=faults,
-        )
-
-        records.append(record)
-
-    return records
-
-
-def mark_duplicated(x: OutputRecord, items: List[OutputRecord]):
-    x.duplicated = True if items.count(x) > 1 else False
-
-    return x
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-u', '--url', help='The URL that points to the ads.txt', required=True)
-
-    args = parser.parse_args()
+    output = {
+        'domain': netloc,
+        'results': {
+            'records': [],
+            'variables': {
+                'sub_domains': [],
+                'contacts': []
+            }
+        }
+    }
 
     try:
-        resp = requests.get(args.url)
+        resp = requests.get(url)
     except Exception as e:
         print(e)
     else:
@@ -260,20 +120,42 @@ def main():
             else:
                 tmp_variables.append(tokens)
 
-        output = [OutputRecord(type='record', data=record, duplicated=False)
-                  for record in build_records(tmp_records)]
+        records = build_records(tmp_records)
+        variables = build_variables(tmp_variables)
 
-        output += [OutputRecord(type='variable', data=variable, duplicated=False)
-                   for variable in build_variables(tmp_variables)]
+        for data in records + variables:
+            if isinstance(data, Record):
+                output['results']['records'].append(data)
+            else:
+                if data.key.upper() == 'SUBDOMAIN':
+                    output['results']['variables']['sub_domains'].append(data)
+                else:
+                    output['results']['variables']['contacts'].append(data)
 
-        # mark duplicated records
-        output = [mark_duplicated(x, output) for x in output]
+    results.append(output)
 
-        # to json
-        output = typedload.dump(output)
+    for _, domain, *rest in output['results']['variables']['sub_domains']:
+        next_location = f'{scheme}://{domain}/ads.txt'
+        recursive_parser(next_location)
+        time.sleep(0.5)
 
-        with open('./output/data.json', 'w') as fh:
-            json.dump(output, fh)
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-u', '--url',
+                        help='The URL that points to the ads.txt',
+                        required=True,
+                        type=str)
+
+    args = parser.parse_args()
+
+    recursive_parser(args.url)
+
+    # to json
+    as_json = typedload.dump(results)
+
+    with open('./output/data.json', 'w') as fh:
+        json.dump(as_json, fh)
 
 
 if __name__ == '__main__':
