@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 from collections import namedtuple
+from dataclasses import dataclass
 from enum import Enum
 from itertools import takewhile
 from typing import List
@@ -103,7 +104,14 @@ other subdomains.
 '''
 Variable = namedtuple('Variable', 'key value num_faults faults')
 
-OutputRecord = namedtuple('OutputRecord', 'type data')
+
+# Mutable data structure
+@dataclass
+class OutputRecord:
+    type: str
+    data: object
+    duplicated: bool
+
 
 Fault = namedtuple('Fault', 'level reason hint')
 
@@ -222,6 +230,12 @@ def build_records(tmp_records):
     return records
 
 
+def mark_duplicated(x: OutputRecord, items: List[OutputRecord]):
+    x.duplicated = True if items.count(x) > 1 else False
+
+    return x
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-u', '--url', help='The URL that points to the ads.txt', required=True)
@@ -246,10 +260,16 @@ def main():
             else:
                 tmp_variables.append(tokens)
 
-        output = [OutputRecord(type='record', data=record) for record in build_records(tmp_records)]
+        output = [OutputRecord(type='record', data=record, duplicated=False)
+                  for record in build_records(tmp_records)]
 
-        output += [OutputRecord(type='variable', data=variable) for variable in build_variables(tmp_variables)]
+        output += [OutputRecord(type='variable', data=variable, duplicated=False)
+                   for variable in build_variables(tmp_variables)]
 
+        # mark duplicated records
+        output = [mark_duplicated(x, output) for x in output]
+
+        # to json
         output = typedload.dump(output)
 
         with open('./output/data.json', 'w') as fh:

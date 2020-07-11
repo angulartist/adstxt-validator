@@ -1,6 +1,5 @@
 [
   {
-    "type": "record",
     "data": {
       "domain": "adstanding.com",
       "publisher_id": "3179",
@@ -8,10 +7,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "adtech.com",
       "publisher_id": "1135.1",
@@ -19,10 +19,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "advertising.com",
       "publisher_id": "26154",
@@ -30,10 +31,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "advertising.com",
       "publisher_id": "28038",
@@ -41,10 +43,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "adyoulike.com",
       "publisher_id": "095b488441206fe2df327a0050e578a4",
@@ -52,10 +55,11 @@
       "certification_id": "4ad745ead2958bf7",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "adyoulike.com",
       "publisher_id": "662483e9c6600a0e9e743273545577f2",
@@ -63,10 +67,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "adyoulike.com",
       "publisher_id": "ac29a43656efe7ec96ad4d1f42766f0b",
@@ -74,10 +79,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "aolcloud.net",
       "publisher_id": "1135.1",
@@ -85,10 +91,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "1314",
@@ -96,10 +103,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "1504",
@@ -107,10 +115,11 @@
       "certification_id": "f5ab79cb980f11d1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "1608",
@@ -118,10 +127,11 @@
       "certification_id": "f5ab79cb980f11d1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "1851",
@@ -129,10 +139,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "2579",
@@ -140,10 +151,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3500",
@@ -151,10 +163,11 @@
       "certification_id": "f5ab79cb980f11d1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3528",
@@ -162,10 +175,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3538",
@@ -173,10 +187,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3539",
@@ -184,10 +199,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3540",
@@ -195,10 +211,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3703",
@@ -206,10 +223,11 @@
       "certification_id": "f5ab79cb980f11d1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3703",
@@ -217,10 +235,11 @@
       "certification_id": "f5ab79cb980f11d1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3741",
@@ -228,10 +247,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "3927",
@@ -239,10 +259,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "7597",
@@ -250,10 +271,11 @@
       "certification_id": "f5ab79cb980f11d1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "8494",
@@ -261,10 +283,11 @@
       "certification_id": "f5ab79cb980f11d1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "appnexus.com",
       "publisher_id": "9242",
@@ -272,10 +295,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "aps.amazon.com",
       "publisher_id": "3403",
@@ -283,10 +307,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "contextweb.com",
       "publisher_id": "560288",
@@ -294,10 +319,11 @@
       "certification_id": "89ff185a4c4e857c",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "contextweb.com",
       "publisher_id": "560288",
@@ -305,10 +331,11 @@
       "certification_id": "89ff185a4c4e857c",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "contextweb.com",
       "publisher_id": "562145",
@@ -316,10 +343,11 @@
       "certification_id": "89ff185a4c4e857c",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "districtm.io",
       "publisher_id": "101760",
@@ -327,10 +355,11 @@
       "certification_id": "3fd707be9c4527c3",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "10002",
@@ -338,10 +367,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1000353",
@@ -349,10 +379,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1036625",
@@ -360,10 +391,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1041073",
@@ -371,10 +403,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1041089",
@@ -382,10 +415,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073089",
@@ -393,10 +427,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073105",
@@ -404,10 +439,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073121",
@@ -415,10 +451,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073137",
@@ -426,10 +463,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073153",
@@ -437,10 +475,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073169",
@@ -448,10 +487,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073185",
@@ -459,10 +499,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073201",
@@ -470,10 +511,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073217",
@@ -481,10 +523,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "1073233",
@@ -492,10 +535,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "122137",
@@ -503,10 +547,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "132089",
@@ -514,10 +559,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "132129",
@@ -525,10 +571,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "150353",
@@ -536,10 +583,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "150361",
@@ -547,10 +595,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "184985",
@@ -558,10 +607,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "184993",
@@ -569,10 +619,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "185001",
@@ -580,10 +631,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "185569",
@@ -591,10 +643,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "187401",
@@ -602,10 +655,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "187409",
@@ -613,10 +667,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "187417",
@@ -624,10 +679,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "187425",
@@ -635,10 +691,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "187433",
@@ -646,10 +703,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "187441",
@@ -657,10 +715,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "188769",
@@ -668,10 +727,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "188777",
@@ -679,10 +739,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "188785",
@@ -690,10 +751,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "188801",
@@ -701,10 +763,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "188809",
@@ -712,10 +775,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "188817",
@@ -723,10 +787,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "189081",
@@ -734,10 +799,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "189089",
@@ -745,10 +811,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "189097",
@@ -756,10 +823,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "203265",
@@ -767,10 +835,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "213562",
@@ -778,10 +847,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "213594",
@@ -789,10 +859,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "213626",
@@ -800,10 +871,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "213650",
@@ -811,10 +883,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "213674",
@@ -822,10 +895,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "213706",
@@ -833,10 +907,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "216314",
@@ -844,10 +919,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "216322",
@@ -855,10 +931,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "216330",
@@ -866,10 +943,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "216602",
@@ -877,10 +955,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "216618",
@@ -888,10 +967,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "220018",
@@ -899,10 +979,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "22289",
@@ -910,10 +991,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "22293",
@@ -921,10 +1003,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "22297",
@@ -932,10 +1015,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "22301",
@@ -943,10 +1027,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "22305",
@@ -954,10 +1039,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "225769",
@@ -965,10 +1051,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "225777",
@@ -976,10 +1063,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "227409",
@@ -987,10 +1075,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "227417",
@@ -998,10 +1087,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "227425",
@@ -1009,10 +1099,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "227441",
@@ -1020,10 +1111,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "227465",
@@ -1031,10 +1123,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "227489",
@@ -1042,10 +1135,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "227529",
@@ -1053,10 +1147,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "227553",
@@ -1064,10 +1159,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "231689",
@@ -1075,10 +1171,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "231697",
@@ -1086,10 +1183,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "231705",
@@ -1097,10 +1195,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "233409",
@@ -1108,10 +1207,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "234641",
@@ -1119,10 +1219,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "234649",
@@ -1130,10 +1231,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "234657",
@@ -1141,10 +1243,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "234665",
@@ -1152,10 +1255,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "234673",
@@ -1163,10 +1267,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "234681",
@@ -1174,10 +1279,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "258578",
@@ -1185,10 +1291,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "273986",
@@ -1196,10 +1303,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "274002",
@@ -1207,10 +1315,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "274018",
@@ -1218,10 +1327,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "274034",
@@ -1229,10 +1339,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "274050",
@@ -1240,10 +1351,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "274834",
@@ -1251,10 +1363,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "274850",
@@ -1262,10 +1375,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "274866",
@@ -1273,10 +1387,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "321761",
@@ -1284,10 +1399,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "321777",
@@ -1295,10 +1411,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "321793",
@@ -1306,10 +1423,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "379057",
@@ -1317,10 +1435,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "379073",
@@ -1328,10 +1447,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "38121",
@@ -1339,10 +1459,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "38129",
@@ -1350,10 +1471,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "38137",
@@ -1361,10 +1483,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "52425",
@@ -1372,10 +1495,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "52449",
@@ -1383,10 +1507,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "53113",
@@ -1394,10 +1519,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "53321",
@@ -1405,10 +1531,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "66905",
@@ -1416,10 +1543,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "68025",
@@ -1427,10 +1555,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "704914",
@@ -1438,10 +1567,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "708402",
@@ -1449,10 +1579,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "709586",
@@ -1460,10 +1591,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "709602",
@@ -1471,10 +1603,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "710210",
@@ -1482,10 +1615,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "710226",
@@ -1493,10 +1627,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "720722",
@@ -1504,10 +1639,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "720738",
@@ -1515,10 +1651,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "726594",
@@ -1526,10 +1663,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "726610",
@@ -1537,10 +1675,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "732290",
@@ -1548,10 +1687,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "732306",
@@ -1559,10 +1699,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "732322",
@@ -1570,10 +1711,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "732338",
@@ -1581,10 +1723,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "Freewheel.tv",
       "publisher_id": "741650",
@@ -1598,10 +1741,11 @@
           "hint": "freewheel.tv"
         }
       ]
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "785009",
@@ -1609,10 +1753,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "836497",
@@ -1620,10 +1765,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "836513",
@@ -1631,10 +1777,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "888689",
@@ -1642,10 +1789,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "888705",
@@ -1653,10 +1801,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "898353",
@@ -1664,10 +1813,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "908337",
@@ -1675,10 +1825,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "992465",
@@ -1686,10 +1837,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "992481",
@@ -1697,10 +1849,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "992497",
@@ -1708,10 +1861,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "992513",
@@ -1719,10 +1873,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "992529",
@@ -1730,10 +1885,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "992545",
@@ -1741,10 +1897,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "997745",
@@ -1752,10 +1909,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "997777",
@@ -1763,10 +1921,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "997809",
@@ -1774,10 +1933,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "997841",
@@ -1785,10 +1945,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "997873",
@@ -1796,10 +1957,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "997905",
@@ -1807,10 +1969,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "freewheel.tv",
       "publisher_id": "997937",
@@ -1818,10 +1981,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "google.com",
       "publisher_id": "pub-2236218997769327",
@@ -1829,10 +1993,11 @@
       "certification_id": "f08c47fec0942fa0",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "google.com",
       "publisher_id": "pub-2366164365855963",
@@ -1840,10 +2005,11 @@
       "certification_id": "f08c47fec0942fa0",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "google.com",
       "publisher_id": "pub-3057818873023700",
@@ -1851,10 +2017,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "google.com",
       "publisher_id": "pub-3282595691941563",
@@ -1862,10 +2029,11 @@
       "certification_id": "f08c47fec0942fa0",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "google.com",
       "publisher_id": "pub-3391936129161967",
@@ -1873,10 +2041,11 @@
       "certification_id": "f08c47fec0942fa0",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "google.com",
       "publisher_id": "pub-5603862283412750",
@@ -1884,10 +2053,11 @@
       "certification_id": "f08c47fec0942fa0",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "google.com",
       "publisher_id": "pub-6228005252642587",
@@ -1895,10 +2065,11 @@
       "certification_id": "f08c47fec0942fa0",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "google.com",
       "publisher_id": "pub-9485981123373313",
@@ -1906,10 +2077,11 @@
       "certification_id": "f08c47fec0942fa0",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "gumgum.com",
       "publisher_id": "13244",
@@ -1917,10 +2089,11 @@
       "certification_id": "ffdef49475d318a9",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "hubvisor.io",
       "publisher_id": "01BYK28ENND8X5G8K0AJ2DPK4E",
@@ -1928,10 +2101,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "improvedigital.com",
       "publisher_id": "1005",
@@ -1939,10 +2113,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "improvedigital.com",
       "publisher_id": "1006",
@@ -1950,10 +2125,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "improvedigital.com",
       "publisher_id": "1067",
@@ -1961,10 +2137,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "improvedigital.com",
       "publisher_id": "1220",
@@ -1972,10 +2149,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "improvedigital.com",
       "publisher_id": "335",
@@ -1983,10 +2161,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "indexexchange.com",
       "publisher_id": "184665",
@@ -1994,10 +2173,11 @@
       "certification_id": "50b1c356f2c5c8fc",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "indexexchange.com",
       "publisher_id": "186401",
@@ -2005,10 +2185,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "indexexchange.com",
       "publisher_id": "187149",
@@ -2016,10 +2197,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "indexexchange.com",
       "publisher_id": "188398",
@@ -2027,10 +2209,11 @@
       "certification_id": "50b1c356f2c5c8fc",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "indexexchange.com",
       "publisher_id": "190856",
@@ -2038,10 +2221,11 @@
       "certification_id": "50b1c356f2c5c8fc",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "indexexchange.com",
       "publisher_id": "192098",
@@ -2049,10 +2233,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "lkqd.net",
       "publisher_id": "450",
@@ -2060,10 +2245,11 @@
       "certification_id": "59c49fa9598a0117",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "loopme.com",
       "publisher_id": "5679",
@@ -2071,10 +2257,11 @@
       "certification_id": "6c8d5f95897a5a3b",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "loopme.com",
       "publisher_id": "s-2411",
@@ -2082,10 +2269,11 @@
       "certification_id": "6c8d5f95897a5a3b",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "openx.com",
       "publisher_id": "537149888",
@@ -2093,10 +2281,11 @@
       "certification_id": "6a698e2ec38604c6",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "openx.com",
       "publisher_id": "537149888",
@@ -2104,10 +2293,11 @@
       "certification_id": "6a698e2ec38604c6",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "openx.com",
       "publisher_id": "540393169",
@@ -2115,10 +2305,11 @@
       "certification_id": "6a698e2ec38604c6",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "openx.com",
       "publisher_id": "540841669",
@@ -2126,10 +2317,11 @@
       "certification_id": "6a698e2ec38604c6",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "outbrain.com",
       "publisher_id": "0018d4c057c1495c47f745e00c9eed4398",
@@ -2137,10 +2329,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "outbrain.com",
       "publisher_id": "009ab4684af9e38d08e81127150fac245b",
@@ -2148,10 +2341,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "pubmatic.com",
       "publisher_id": "154037",
@@ -2159,10 +2353,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "pubmatic.com",
       "publisher_id": "156431",
@@ -2170,10 +2365,11 @@
       "certification_id": "5d62403b186f2ace",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "pubmatic.com",
       "publisher_id": "156439",
@@ -2181,10 +2377,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "pubmatic.com",
       "publisher_id": "158615",
@@ -2192,10 +2389,11 @@
       "certification_id": "5d62403b186f2ace",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "quantum-advertising.com",
       "publisher_id": "1778",
@@ -2203,10 +2401,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "quantum-advertising.com",
       "publisher_id": "6071",
@@ -2214,10 +2413,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "10027",
@@ -2225,10 +2425,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "12338",
@@ -2236,10 +2437,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "14976",
@@ -2247,10 +2449,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "16114",
@@ -2258,10 +2461,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "16422",
@@ -2269,10 +2473,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "17130",
@@ -2280,10 +2485,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "17204",
@@ -2291,10 +2497,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "19668",
@@ -2302,10 +2509,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "20736",
@@ -2313,10 +2521,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "208016",
@@ -2324,10 +2533,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "211211",
@@ -2335,10 +2545,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "rubiconproject.com",
       "publisher_id": "9585",
@@ -2346,10 +2557,11 @@
       "certification_id": "0bfd66d529a55807",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "Sekindo.com",
       "publisher_id": "19712",
@@ -2363,10 +2575,11 @@
           "hint": "sekindo.com"
         }
       ]
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "smartadserver.com",
       "publisher_id": "13",
@@ -2374,10 +2587,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "smartadserver.com",
       "publisher_id": "1338",
@@ -2385,10 +2599,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "smartadserver.com",
       "publisher_id": "1827",
@@ -2396,10 +2611,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "smartadserver.com",
       "publisher_id": "3063",
@@ -2407,10 +2623,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "smartadserver.com",
       "publisher_id": "3245",
@@ -2418,10 +2635,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "smartadserver.com",
       "publisher_id": "886",
@@ -2429,10 +2647,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "sovrn.com",
       "publisher_id": "257611",
@@ -2440,10 +2659,11 @@
       "certification_id": "fafdf38b16bf6b2b",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotx.tv",
       "publisher_id": "142042",
@@ -2451,10 +2671,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotx.tv",
       "publisher_id": "228597",
@@ -2462,10 +2683,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotx.tv",
       "publisher_id": "230037",
@@ -2473,10 +2695,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotx.tv",
       "publisher_id": "238936",
@@ -2484,10 +2707,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotx.tv",
       "publisher_id": "241646",
@@ -2495,10 +2719,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotxchange.com",
       "publisher_id": "142042",
@@ -2506,10 +2731,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotxchange.com",
       "publisher_id": "225721",
@@ -2517,10 +2743,11 @@
       "certification_id": null,
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotxchange.com",
       "publisher_id": "228597",
@@ -2528,10 +2755,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotxchange.com",
       "publisher_id": "230037",
@@ -2539,10 +2767,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotxchange.com",
       "publisher_id": "238936",
@@ -2550,10 +2779,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "spotxchange.com",
       "publisher_id": "241646",
@@ -2561,10 +2791,11 @@
       "certification_id": "7842df1d2fe2db34",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "teads.tv",
       "publisher_id": "15429",
@@ -2572,10 +2803,11 @@
       "certification_id": "15a9c44f6d26cbe1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "teads.tv",
       "publisher_id": "2727",
@@ -2583,10 +2815,11 @@
       "certification_id": "15a9c44f6d26cbe1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "teads.tv",
       "publisher_id": "6053",
@@ -2594,10 +2827,11 @@
       "certification_id": "15a9c44f6d26cbe1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "teads.tv",
       "publisher_id": "9965",
@@ -2605,10 +2839,11 @@
       "certification_id": "15a9c44f6d26cbe1",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "themediagrid.com",
       "publisher_id": "NB56PT",
@@ -2616,10 +2851,11 @@
       "certification_id": "35d5010d7789b49d",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "tremorhub.com",
       "publisher_id": "ewut4-b6zwq",
@@ -2627,10 +2863,11 @@
       "certification_id": "1a4e959a1b50034a",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "tremorhub.com",
       "publisher_id": "q017o-78mlk",
@@ -2638,10 +2875,11 @@
       "certification_id": "1a4e959a1b50034a",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "triplelift.com",
       "publisher_id": "3355",
@@ -2649,10 +2887,11 @@
       "certification_id": "6c33edb13117fd86",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "triplelift.com",
       "publisher_id": "7277",
@@ -2660,10 +2899,11 @@
       "certification_id": "6c33edb13117fd86",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "vidazoo.com",
       "publisher_id": "1773068026",
@@ -2671,10 +2911,11 @@
       "certification_id": "b6ada874b4d7d0b2",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "record",
     "data": {
       "domain": "xad.com",
       "publisher_id": "958",
@@ -2682,42 +2923,48 @@
       "certification_id": "81cbf0a75a5e0e9a",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "record",
+    "duplicated": false
   },
   {
-    "type": "variable",
     "data": {
       "key": "subdomain",
       "value": "bfmbusiness.bfmtv.com",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "variable",
+    "duplicated": false
   },
   {
-    "type": "variable",
     "data": {
       "key": "subdomain",
       "value": "dirigeants.bfmtv.com",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "variable",
+    "duplicated": false
   },
   {
-    "type": "variable",
     "data": {
       "key": "subdomain",
       "value": "rmc.bfmtv.com",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "variable",
+    "duplicated": false
   },
   {
-    "type": "variable",
     "data": {
       "key": "subdomain",
       "value": "rmcsport.bfmtv.com",
       "num_faults": 0,
       "faults": []
-    }
+    },
+    "type": "variable",
+    "duplicated": false
   }
 ]
