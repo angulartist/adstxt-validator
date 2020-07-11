@@ -12,7 +12,7 @@ import requests
 import typedload
 
 from lib.entities import Record
-from lib.transformers import tokenize, build_records, build_variables
+from lib.transformers import tokenize, build_records, build_variables, group_by_domains
 
 # RECORDS
 
@@ -91,7 +91,7 @@ def recursive_parser(url):
 
     scheme, netloc, *rest = urlparse(url)
 
-    output = {
+    entry = {
         'domain': netloc,
         'results': {
             'records': [],
@@ -125,16 +125,16 @@ def recursive_parser(url):
 
         for data in records + variables:
             if isinstance(data, Record):
-                output['results']['records'].append(data)
+                entry['results']['records'].append(data)
             else:
                 if data.key.upper() == 'SUBDOMAIN':
-                    output['results']['variables']['sub_domains'].append(data)
+                    entry['results']['variables']['sub_domains'].append(data)
                 else:
-                    output['results']['variables']['contacts'].append(data)
+                    entry['results']['variables']['contacts'].append(data)
 
-    results.append(output)
+    results.append(entry)
 
-    for _, domain, *rest in output['results']['variables']['sub_domains']:
+    for _, domain, *rest in entry['results']['variables']['sub_domains']:
         next_location = f'{scheme}://{domain}/ads.txt'
         recursive_parser(next_location)
         time.sleep(0.5)
@@ -151,8 +151,10 @@ def main():
 
     recursive_parser(args.url)
 
+    output = group_by_domains(results)
+
     # to json
-    as_json = typedload.dump(results)
+    as_json = typedload.dump(output)
 
     with open('./output/data.json', 'w') as fh:
         json.dump(as_json, fh)

@@ -1,4 +1,5 @@
 import re
+from collections import defaultdict
 from enum import Enum
 from itertools import takewhile
 from typing import List
@@ -23,6 +24,16 @@ VALID_VARIABLES = {'CONTACT', 'SUBDOMAIN'}
 #     x.duplicated = True if items.count(x) > 1 else False
 #
 #     return x
+
+
+def group_by_domains(items):
+    for item in items:
+        grouped = defaultdict(list)
+        for x in item['results']['records']:
+            grouped[x.domain.lower()].append(x)
+        item['results']['records'] = grouped
+
+    return items
 
 
 def strip_comments(cs):
