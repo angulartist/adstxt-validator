@@ -88,9 +88,11 @@ def recursive_parser(url, sld=False):
 
             return f'{scheme}://{domain}/ads.txt'
 
+        # extract optional subdomains ads.txt from the root domain
         next_locations = map(get_next_location, entry['results']['vars']['sub_domains'])
-        next_locations = filter(lambda x: x not in processed_urls, next_locations)
-
+        # prevent infinite call stack
+        next_locations = filter(lambda x: x not in processed_urls and x != url, next_locations)
+        # recursive concurrent call
         with PoolExecutor(max_workers=4) as executor:
             for _ in executor.map(recursive_parser, next_locations):
                 pass
