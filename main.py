@@ -25,10 +25,6 @@ results = []
 def recursive_parser(url, sld=False):
     print('Processing URL:', url)
 
-    if url in processed_urls:
-        print('URL:', url, 'skipped')
-        return None
-
     processed_urls.add(url)
 
     scheme, netloc, *rest = urlparse(url)
@@ -93,6 +89,7 @@ def recursive_parser(url, sld=False):
             return f'{scheme}://{domain}/ads.txt'
 
         next_locations = map(get_next_location, entry['results']['vars']['sub_domains'])
+        next_locations = filter(lambda x: x not in processed_urls, next_locations)
 
         with PoolExecutor(max_workers=4) as executor:
             for _ in executor.map(recursive_parser, next_locations):
