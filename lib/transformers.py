@@ -26,7 +26,7 @@ VALID_VARIABLES = {'CONTACT', 'SUBDOMAIN'}
 #     return x
 
 
-def group_by_domains(items):
+def group_by_domains(items: list):
     for item in items:
         grouped = defaultdict(list)
         for x in item['results']['recs']:
@@ -36,7 +36,7 @@ def group_by_domains(items):
     return items
 
 
-def strip_comments(cs):
+def strip_comments(cs: str):
     """
     Takes a string and removes comments.
     :param cs: str - Comment tokens
@@ -54,7 +54,7 @@ def strip_comments(cs):
     ))
 
 
-def tokenize(string):
+def tokenize(string: str):
     """
     Takes a string and return an Input.
     :param string: str - Line to parse
@@ -68,7 +68,7 @@ def tokenize(string):
     return Input(tokens_, len(tokens_))
 
 
-def get_vars(tmp_variables):
+def get_vars(tmp_variables: list):
     variables: List[Variable] = []
 
     for (key, value), line in tmp_variables:
@@ -109,7 +109,7 @@ def get_vars(tmp_variables):
     return variables
 
 
-def get_records(tmp_records):
+def get_records(tmp_records: list):
     records: List[Record] = []
 
     for (domain, publisher_id, relationship, *cid), line in tmp_records:

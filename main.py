@@ -6,12 +6,13 @@ doc_ver: 1.0.2
 import argparse
 import json
 from concurrent.futures import ThreadPoolExecutor as PoolExecutor
+from typing import List
 from urllib.parse import urlparse
 
 import requests
 import typedload
 
-from lib.entities import Record, Variable
+from lib.entities import Record, Variable, Input
 from lib.transformers import tokenize, get_records, get_vars, group_by_domains
 
 NUM_MIN_RECORD_SLOTS = 3
@@ -20,12 +21,15 @@ NUM_VARIABLE_SLOTS = 2
 results = []
 
 
-def recursive_parser(url, sld=False):
+def recursive_parser(url: str = None, sld: bool = False):
+    if url is None:
+        raise ValueError('URL is mandatory.')
+
     print('Processing URL:', url)
 
     scheme, netloc, *rest = urlparse(url)
 
-    entry = {
+    entry: dict = {
         'domain': netloc,
         'sld': sld,
         'results': {
@@ -43,19 +47,19 @@ def recursive_parser(url, sld=False):
     except Exception as e:
         print(e)
     else:
-        text = resp.text
+        text: str = resp.text
 
-        elms = [(tokenize(string), index) for index, string in enumerate(text.rsplit('\n'))]
+        elms: List[Input] = [(tokenize(string), index) for index, string in enumerate(text.rsplit('\n'))]
 
         _records, _variables, _outliers = [], [], []
 
         for (tokens, num_slots), index in elms:
             if num_slots >= NUM_MIN_RECORD_SLOTS:
-                target = _records
+                target: list = _records
             elif num_slots == NUM_VARIABLE_SLOTS:
-                target = _variables
+                target: list = _variables
             else:
-                target = _outliers
+                target: list = _outliers
 
             target.append((tokens, index))
 
@@ -80,8 +84,8 @@ def recursive_parser(url, sld=False):
     # to subdomains. Subdomains should not refer to
     # other subdomains. -- (IAB)
     if sld:
-        def get_next_location(sub_domains: Variable):
-            return f'{scheme}://{sub_domains.value}/ads.txt'
+        def get_next_location(sub_domain: Variable):
+            return f'{scheme}://{sub_domain.value}/ads.txt'
 
         # extract optional subdomains ads.txt from the root domain
         next_locations = filter(lambda x: x != url, map(get_next_location, entry['results']['vars']['sub_domains']))
