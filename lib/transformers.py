@@ -71,7 +71,7 @@ def tokenize(string):
 def get_vars(tmp_variables):
     variables: List[Variable] = []
 
-    for key, value in tmp_variables:
+    for (key, value), line in tmp_variables:
         faults: List[Fault] = []
 
         if key.upper() not in VALID_VARIABLES:
@@ -97,6 +97,7 @@ def get_vars(tmp_variables):
                 ))
 
         variable = Variable(
+            line=line,
             key=key,
             value=value,
             num_faults=len(faults),
@@ -111,7 +112,7 @@ def get_vars(tmp_variables):
 def get_records(tmp_records):
     records: List[Record] = []
 
-    for domain, publisher_id, relationship, *cid in tmp_records:
+    for (domain, publisher_id, relationship, *cid), line in tmp_records:
         faults: List[Fault] = []
 
         if not domain.islower():
@@ -139,6 +140,7 @@ def get_records(tmp_records):
         certification_id = cid[0] if cid else None
 
         record = Record(
+            line=line,
             domain=domain,
             publisher_id=publisher_id,
             relationship=relationship,

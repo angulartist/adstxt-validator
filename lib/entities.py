@@ -46,7 +46,8 @@ Accountability Group (aka TAG), and the TAGID
 would be included here [11].
 '''
 Record = namedtuple('Record',
-                    ['domain',
+                    ['line',
+                     'domain',
                      'publisher_id',
                      'relationship',
                      'certification_id',
@@ -75,7 +76,7 @@ process. Only root domains should refer crawlers
 to subdomains. Subdomains should not refer to
 other subdomains. 
 '''
-Variable = namedtuple('Variable', 'key value num_faults faults')
+Variable = namedtuple('Variable', 'line key value num_faults faults')
 
 Fault = namedtuple('Fault', 'level reason hint')
 

@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 import requests
 import typedload
 
-from lib.entities import Record
+from lib.entities import Record, Variable
 from lib.transformers import tokenize, get_records, get_vars, group_by_domains
 
 NUM_MIN_RECORD_SLOTS = 3
@@ -45,11 +45,11 @@ def recursive_parser(url, sld=False):
     else:
         text = resp.text
 
-        elms = [tokenize(string) for string in text.rsplit('\n')]
+        elms = [(tokenize(string), index) for index, string in enumerate(text.rsplit('\n'))]
 
         _records, _variables, _outliers = [], [], []
 
-        for tokens, num_slots in elms:
+        for (tokens, num_slots), index in elms:
             if num_slots >= NUM_MIN_RECORD_SLOTS:
                 target = _records
             elif num_slots == NUM_VARIABLE_SLOTS:
@@ -57,7 +57,7 @@ def recursive_parser(url, sld=False):
             else:
                 target = _outliers
 
-            target.append(tokens)
+            target.append((tokens, index))
 
         records, variables = get_records(_records), get_vars(_variables)
 
@@ -80,10 +80,8 @@ def recursive_parser(url, sld=False):
     # to subdomains. Subdomains should not refer to
     # other subdomains. -- (IAB)
     if sld:
-        def get_next_location(sub_domains):
-            _, domain, *other = sub_domains
-
-            return f'{scheme}://{domain}/ads.txt'
+        def get_next_location(sub_domains: Variable):
+            return f'{scheme}://{sub_domains.value}/ads.txt'
 
         # extract optional subdomains ads.txt from the root domain
         next_locations = filter(lambda x: x != url, map(get_next_location, entry['results']['vars']['sub_domains']))
