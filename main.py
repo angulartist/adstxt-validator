@@ -17,20 +17,17 @@ from lib.transformers import tokenize, get_records, get_vars, group_by_domains
 NUM_MIN_RECORD_SLOTS = 3
 NUM_VARIABLE_SLOTS = 2
 
-processed_urls = set()
-
 results = []
 
 
 def recursive_parser(url, sld=False):
     print('Processing URL:', url)
 
-    processed_urls.add(url)
-
     scheme, netloc, *rest = urlparse(url)
 
     entry = {
         'domain': netloc,
+        'sld': sld,
         'results': {
             'recs': [],
             'vars': {
@@ -89,9 +86,7 @@ def recursive_parser(url, sld=False):
             return f'{scheme}://{domain}/ads.txt'
 
         # extract optional subdomains ads.txt from the root domain
-        next_locations = map(get_next_location, entry['results']['vars']['sub_domains'])
-        # prevent infinite call stack
-        next_locations = filter(lambda x: x not in processed_urls and x != url, next_locations)
+        next_locations = filter(lambda x: x != url, map(get_next_location, entry['results']['vars']['sub_domains']))
         # recursive concurrent call
         with PoolExecutor(max_workers=4) as executor:
             for _ in executor.map(recursive_parser, next_locations):
