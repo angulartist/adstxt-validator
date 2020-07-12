@@ -29,9 +29,9 @@ VALID_VARIABLES = {'CONTACT', 'SUBDOMAIN'}
 def group_by_domains(items):
     for item in items:
         grouped = defaultdict(list)
-        for x in item['results']['records']:
+        for x in item['results']['recs']:
             grouped[x.domain.lower()].append(x)
-        item['results']['records'] = grouped
+        item['results']['recs'] = grouped
 
     return items
 
@@ -67,8 +67,9 @@ def tokenize(string):
     return Input(tokens_, len(tokens_))
 
 
-def build_variables(tmp_variables):
+def get_vars(tmp_variables):
     variables: List[Variable] = []
+
     for key, value in tmp_variables:
         faults: List[Fault] = []
 
@@ -106,7 +107,7 @@ def build_variables(tmp_variables):
     return variables
 
 
-def build_records(tmp_records):
+def get_records(tmp_records):
     records: List[Record] = []
 
     for domain, publisher_id, relationship, *cid in tmp_records:

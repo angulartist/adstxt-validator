@@ -5,83 +5,16 @@ doc_ver: 1.0.2
 """
 import argparse
 import json
-import time
+from concurrent.futures import ThreadPoolExecutor as PoolExecutor
 from urllib.parse import urlparse
 
 import requests
 import typedload
 
 from lib.entities import Record
-from lib.transformers import tokenize, build_records, build_variables, group_by_domains
+from lib.transformers import tokenize, get_records, get_vars, group_by_domains
 
-# RECORDS
-
-'''
-domain:
-(Required) The canonical domain name of the
-SSP, Exchange, Header Wrapper, etc system that
-bidders connect to. This may be the operational
-domain of the system, if that is different than the
-parent corporate domain, to facilitate WHOIS and
-reverse IP lookups to establish clear ownership of
-the delegate system. Ideally the SSP or Exchange
-publishes a document detailing what domain name
-to use.
-
-publisher_id:
-(Required) The identifier associated with the seller
-or reseller account within the advertising system in
-field #1. This must contain the same value used in
-transactions (i.e. OpenRTB bid requests) in the
-field specified by the SSP/exchange. Typically, in
-OpenRTB, this is publisher.id. For OpenDirect it is
-typically the publisher’s organization ID.
-
-relationship:
-(Required) An enumeration of the type of account.
-A value of ‘DIRECT’ indicates that the Publisher
-(content owner) directly controls the account
-indicated in field #2 on the system in field #1. This
-tends to mean a direct business contract between
-the Publisher and the advertising system. A value
-of ‘RESELLER’ indicates that the Publisher has
-authorized another entity to control the account
-indicated in field #2 and resell their ad space via
-the system in field #1. Other types may be added
-in the future. Note that this field should be treated
-as case insensitive when interpreting the data.
-
-certification_id:
-(Optional) An ID that uniquely identifies the
-advertising system within a certification authority
-(this ID maps to the entity listed in field #1). A
-current certification authority is the Trustworthy
-Accountability Group (aka TAG), and the TAGID
-would be included here [11].
-'''
-
-# VARIABLES
-
-'''
-contact:
-(Optional) Some human readable contact
-information for the owner of the file. This may be
-the contact of the advertising operations team for
-the website. This may be an email address,
-phone number, link to a contact form, or other
-suitable means of communication.
-
-subdomain:
-(Optional) A machine readable subdomain pointer
-to a subdomain within the root domain, on which
-an ads.txt can be found. The crawler should fetch
-and consume associate the data to the
-subdomain, not the current domain. This referral
-should be exempt from the public suffix truncation
-process. Only root domains should refer crawlers
-to subdomains. Subdomains should not refer to
-other subdomains. 
-'''
+MIN_RECORD_SLOTS = 3
 
 results = []
 
@@ -94,8 +27,8 @@ def recursive_parser(url):
     entry = {
         'domain': netloc,
         'results': {
-            'records': [],
-            'variables': {
+            'recs': [],
+            'vars': {
                 'sub_domains': [],
                 'contacts': []
             }
@@ -109,35 +42,38 @@ def recursive_parser(url):
     else:
         text = resp.text
 
-        inputs = [tokenize(string) for string in text.rsplit('\n')]
+        elms = [tokenize(string) for string in text.rsplit('\n')]
 
-        tmp_records = []
-        tmp_variables = []
+        _records, _variables = [], []
 
-        for tokens, size in inputs:
-            if size > 2:
-                tmp_records.append(tokens)
-            else:
-                tmp_variables.append(tokens)
+        for tokens, num_slots in elms:
+            target = _records if num_slots >= MIN_RECORD_SLOTS else _variables
+            target.append(tokens)
 
-        records = build_records(tmp_records)
-        variables = build_variables(tmp_variables)
+        records, variables = get_records(_records), get_vars(_variables)
 
         for data in records + variables:
             if isinstance(data, Record):
-                entry['results']['records'].append(data)
+                entry['results']['recs'].append(data)
             else:
                 if data.key.upper() == 'SUBDOMAIN':
-                    entry['results']['variables']['sub_domains'].append(data)
+                    entry['results']['vars']['sub_domains'].append(data)
                 else:
-                    entry['results']['variables']['contacts'].append(data)
+                    entry['results']['vars']['contacts'].append(data)
 
     results.append(entry)
 
-    for _, domain, *rest in entry['results']['variables']['sub_domains']:
-        next_location = f'{scheme}://{domain}/ads.txt'
-        recursive_parser(next_location)
-        time.sleep(0.5)
+    def get_next_location(sub_domains):
+        _, domain, *other = sub_domains
+
+        return f'{scheme}://{domain}/ads.txt'
+
+    next_locations = map(get_next_location, entry['results']['vars']['sub_domains'])
+
+    with PoolExecutor(max_workers=4) as executor:
+
+        for _ in executor.map(recursive_parser, next_locations):
+            pass
 
 
 def main():
