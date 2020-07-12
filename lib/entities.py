@@ -80,4 +80,4 @@ Variable = namedtuple('Variable', 'line key value num_faults faults')
 
 Fault = namedtuple('Fault', 'level reason hint')
 
-Input = namedtuple('Input', 'tokens num_slots')
+Input = namedtuple('Input', 'tokens num_slots line')

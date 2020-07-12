@@ -6,7 +6,7 @@ doc_ver: 1.0.2
 import argparse
 import json
 from concurrent.futures import ThreadPoolExecutor as PoolExecutor
-from typing import List
+from typing import List, Union, Tuple
 from urllib.parse import urlparse
 
 import requests
@@ -47,13 +47,16 @@ def recursive_parser(url: str = None, sld: bool = False):
     except Exception as e:
         print(e)
     else:
+        # get page content as text
         text: str = resp.text
-
-        elms: List[Input] = [(tokenize(string), index) for index, string in enumerate(text.rsplit('\n'))]
+        # tokenize text
+        elms: List[Union[Input, Tuple]] = [(tokenize(string, line)) for line, string in enumerate(text.rsplit('\n'))]
+        # filter out empty lines
+        elms: List[Input] = [elm for elm in elms if elm.tokens]
 
         _records, _variables, _outliers = [], [], []
 
-        for (tokens, num_slots), index in elms:
+        for tokens, num_slots, line in elms:
             if num_slots >= NUM_MIN_RECORD_SLOTS:
                 target: list = _records
             elif num_slots == NUM_VARIABLE_SLOTS:
@@ -61,7 +64,7 @@ def recursive_parser(url: str = None, sld: bool = False):
             else:
                 target: list = _outliers
 
-            target.append((tokens, index))
+            target.append((tokens, line))
 
         records, variables = get_records(_records), get_vars(_variables)
 

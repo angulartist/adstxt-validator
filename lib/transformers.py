@@ -54,18 +54,23 @@ def strip_comments(cs: str):
     ))
 
 
-def tokenize(string: str):
+def tokenize(string: str, line: int):
     """
     Takes a string and return an Input.
+    :param line:
     :param string: str - Line to parse
     :return: Input - Input that contains tokens
     """
     string_ = strip_comments('#')(string)
-    string_ = string_.replace(' ', '')
+
+    if re.match(r'^\s*$', string_):
+        return Input(None, 0, line)
+
+    string_ = string_.replace(' ', '').strip()
     tokens_ = re.split(',|=', string_)
     tokens_ = [token for token in tokens_]
 
-    return Input(tokens_, len(tokens_))
+    return Input(tokens_, len(tokens_), line)
 
 
 def get_vars(tmp_variables: list):
