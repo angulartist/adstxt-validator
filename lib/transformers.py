@@ -61,8 +61,9 @@ def tokenize(string):
     :return: Input - Input that contains tokens
     """
     string_ = strip_comments('#')(string)
+    string_ = string_.replace(' ', '')
     tokens_ = re.split(',|=', string_)
-    tokens_ = [token.strip() for token in tokens_]
+    tokens_ = [token for token in tokens_]
 
     return Input(tokens_, len(tokens_))
 

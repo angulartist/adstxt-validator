@@ -14,13 +14,22 @@ import typedload
 from lib.entities import Record
 from lib.transformers import tokenize, get_records, get_vars, group_by_domains
 
-MIN_RECORD_SLOTS = 3
+NUM_MIN_RECORD_SLOTS = 3
+NUM_VARIABLE_SLOTS = 2
+
+processed_urls = set()
 
 results = []
 
 
-def recursive_parser(url):
-    print('Location:', url)
+def recursive_parser(url, sld=False):
+    print('Processing URL:', url)
+
+    if url in processed_urls:
+        print('URL:', url, 'skipped')
+        return None
+
+    processed_urls.add(url)
 
     scheme, netloc, *rest = urlparse(url)
 
@@ -32,7 +41,8 @@ def recursive_parser(url):
                 'sub_domains': [],
                 'contacts': []
             }
-        }
+        },
+        'outliers': []
     }
 
     try:
@@ -44,10 +54,16 @@ def recursive_parser(url):
 
         elms = [tokenize(string) for string in text.rsplit('\n')]
 
-        _records, _variables = [], []
+        _records, _variables, _outliers = [], [], []
 
         for tokens, num_slots in elms:
-            target = _records if num_slots >= MIN_RECORD_SLOTS else _variables
+            if num_slots >= NUM_MIN_RECORD_SLOTS:
+                target = _records
+            elif num_slots == NUM_VARIABLE_SLOTS:
+                target = _variables
+            else:
+                target = _outliers
+
             target.append(tokens)
 
         records, variables = get_records(_records), get_vars(_variables)
@@ -61,19 +77,26 @@ def recursive_parser(url):
                 else:
                     entry['results']['vars']['contacts'].append(data)
 
+        entry['outliers'] = _outliers
+
     results.append(entry)
 
-    def get_next_location(sub_domains):
-        _, domain, *other = sub_domains
+    # get subdomain ads.txt for SLD only
+    # (sub-domains redirect are not allowed)
+    # -- Only root domains should refer crawlers
+    # to subdomains. Subdomains should not refer to
+    # other subdomains. -- (IAB)
+    if sld:
+        def get_next_location(sub_domains):
+            _, domain, *other = sub_domains
 
-        return f'{scheme}://{domain}/ads.txt'
+            return f'{scheme}://{domain}/ads.txt'
 
-    next_locations = map(get_next_location, entry['results']['vars']['sub_domains'])
+        next_locations = map(get_next_location, entry['results']['vars']['sub_domains'])
 
-    with PoolExecutor(max_workers=4) as executor:
-
-        for _ in executor.map(recursive_parser, next_locations):
-            pass
+        with PoolExecutor(max_workers=4) as executor:
+            for _ in executor.map(recursive_parser, next_locations):
+                pass
 
 
 def main():
@@ -85,7 +108,7 @@ def main():
 
     args = parser.parse_args()
 
-    recursive_parser(args.url)
+    recursive_parser(args.url, sld=True)
 
     output = group_by_domains(results)
 
