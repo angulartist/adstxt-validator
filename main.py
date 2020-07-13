@@ -6,17 +6,14 @@ doc_ver: 1.0.2
 import argparse
 import json
 from concurrent.futures import ThreadPoolExecutor as PoolExecutor
-from typing import List, Union, Tuple
 from urllib.parse import urlparse
 
 import requests
 import typedload
+from pipetools import pipe
 
-from lib.entities import Record, Variable, Input
-from lib.transformers import tokenize, get_records, get_vars, group_by_domains
-
-NUM_MIN_RECORD_SLOTS = 3
-NUM_VARIABLE_SLOTS = 2
+from lib.entities import Record, Variable
+from lib.transformers import group_by_domains, get_records, tokenize, strip_comments, split_fn, orchestrator_fn
 
 results = []
 
@@ -38,8 +35,7 @@ def recursive_parser(url: str = None, sld: bool = False):
                 'sub_domains': [],
                 'contacts': []
             }
-        },
-        'outliers': []
+        }
     }
 
     try:
@@ -47,37 +43,28 @@ def recursive_parser(url: str = None, sld: bool = False):
     except Exception as e:
         print(e)
     else:
-        # get page content as text
-        text: str = resp.text
-        # tokenize text
-        elms: List[Union[Input, Tuple]] = [(tokenize(string, line)) for line, string in enumerate(text.rsplit('\n'))]
-        # filter out empty lines
-        elms: List[Input] = [elm for elm in elms if elm.tokens]
+        inputs = (resp >
+                  pipe
+                  | (lambda x: x.text)
+                  | split_fn
+                  | strip_comments
+                  | tokenize
+                  | orchestrator_fn)
 
-        _records, _variables, _outliers = [], [], []
+        records = (inputs > pipe
+                   | get_records)
 
-        for tokens, num_slots, line in elms:
-            if num_slots >= NUM_MIN_RECORD_SLOTS:
-                target: list = _records
-            elif num_slots == NUM_VARIABLE_SLOTS:
-                target: list = _variables
-            else:
-                target: list = _outliers
-
-            target.append((tokens, line))
-
-        records, variables = get_records(_records), get_vars(_variables)
-
-        for data in records + variables:
+        for data in records:
             if isinstance(data, Record):
                 entry['results']['recs'].append(data)
-            else:
+            elif isinstance(data, Variable):
                 if data.key.upper() == 'SUBDOMAIN':
                     entry['results']['vars']['sub_domains'].append(data)
                 else:
                     entry['results']['vars']['contacts'].append(data)
-
-        entry['outliers'] = _outliers
+            else:
+                print('Skip outlier...')
+                continue
 
     results.append(entry)
 

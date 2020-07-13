@@ -2,10 +2,13 @@ import re
 from collections import defaultdict
 from enum import Enum
 from itertools import takewhile
-from typing import List
+from typing import List, Tuple
 
 from lib import validators
 from lib.entities import Record, Input, Variable, Fault
+
+NUM_MIN_RECORD_SLOTS = 3
+NUM_VARIABLE_SLOTS = 2
 
 
 class Level(Enum):
@@ -36,124 +39,115 @@ def group_by_domains(items: list):
     return items
 
 
-def strip_comments(cs: str):
-    """
-    Takes a string and removes comments.
-    :param cs: str - Comment tokens
-    :return: str - Parsed line
-    """
+def split_fn(text):
+    return ((line, string) for line, string in enumerate(text.rsplit('\n')))
 
+
+def orchestrator_fn(items):
+    for tokens, num_slots, line in items:
+        if num_slots >= NUM_MIN_RECORD_SLOTS:
+            yield 'record', tokens, line
+        elif num_slots == NUM_VARIABLE_SLOTS:
+            yield 'var', tokens, line
+        else:
+            yield 'outlier', tokens, line
+
+
+def strip_comments(splitted: List[Tuple], cs: str = '#'):
     def go(cs_):
         return lambda s: ''.join(
             takewhile(lambda c: c not in cs_, s)
         ).strip()
 
-    return lambda txt: '\n'.join(map(
-        go(cs),
-        txt.splitlines()
-    ))
+    for line, string in splitted:
+        yield line, '\n'.join(map(
+            go(cs),
+            string.splitlines()
+        ))
 
 
-def tokenize(string: str, line: int):
-    """
-    Takes a string and return an Input.
-    :param line:
-    :param string: str - Line to parse
-    :return: Input - Input that contains tokens
-    """
-    string_ = strip_comments('#')(string)
+def tokenize(items):
+    for line, string in items:
+        # skip empty lines
+        if not re.match(r'^\s*$', string):
+            string = string.replace(' ', '').strip()
+            tokens = re.split(',|=', string)
+            tokens = [token for token in tokens]
 
-    if re.match(r'^\s*$', string_):
-        return Input(None, 0, line)
-
-    string_ = string_.replace(' ', '').strip()
-    tokens_ = re.split(',|=', string_)
-    tokens_ = [token for token in tokens_]
-
-    return Input(tokens_, len(tokens_), line)
+            yield Input(tokens, len(tokens), line)
 
 
-def get_vars(tmp_variables: list):
-    variables: List[Variable] = []
-
-    for (key, value), line in tmp_variables:
+def get_records(items):
+    for origin, fields, line in items:
         faults: List[Fault] = []
 
-        if key.upper() not in VALID_VARIABLES:
-            faults.append(Fault(
-                level=Level.DANG,
-                reason='unexpected variable',
-                hint=VALID_VARIABLES,
-            ))
+        if origin == 'record':
+            domain, publisher_id, relationship, *cid = fields
 
-        if key.upper() == 'SUBDOMAIN':
-            if not value.islower():
+            if not domain.islower():
                 faults.append(Fault(
                     level=Level.WARN,
                     reason='domain must be in lower case',
-                    hint=value.lower(),
+                    hint=domain.lower(),
                 ))
 
-            if not validators.domain(value):
+            # check domain format
+            if not validators.domain(domain):
                 faults.append(Fault(
                     level=Level.DANG,
-                    reason='unexpected format',
-                    hint=None
+                    reason=f'unexpected format',
+                    hint=None,
                 ))
 
-        variable = Variable(
-            line=line,
-            key=key,
-            value=value,
-            num_faults=len(faults),
-            faults=faults,
-        )
+            if relationship.upper() not in VALID_RELATIONSHIPS:
+                faults.append(Fault(
+                    level=Level.DANG,
+                    reason='unexpected relationship',
+                    hint=VALID_RELATIONSHIPS,
+                ))
 
-        variables.append(variable)
+            certification_id = cid[0] if cid else None
 
-    return variables
+            yield Record(
+                line=line,
+                domain=domain,
+                publisher_id=publisher_id,
+                relationship=relationship,
+                certification_id=certification_id,
+                num_faults=len(faults),
+                faults=faults,
+            )
+        elif origin == 'var':
+            key, value = fields
 
+            if key.upper() not in VALID_VARIABLES:
+                faults.append(Fault(
+                    level=Level.DANG,
+                    reason='unexpected variable',
+                    hint=VALID_VARIABLES,
+                ))
 
-def get_records(tmp_records: list):
-    records: List[Record] = []
+            if key.upper() == 'SUBDOMAIN':
+                if not value.islower():
+                    faults.append(Fault(
+                        level=Level.WARN,
+                        reason='domain must be in lower case',
+                        hint=value.lower(),
+                    ))
 
-    for (domain, publisher_id, relationship, *cid), line in tmp_records:
-        faults: List[Fault] = []
+                if not validators.domain(value):
+                    faults.append(Fault(
+                        level=Level.DANG,
+                        reason='unexpected format',
+                        hint=None
+                    ))
 
-        if not domain.islower():
-            faults.append(Fault(
-                level=Level.WARN,
-                reason='domain must be in lower case',
-                hint=domain.lower(),
-            ))
-
-        # check domain format
-        if not validators.domain(domain):
-            faults.append(Fault(
-                level=Level.DANG,
-                reason=f'unexpected format',
-                hint=None,
-            ))
-
-        if relationship.upper() not in VALID_RELATIONSHIPS:
-            faults.append(Fault(
-                level=Level.DANG,
-                reason='unexpected relationship',
-                hint=VALID_RELATIONSHIPS,
-            ))
-
-        certification_id = cid[0] if cid else None
-
-        record = Record(
-            line=line,
-            domain=domain,
-            publisher_id=publisher_id,
-            relationship=relationship,
-            certification_id=certification_id,
-            num_faults=len(faults),
-            faults=faults,
-        )
-
-        records.append(record)
-
-    return records
+            yield Variable(
+                line=line,
+                key=key,
+                value=value,
+                num_faults=len(faults),
+                faults=faults,
+            )
+        else:
+            yield None
