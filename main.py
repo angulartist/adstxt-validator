@@ -74,6 +74,9 @@ def recursive_parser(url: str = None, sld: bool = False):
                | get_records)
 
     for data in records:
+        if data is None:
+            continue
+
         if isinstance(data, Record):
             entry['results']['recs'].append(data)
         elif isinstance(data, Variable):
@@ -81,9 +84,6 @@ def recursive_parser(url: str = None, sld: bool = False):
                 entry['results']['vars']['sub_domains'].append(data)
             else:
                 entry['results']['vars']['contacts'].append(data)
-        else:
-            print('Skip outlier...')
-            continue
 
     results.append(entry)
 
