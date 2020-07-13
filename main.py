@@ -10,12 +10,16 @@ from urllib.parse import urlparse
 
 import requests
 import typedload
-from pipetools import pipe
+from consecution import Pipeline, GlobalState
 
-from lib.entities import Entry, Variable
-from lib.transformers import get_records, tokenize, strip_comments, split_fn, orchestrator_fn
+from lib.entities import Variable
+from lib.nodes import ToRecordsNode, ToVariablesNode, UncommentNode, TokenizeNode, OrchestrateNode, AggregateNode
 
-results = []
+# node shared state
+global_state = GlobalState(
+    results=[],
+    next_locations=[]
+)
 
 
 def resolve(url: str = None):
@@ -48,18 +52,19 @@ def recursive_parser(url: str = None, sld: bool = False):
     """
     document, (scheme, netloc) = resolve(url)
 
-    entry: Entry = Entry(source=netloc, sub_level_domain=sld)
+    # extraction pipeline
+    pipe = Pipeline(
+        UncommentNode('remove comments')
+        | TokenizeNode('tokenize lines')
+        | OrchestrateNode('orchestrate types')
+        | [ToRecordsNode('get records'), ToVariablesNode('get variables')]
+        | AggregateNode('create entries', source=netloc, sub_level_domain=sld),
+        global_state=global_state)
 
-    _ = (document >
-         pipe
-         | split_fn
-         | strip_comments
-         | tokenize
-         | orchestrator_fn
-         | get_records
-         | entry.put)
+    # convert raw text to list of lines
+    lines = document.rsplit('\n')
 
-    results.append(entry)
+    pipe.consume(lines)
 
     # get subdomain ads.txt for SLD only
     # (sub-domains redirect are not allowed)
@@ -73,7 +78,7 @@ def recursive_parser(url: str = None, sld: bool = False):
         # extract optional subdomains ads.txt from the root domain
         next_locations = filter(
             lambda x: x != url,
-            map(get_next_location, entry.sub_domains)
+            map(get_next_location, global_state.next_locations)
         )
         # recursive concurrent call
         with ThreadPoolExecutor(max_workers=4) as executor:
@@ -92,10 +97,8 @@ def main():
 
     recursive_parser(args.url, sld=True)
 
-    # results = group_by_domains(results)
-
     # to json
-    as_json = typedload.dump(results)
+    as_json = typedload.dump(global_state.results)
 
     with open('./output/data.json', 'w') as fh:
         json.dump(as_json, fh)

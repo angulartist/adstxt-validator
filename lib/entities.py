@@ -105,21 +105,17 @@ class Entry:
     recs: List[Record] = field(default_factory=list)
     vars: List[Variable] = field(default_factory=list)
 
-    def put(self, items):
-        for item in items:
-            if item is None:
-                continue
+    def put(self, item):
+        switcher = {
+            'Record': (
+                lambda x: self.recs.append(x)
+            ),
+            'Variable': (
+                lambda x: self.vars.append(x)
+            )
+        }
 
-            switcher = {
-                'Record': (
-                    lambda x: self.recs.append(x)
-                ),
-                'Variable': (
-                    lambda x: self.vars.append(x)
-                )
-            }
-
-            switcher.get(item.__class__.__name__, 'Unknown type')(item)
+        switcher.get(item.__class__.__name__, 'Unknown type')(item)
 
     @property
     def sub_domains(self):
