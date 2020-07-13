@@ -1,26 +1,11 @@
 import re
 from collections import defaultdict
-from enum import Enum
 from itertools import takewhile
 from typing import List, Tuple
 
 from lib import validators
-from lib.entities import Record, Input, Variable, Fault
-
-NUM_MIN_RECORD_SLOTS = 3
-NUM_VARIABLE_SLOTS = 2
-
-
-class Level(Enum):
-    INFO = 1
-    WARN = 2
-    DANG = 3
-
-
-# Available relationships
-VALID_RELATIONSHIPS = {'DIRECT', 'RESELLER'}
-# Available variables
-VALID_VARIABLES = {'CONTACT', 'SUBDOMAIN'}
+from lib.entities import Record, Input, Variable, Fault, ErrorLevel
+from lib.vars import VALID_VARIABLES, NUM_MIN_RECORD_SLOTS, NUM_VARIABLE_SLOTS, VALID_RELATIONSHIPS
 
 
 def group_by_domains(items: list):
@@ -83,26 +68,26 @@ def get_records(items):
         if origin == 'record':
             domain, publisher_id, relationship, *cid = fields
 
-            if not domain.islower():
-                faults.append(Fault(
-                    level=Level.WARN,
-                    reason='domain must be in lower case',
-                    hint=domain.lower(),
-                ))
-
             # check domain format
             if not validators.domain(domain):
                 faults.append(Fault(
-                    level=Level.DANG,
+                    level=ErrorLevel.DANG,
                     reason=f'unexpected format',
                     hint=None,
                 ))
 
             if relationship.upper() not in VALID_RELATIONSHIPS:
                 faults.append(Fault(
-                    level=Level.DANG,
+                    level=ErrorLevel.DANG,
                     reason='unexpected relationship',
                     hint=VALID_RELATIONSHIPS,
+                ))
+
+            if not domain.islower():
+                faults.append(Fault(
+                    level=ErrorLevel.WARN,
+                    reason='domain must be in lower case',
+                    hint=domain.lower(),
                 ))
 
             certification_id = cid[0] if cid else None
@@ -121,7 +106,7 @@ def get_records(items):
 
             if key.upper() not in VALID_VARIABLES:
                 faults.append(Fault(
-                    level=Level.DANG,
+                    level=ErrorLevel.DANG,
                     reason='unexpected variable',
                     hint=VALID_VARIABLES,
                 ))
@@ -129,14 +114,14 @@ def get_records(items):
             if key.upper() == 'SUBDOMAIN':
                 if not value.islower():
                     faults.append(Fault(
-                        level=Level.WARN,
+                        level=ErrorLevel.WARN,
                         reason='domain must be in lower case',
                         hint=value.lower(),
                     ))
 
                 if not validators.domain(value):
                     faults.append(Fault(
-                        level=Level.DANG,
+                        level=ErrorLevel.DANG,
                         reason='unexpected format',
                         hint=None
                     ))

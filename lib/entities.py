@@ -1,4 +1,14 @@
 from collections import namedtuple
+from dataclasses import dataclass, field
+from enum import Enum
+from typing import List
+
+
+class ErrorLevel(Enum):
+    INFO = 1
+    WARN = 2
+    DANG = 3
+
 
 # RECORDS
 
@@ -45,14 +55,14 @@ current certification authority is the Trustworthy
 Accountability Group (aka TAG), and the TAGID
 would be included here [11].
 '''
-Record = namedtuple('Record',
-                    ['line',
-                     'domain',
-                     'publisher_id',
-                     'relationship',
-                     'certification_id',
-                     'num_faults',
-                     'faults'])
+Record = namedtuple('Record', ['line',
+                               'domain',
+                               'publisher_id',
+                               'relationship',
+                               'certification_id',
+                               'num_faults',
+                               'faults'
+                               ])
 
 # VARIABLES
 
@@ -81,3 +91,31 @@ Variable = namedtuple('Variable', 'line key value num_faults faults')
 Fault = namedtuple('Fault', 'level reason hint')
 
 Input = namedtuple('Input', 'tokens num_slots line')
+
+
+@dataclass
+class Entry:
+    source: str
+    sub_level_domain: bool
+    recs: List[Record] = field(default_factory=list)
+    vars: List[Variable] = field(default_factory=list)
+
+    def put(self, items):
+        for item in items:
+            if item is None:
+                continue
+
+            switcher = {
+                'Record': (
+                    lambda x: self.recs.append(x)
+                ),
+                'Variable': (
+                    lambda x: self.vars.append(x)
+                )
+            }
+
+            switcher.get(item.__class__.__name__, 'Unknown type')(item)
+
+    @property
+    def sub_domains(self):
+        return [x for x in self.vars if x.key.upper() == 'SUBDOMAIN']
