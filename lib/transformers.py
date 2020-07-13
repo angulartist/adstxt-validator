@@ -4,7 +4,7 @@ from itertools import takewhile
 from typing import List, Tuple
 
 from lib import validators
-from lib.entities import Record, Input, Variable, Fault, ErrorLevel
+from lib.entities import Record, Input, Variable, Fault, ErrorLevel, Origin
 from lib.vars import VALID_VARIABLES, NUM_MIN_RECORD_SLOTS, NUM_VARIABLE_SLOTS, VALID_RELATIONSHIPS
 
 
@@ -27,9 +27,9 @@ def orchestrator_fn(items):
         origin = None
 
         if num_slots >= NUM_MIN_RECORD_SLOTS:
-            origin = 'record'
+            origin = Origin.RECORD
         elif num_slots == NUM_VARIABLE_SLOTS:
-            origin = 'variable'
+            origin = Origin.VARIABLE
 
         yield origin, tokens, line
 
@@ -65,7 +65,7 @@ def get_records(items):
 
         faults: List[Fault] = []
 
-        if origin == 'record':
+        if origin == Origin.RECORD:
             domain, publisher_id, relationship, *cid = fields
 
             # check domain format

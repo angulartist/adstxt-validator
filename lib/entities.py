@@ -10,6 +10,11 @@ class ErrorLevel(Enum):
     DANG = 3
 
 
+class Origin(Enum):
+    RECORD = 1
+    VARIABLE = 2
+
+
 # RECORDS
 
 '''
