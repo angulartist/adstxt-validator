@@ -23,12 +23,6 @@ VALID_RELATIONSHIPS = {'DIRECT', 'RESELLER'}
 VALID_VARIABLES = {'CONTACT', 'SUBDOMAIN'}
 
 
-# def mark_duplicated(x: OutputEntity, items: List[OutputEntity]):
-#     x.duplicated = True if items.count(x) > 1 else False
-#
-#     return x
-
-
 def group_by_domains(items: list):
     for item in items:
         grouped = defaultdict(list)
@@ -45,12 +39,14 @@ def split_fn(text):
 
 def orchestrator_fn(items):
     for tokens, num_slots, line in items:
+        origin = None
+
         if num_slots >= NUM_MIN_RECORD_SLOTS:
-            yield 'record', tokens, line
+            origin = 'record'
         elif num_slots == NUM_VARIABLE_SLOTS:
-            yield 'var', tokens, line
-        else:
-            yield 'outlier', tokens, line
+            origin = 'variable'
+
+        yield origin, tokens, line
 
 
 def strip_comments(splitted: List[Tuple], cs: str = '#'):
@@ -79,6 +75,9 @@ def tokenize(items):
 
 def get_records(items):
     for origin, fields, line in items:
+        if origin is None:
+            yield None
+
         faults: List[Fault] = []
 
         if origin == 'record':
@@ -117,7 +116,7 @@ def get_records(items):
                 num_faults=len(faults),
                 faults=faults,
             )
-        elif origin == 'var':
+        else:
             key, value = fields
 
             if key.upper() not in VALID_VARIABLES:
@@ -149,5 +148,3 @@ def get_records(items):
                 num_faults=len(faults),
                 faults=faults,
             )
-        else:
-            yield None

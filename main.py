@@ -18,13 +18,37 @@ from lib.transformers import group_by_domains, get_records, tokenize, strip_comm
 results = []
 
 
-def recursive_parser(url: str = None, sld: bool = False):
+def resolve(url: str = None):
+    """
+    Fetch url and get the content
+    :param url:
+    :return:
+    """
     if url is None:
         raise ValueError('URL is mandatory.')
 
     print('Processing URL:', url)
 
     scheme, netloc, *rest = urlparse(url)
+
+    try:
+        resp = requests.get(url)
+
+        return resp, (scheme, netloc)
+    except Exception as e:
+        print(e)
+
+
+def recursive_parser(url: str = None, sld: bool = False):
+    """
+    Parse ads.txt
+    :param url:
+    :param sld:
+    :return:
+    """
+    resp, meta = resolve(url)
+
+    scheme, netloc = meta
 
     entry: dict = {
         'domain': netloc,
@@ -38,33 +62,28 @@ def recursive_parser(url: str = None, sld: bool = False):
         }
     }
 
-    try:
-        resp = requests.get(url)
-    except Exception as e:
-        print(e)
-    else:
-        inputs = (resp >
-                  pipe
-                  | (lambda x: x.text)
-                  | split_fn
-                  | strip_comments
-                  | tokenize
-                  | orchestrator_fn)
+    inputs = (resp >
+              pipe
+              | (lambda x: x.text)
+              | split_fn
+              | strip_comments
+              | tokenize
+              | orchestrator_fn)
 
-        records = (inputs > pipe
-                   | get_records)
+    records = (inputs > pipe
+               | get_records)
 
-        for data in records:
-            if isinstance(data, Record):
-                entry['results']['recs'].append(data)
-            elif isinstance(data, Variable):
-                if data.key.upper() == 'SUBDOMAIN':
-                    entry['results']['vars']['sub_domains'].append(data)
-                else:
-                    entry['results']['vars']['contacts'].append(data)
+    for data in records:
+        if isinstance(data, Record):
+            entry['results']['recs'].append(data)
+        elif isinstance(data, Variable):
+            if data.key.upper() == 'SUBDOMAIN':
+                entry['results']['vars']['sub_domains'].append(data)
             else:
-                print('Skip outlier...')
-                continue
+                entry['results']['vars']['contacts'].append(data)
+        else:
+            print('Skip outlier...')
+            continue
 
     results.append(entry)
 
