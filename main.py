@@ -71,13 +71,9 @@ def recursive_parser(url: str = None, sld: bool = False):
                         sub_level_domain=sld),
         global_state=global_state)
 
-    with open('./test/demo.ads.txt', 'r') as fh:
-        tmp = fh.readlines()
-
     # convert raw text to list of lines
-    # lines = document.rsplit('\n')
-    lines = tmp
-
+    lines = document.rsplit('\n')
+    # here we go
     pipe.consume(lines)
 
     # get subdomain ads.txt for SLD only

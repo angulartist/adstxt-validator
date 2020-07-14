@@ -6,14 +6,13 @@ https://iabtechlab.com/wp-content/uploads/2019/03/IAB-OpenRTB-Ads.txt-Public-Spe
 
 - [x] validate domains format
 - [x] validate relationship
-- [x] validate record format
+- [x] validate record format (domain/pub_id/relationship)
 - [x] validate variable type (contact/subdomain)
 - [x] follow and merge subdomains ads.txt
-- [x] ignore comments
+- [x] filter out comments
+- [x] flag duplicated lines
 
 todo:
 
-- [ ] find duplicates
-- [ ] keep comments
-- [ ] domain name misspelling checking
-- [ ] certification id verification
+- [ ] domain name misspelling checking ?
+- [ ] certification id verification ?
