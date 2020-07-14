@@ -5,22 +5,19 @@ from typing import List
 from consecution import Node
 
 from lib import validators
-from lib.entities import Record, Input, Variable, Fault, ErrorLevel, Origin, Entry
+from lib.entities import Record, Input, Variable, Fault, ErrorLevel, Entry
 from lib.vars import VALID_VARIABLES, NUM_MIN_RECORD_SLOTS, NUM_VARIABLE_SLOTS, VALID_RELATIONSHIPS
 
 
-class OrchestrateNode(Node):
-    def process(self, item: Input):
-        origin = None
+def orchestrate(item):
+    tokens, num_slots, line = item
 
-        tokens, num_slots, line = item
-
-        if num_slots >= NUM_MIN_RECORD_SLOTS:
-            origin = Origin.RECORD
-        elif num_slots == NUM_VARIABLE_SLOTS:
-            origin = Origin.VARIABLE
-
-        self._push((origin, tokens, line))
+    if num_slots >= NUM_MIN_RECORD_SLOTS:
+        return 'get_recs'
+    elif num_slots == NUM_VARIABLE_SLOTS:
+        return 'get_vars'
+    else:
+        return None
 
 
 class TrimNode(Node):
@@ -83,6 +80,9 @@ class AggregateNode(Node):
         self.entry = None
 
     def begin(self):
+        if not self.sub_level_domain:
+            self.global_state.next_locations = []
+
         self.entry: Entry = Entry(
             source=self.source,
             sub_level_domain=self.sub_level_domain
@@ -100,85 +100,83 @@ class ToVariablesNode(Node):
     def process(self, item):
         faults: List[Fault] = []
 
-        origin, fields, line = item
+        tokens, num_tokens, line = item
 
-        if origin == Origin.VARIABLE:
-            key, value = fields
+        key, value = tokens
 
-            if key.upper() not in VALID_VARIABLES:
+        if key.upper() not in VALID_VARIABLES:
+            faults.append(Fault(
+                level=ErrorLevel.DANG,
+                reason='unexpected variable',
+                hint=VALID_VARIABLES,
+            ))
+
+        if key.upper() == 'SUBDOMAIN':
+            if not value.islower():
                 faults.append(Fault(
-                    level=ErrorLevel.DANG,
-                    reason='unexpected variable',
-                    hint=VALID_VARIABLES,
+                    level=ErrorLevel.WARN,
+                    reason='domain must be in lower case',
+                    hint=value.lower(),
                 ))
 
-            if key.upper() == 'SUBDOMAIN':
-                if not value.islower():
-                    faults.append(Fault(
-                        level=ErrorLevel.WARN,
-                        reason='domain must be in lower case',
-                        hint=value.lower(),
-                    ))
+            if not validators.domain(value):
+                faults.append(Fault(
+                    level=ErrorLevel.DANG,
+                    reason='unexpected format',
+                    hint=None
+                ))
 
-                if not validators.domain(value):
-                    faults.append(Fault(
-                        level=ErrorLevel.DANG,
-                        reason='unexpected format',
-                        hint=None
-                    ))
+        variable = Variable(
+            line=line,
+            key=key,
+            value=value,
+            num_faults=len(faults),
+            faults=faults,
+        )
 
-            variable = Variable(
-                line=line,
-                key=key,
-                value=value,
-                num_faults=len(faults),
-                faults=faults,
-            )
-
-            self._push(variable)
+        self._push(variable)
 
 
 class ToRecordsNode(Node):
     def process(self, item):
         faults: List[Fault] = []
 
-        origin, fields, line = item
+        tokens, num_tokens, line = item
 
-        if origin == Origin.RECORD:
-            domain, publisher_id, relationship, *cid = fields
+        domain, publisher_id, relationship, *cid = tokens
 
-            # check domain format
-            if not validators.domain(domain):
-                faults.append(Fault(
-                    level=ErrorLevel.DANG,
-                    reason=f'unexpected format',
-                    hint=None,
-                ))
+        # check domain format
+        if not validators.domain(domain):
+            faults.append(Fault(
+                level=ErrorLevel.DANG,
+                reason=f'unexpected format',
+                hint=None,
+            ))
 
-            if relationship.upper() not in VALID_RELATIONSHIPS:
-                faults.append(Fault(
-                    level=ErrorLevel.DANG,
-                    reason='unexpected relationship',
-                    hint=VALID_RELATIONSHIPS,
-                ))
+        if relationship.upper() not in VALID_RELATIONSHIPS:
+            faults.append(Fault(
+                level=ErrorLevel.DANG,
+                reason='unexpected relationship',
+                hint=VALID_RELATIONSHIPS,
+            ))
 
-            if not domain.islower():
-                faults.append(Fault(
-                    level=ErrorLevel.WARN,
-                    reason='domain must be in lower case',
-                    hint=domain.lower(),
-                ))
+        if not domain.islower():
+            faults.append(Fault(
+                level=ErrorLevel.WARN,
+                reason='domain must be in lower case',
+                hint=domain.lower(),
+            ))
 
-            certification_id = cid[0] if cid else None
+        certification_id = cid[0] if cid else None
 
-            record = Record(
-                line=line,
-                domain=domain,
-                publisher_id=publisher_id,
-                relationship=relationship,
-                certification_id=certification_id,
-                num_faults=len(faults),
-                faults=faults,
-            )
+        record = Record(
+            line=line,
+            domain=domain,
+            publisher_id=publisher_id,
+            relationship=relationship,
+            certification_id=certification_id,
+            num_faults=len(faults),
+            faults=faults,
+        )
 
-            self._push(record)
+        self._push(record)
