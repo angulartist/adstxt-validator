@@ -18,11 +18,29 @@ def to_unicode(obj, charset='utf-8', errors='strict'):
     return obj.decode(charset, errors)
 
 
-def domain(string):
+def domain(string: str):
     try:
         return pattern.match(to_unicode(string).encode('idna').decode('ascii'))
     except (UnicodeError, AttributeError):
         return False
+
+
+def check_domain(string: str, *, faults: list):
+    if not string.islower():
+        faults.append(Fault(
+            level=ErrorLevel.WARN,
+            reason='domain must be in lower case',
+            hint=string.lower(),
+        ))
+
+    if not domain(string):
+        faults.append(Fault(
+            level=ErrorLevel.DANG,
+            reason='unexpected format',
+            hint=None
+        ))
+
+    return faults
 
 
 def check_in_set(item, *, set_, faults: list):

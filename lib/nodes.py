@@ -4,10 +4,9 @@ from typing import List
 
 from consecution import Node
 
-from lib import validators
 from lib.decorators import yell
-from lib.entities import Record, Input, Variable, Fault, ErrorLevel, Entry
-from lib.validators import check_in_set
+from lib.entities import Record, Input, Variable, Fault, Entry
+from lib.validators import check_in_set, check_domain
 from lib.vars import VALID_VARIABLES, NUM_MIN_RECORD_SLOTS, NUM_VARIABLE_SLOTS, VALID_RELATIONSHIPS
 
 
@@ -115,19 +114,7 @@ class ToVariablesNode(Node):
         faults = check_in_set(key.upper(), set_=VALID_VARIABLES, faults=faults)
 
         if key.upper() == 'SUBDOMAIN':
-            if not value.islower():
-                faults.append(Fault(
-                    level=ErrorLevel.WARN,
-                    reason='domain must be in lower case',
-                    hint=value.lower(),
-                ))
-
-            if not validators.domain(value):
-                faults.append(Fault(
-                    level=ErrorLevel.DANG,
-                    reason='unexpected format',
-                    hint=None
-                ))
+            faults = check_domain(value, faults=faults)
 
         variable = Variable(
             line=line,
@@ -149,22 +136,10 @@ class ToRecordsNode(Node):
 
         domain, publisher_id, relationship, *cid = tokens
 
-        # check domain format
-        if not validators.domain(domain):
-            faults.append(Fault(
-                level=ErrorLevel.DANG,
-                reason=f'unexpected format',
-                hint=None,
-            ))
-
         faults = check_in_set(relationship.upper(), set_=VALID_RELATIONSHIPS, faults=faults)
 
-        if not domain.islower():
-            faults.append(Fault(
-                level=ErrorLevel.WARN,
-                reason='domain must be in lower case',
-                hint=domain.lower(),
-            ))
+        # check domain format
+        faults = check_domain(domain, faults=faults)
 
         certification_id = cid[0] if cid else None
 
