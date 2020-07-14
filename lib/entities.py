@@ -71,6 +71,7 @@ class Record:
     publisher_id: str
     relationship: str
     certification_id: str
+    extensions: list
     faults: List[Fault]
     duplicated: bool
     num_faults: int = 0

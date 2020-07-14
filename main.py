@@ -12,7 +12,7 @@ import typedload
 from consecution import Pipeline, GlobalState
 
 from lib.nodes import ValidateRecordsNode, ValidateVariablesNode, UncommentNode, TokenizeNode, AggregateNode, \
-    TrimNode, LineNode, orchestrate, OutlierNode, DuplicateNode
+    TrimNode, LineNode, orchestrate, OutlierNode, DuplicateNode, EmptyLineNode
 
 # node shared state
 global_state = GlobalState(
@@ -58,8 +58,10 @@ def recursive_parser(url: str = None, sld: bool = False):
         UncommentNode('remove comments', cs='#')
         | TrimNode('trim all whitespaces')
         | LineNode('add line number')
+        | EmptyLineNode('filter out empty line')
         | TokenizeNode('tokenize lines')
-        | [
+        |
+        [
             ValidateRecordsNode('get_recs'),
             ValidateVariablesNode('get_vars'),
             OutlierNode('outliers'),

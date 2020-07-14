@@ -94,6 +94,19 @@ class LineNode(Node):
         self.global_state.lines = 0
 
 
+class EmptyLineNode(Node):
+    """ Filters out empty strings """
+
+    @yell
+    def process(self, item):
+        string, _ = item
+
+        # if not empty/blank
+        # then push it downstream
+        if not re.match(r"^\s*$", string):
+            self._push(item)
+
+
 class TokenizeNode(Node):
     """ Tokenize the given string and returns an Input. """
 
@@ -101,14 +114,13 @@ class TokenizeNode(Node):
     def process(self, item: str):
         string, line = item
 
-        # filter out empty string
-        if not re.match(r"^\s*$", string):
-            # split comma separated strings and key=value pairs
-            tokens = re.split('[,=]', string)
-            # create a new Input
-            input_ = Input(tokens, len(tokens), line)
+        # split comma separated strings and key=value pairs
+        # (records: , | variables: = | extensions: ;)
+        tokens = [token for token in re.split('[;,=]', string) if token]
+        # create a new Input
+        input_ = Input(tokens, len(tokens), line)
 
-            self._push(input_)
+        self._push(input_)
 
 
 class DuplicateNode(Node):
@@ -212,7 +224,7 @@ class ValidateRecordsNode(Node):
 
         tokens, num_tokens, line = item
 
-        domain, publisher_id, relationship, *cid = tokens
+        domain, publisher_id, relationship, *extra = tokens
 
         # validate relationship
         faults = check_in_set(
@@ -225,7 +237,12 @@ class ValidateRecordsNode(Node):
         faults = check_domain(domain, faults=faults)
 
         # if any Certification ID
-        certification_id = cid[0] if cid else None
+        # first "extra" field must be the Certification ID
+        certification_id = extra[0] if extra else None
+
+        # if any extension fields
+        # after Certification ID: should be extensions
+        extensions = extra[1:] if extra else []
 
         record = Record(
             line=line,
@@ -233,6 +250,7 @@ class ValidateRecordsNode(Node):
             publisher_id=publisher_id,
             relationship=relationship,
             certification_id=certification_id,
+            extensions=extensions,
             num_faults=len(faults),
             faults=faults,
             duplicated=False,
