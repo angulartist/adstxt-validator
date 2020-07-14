@@ -13,12 +13,13 @@ import typedload
 from consecution import Pipeline, GlobalState
 
 from lib.nodes import ToRecordsNode, ToVariablesNode, UncommentNode, TokenizeNode, OrchestrateNode, AggregateNode, \
-    TrimNode
+    TrimNode, LineNode
 
 # node shared state
 global_state = GlobalState(
     results=[],
-    next_locations=[]
+    next_locations=[],
+    lines=0
 )
 
 
@@ -56,6 +57,7 @@ def recursive_parser(url: str = None, sld: bool = False):
     pipe = Pipeline(
         UncommentNode('remove comments', cs='#')
         | TrimNode('trim all whitespaces')
+        | LineNode('add line number')
         | TokenizeNode('tokenize lines')
         | OrchestrateNode('orchestrate types')
         | [ToRecordsNode('get records'), ToVariablesNode('get variables')]

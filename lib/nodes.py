@@ -52,11 +52,25 @@ class UncommentNode(Node):
         self._push(cleaned)
 
 
+class LineNode(Node):
+    def process(self, item: str):
+        line = self.global_state.lines
+
+        self._push((item, line))
+
+        self.global_state.lines += 1
+
+    def end(self):
+        self.global_state.lines = 0
+
+
 class TokenizeNode(Node):
     def process(self, item: str):
-        if not re.match(r'^\s*$', item):
-            tokens = re.split(',|=', item)
-            input_ = Input(tokens, len(tokens), 0)
+        string, line = item
+
+        if not re.match(r'^\s*$', string):
+            tokens = re.split(',|=', string)
+            input_ = Input(tokens, len(tokens), line)
 
             self._push(input_)
 
