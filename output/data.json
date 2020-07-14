@@ -1,36 +1,6 @@
 [
   {
     "source": "bfmtv.com",
-    "vars": [
-      {
-        "line": 243,
-        "key": "subdomain",
-        "value": "bfmbusiness.bfmtv.com",
-        "num_faults": 0,
-        "faults": []
-      },
-      {
-        "line": 244,
-        "key": "subdomain",
-        "value": "dirigeants.bfmtv.com",
-        "num_faults": 0,
-        "faults": []
-      },
-      {
-        "line": 245,
-        "key": "subdomain",
-        "value": "rmc.bfmtv.com",
-        "num_faults": 0,
-        "faults": []
-      },
-      {
-        "line": 246,
-        "key": "subdomain",
-        "value": "rmcsport.bfmtv.com",
-        "num_faults": 0,
-        "faults": []
-      }
-    ],
     "recs": [
       {
         "line": 0,
@@ -1338,7 +1308,7 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Freewheel.tv",
             "hint": "freewheel.tv"
           }
         ]
@@ -1965,7 +1935,7 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Sekindo.com",
             "hint": "sekindo.com"
           }
         ]
@@ -2232,7 +2202,37 @@
         "faults": []
       }
     ],
-    "sub_level_domain": true
+    "sub_level_domain": true,
+    "vars": [
+      {
+        "line": 243,
+        "key": "subdomain",
+        "value": "bfmbusiness.bfmtv.com",
+        "num_faults": 0,
+        "faults": []
+      },
+      {
+        "line": 244,
+        "key": "subdomain",
+        "value": "dirigeants.bfmtv.com",
+        "num_faults": 0,
+        "faults": []
+      },
+      {
+        "line": 245,
+        "key": "subdomain",
+        "value": "rmc.bfmtv.com",
+        "num_faults": 0,
+        "faults": []
+      },
+      {
+        "line": 246,
+        "key": "subdomain",
+        "value": "rmcsport.bfmtv.com",
+        "num_faults": 0,
+        "faults": []
+      }
+    ]
   },
   {
     "source": "dirigeants.bfmtv.com",
@@ -2517,7 +2517,7 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Freewheel.tv",
             "hint": "freewheel.tv"
           }
         ]
@@ -2982,7 +2982,7 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Sekindo.com",
             "hint": "sekindo.com"
           }
         ]
@@ -3282,7 +3282,7 @@
         "faults": []
       },
       {
-        "line": 12,
+        "line": 11,
         "domain": "appnexus.com",
         "publisher_id": "1851",
         "relationship": "RESELLER",
@@ -3291,7 +3291,7 @@
         "faults": []
       },
       {
-        "line": 14,
+        "line": 12,
         "domain": "appnexus.com",
         "publisher_id": "2579",
         "relationship": "DIRECT",
@@ -3300,7 +3300,7 @@
         "faults": []
       },
       {
-        "line": 16,
+        "line": 13,
         "domain": "appnexus.com",
         "publisher_id": "3500",
         "relationship": "RESELLER",
@@ -3309,7 +3309,7 @@
         "faults": []
       },
       {
-        "line": 18,
+        "line": 14,
         "domain": "appnexus.com",
         "publisher_id": "3528",
         "relationship": "RESELLER",
@@ -3318,7 +3318,7 @@
         "faults": []
       },
       {
-        "line": 20,
+        "line": 15,
         "domain": "appnexus.com",
         "publisher_id": "3538",
         "relationship": "RESELLER",
@@ -3327,7 +3327,7 @@
         "faults": []
       },
       {
-        "line": 22,
+        "line": 16,
         "domain": "appnexus.com",
         "publisher_id": "3539",
         "relationship": "RESELLER",
@@ -3336,7 +3336,7 @@
         "faults": []
       },
       {
-        "line": 24,
+        "line": 17,
         "domain": "appnexus.com",
         "publisher_id": "3540",
         "relationship": "RESELLER",
@@ -3345,7 +3345,7 @@
         "faults": []
       },
       {
-        "line": 26,
+        "line": 18,
         "domain": "appnexus.com",
         "publisher_id": "3703",
         "relationship": "DIRECT",
@@ -3354,7 +3354,7 @@
         "faults": []
       },
       {
-        "line": 28,
+        "line": 19,
         "domain": "appnexus.com",
         "publisher_id": "3703",
         "relationship": "RESELLER",
@@ -3363,7 +3363,7 @@
         "faults": []
       },
       {
-        "line": 30,
+        "line": 20,
         "domain": "appnexus.com",
         "publisher_id": "3741",
         "relationship": "RESELLER",
@@ -3372,7 +3372,7 @@
         "faults": []
       },
       {
-        "line": 32,
+        "line": 21,
         "domain": "appnexus.com",
         "publisher_id": "3927",
         "relationship": "RESELLER",
@@ -3381,7 +3381,7 @@
         "faults": []
       },
       {
-        "line": 34,
+        "line": 22,
         "domain": "appnexus.com",
         "publisher_id": "7597",
         "relationship": "RESELLER",
@@ -3390,7 +3390,7 @@
         "faults": []
       },
       {
-        "line": 36,
+        "line": 23,
         "domain": "appnexus.com",
         "publisher_id": "8494",
         "relationship": "RESELLER",
@@ -3399,7 +3399,7 @@
         "faults": []
       },
       {
-        "line": 38,
+        "line": 24,
         "domain": "appnexus.com",
         "publisher_id": "9242",
         "relationship": "RESELLER",
@@ -3408,7 +3408,7 @@
         "faults": []
       },
       {
-        "line": 40,
+        "line": 25,
         "domain": "aps.amazon.com",
         "publisher_id": "3403",
         "relationship": "DIRECT",
@@ -3417,7 +3417,7 @@
         "faults": []
       },
       {
-        "line": 42,
+        "line": 26,
         "domain": "contextweb.com",
         "publisher_id": "560288",
         "relationship": "DIRECT",
@@ -3426,7 +3426,7 @@
         "faults": []
       },
       {
-        "line": 44,
+        "line": 27,
         "domain": "contextweb.com",
         "publisher_id": "560288",
         "relationship": "RESELLER",
@@ -3435,7 +3435,7 @@
         "faults": []
       },
       {
-        "line": 46,
+        "line": 28,
         "domain": "contextweb.com",
         "publisher_id": "562145",
         "relationship": "RESELLER",
@@ -3444,7 +3444,7 @@
         "faults": []
       },
       {
-        "line": 48,
+        "line": 29,
         "domain": "districtm.io",
         "publisher_id": "101760",
         "relationship": "RESELLER",
@@ -3453,7 +3453,7 @@
         "faults": []
       },
       {
-        "line": 50,
+        "line": 30,
         "domain": "freewheel.tv",
         "publisher_id": "10002",
         "relationship": "DIRECT",
@@ -3462,7 +3462,7 @@
         "faults": []
       },
       {
-        "line": 52,
+        "line": 31,
         "domain": "freewheel.tv",
         "publisher_id": "1000353",
         "relationship": "DIRECT",
@@ -3471,7 +3471,7 @@
         "faults": []
       },
       {
-        "line": 54,
+        "line": 32,
         "domain": "freewheel.tv",
         "publisher_id": "1036625",
         "relationship": "DIRECT",
@@ -3480,7 +3480,7 @@
         "faults": []
       },
       {
-        "line": 56,
+        "line": 33,
         "domain": "freewheel.tv",
         "publisher_id": "1041073",
         "relationship": "DIRECT",
@@ -3489,7 +3489,7 @@
         "faults": []
       },
       {
-        "line": 59,
+        "line": 34,
         "domain": "freewheel.tv",
         "publisher_id": "1041089",
         "relationship": "RESELLER",
@@ -3498,7 +3498,7 @@
         "faults": []
       },
       {
-        "line": 61,
+        "line": 35,
         "domain": "freewheel.tv",
         "publisher_id": "1073089",
         "relationship": "RESELLER",
@@ -3507,7 +3507,7 @@
         "faults": []
       },
       {
-        "line": 63,
+        "line": 36,
         "domain": "freewheel.tv",
         "publisher_id": "1073105",
         "relationship": "RESELLER",
@@ -3516,7 +3516,7 @@
         "faults": []
       },
       {
-        "line": 64,
+        "line": 37,
         "domain": "freewheel.tv",
         "publisher_id": "1073121",
         "relationship": "RESELLER",
@@ -3525,7 +3525,7 @@
         "faults": []
       },
       {
-        "line": 68,
+        "line": 38,
         "domain": "freewheel.tv",
         "publisher_id": "1073137",
         "relationship": "RESELLER",
@@ -3534,7 +3534,7 @@
         "faults": []
       },
       {
-        "line": 70,
+        "line": 39,
         "domain": "freewheel.tv",
         "publisher_id": "1073153",
         "relationship": "RESELLER",
@@ -3543,7 +3543,7 @@
         "faults": []
       },
       {
-        "line": 72,
+        "line": 40,
         "domain": "freewheel.tv",
         "publisher_id": "1073169",
         "relationship": "RESELLER",
@@ -3552,7 +3552,7 @@
         "faults": []
       },
       {
-        "line": 79,
+        "line": 41,
         "domain": "freewheel.tv",
         "publisher_id": "1073185",
         "relationship": "RESELLER",
@@ -3561,7 +3561,7 @@
         "faults": []
       },
       {
-        "line": 82,
+        "line": 42,
         "domain": "freewheel.tv",
         "publisher_id": "1073201",
         "relationship": "RESELLER",
@@ -3570,7 +3570,7 @@
         "faults": []
       },
       {
-        "line": 84,
+        "line": 43,
         "domain": "freewheel.tv",
         "publisher_id": "1073217",
         "relationship": "RESELLER",
@@ -3579,7 +3579,7 @@
         "faults": []
       },
       {
-        "line": 86,
+        "line": 44,
         "domain": "freewheel.tv",
         "publisher_id": "1073233",
         "relationship": "RESELLER",
@@ -3588,7 +3588,7 @@
         "faults": []
       },
       {
-        "line": 89,
+        "line": 45,
         "domain": "freewheel.tv",
         "publisher_id": "122137",
         "relationship": "RESELLER",
@@ -3597,7 +3597,7 @@
         "faults": []
       },
       {
-        "line": 91,
+        "line": 46,
         "domain": "freewheel.tv",
         "publisher_id": "132089",
         "relationship": "DIRECT",
@@ -3606,7 +3606,7 @@
         "faults": []
       },
       {
-        "line": 93,
+        "line": 47,
         "domain": "freewheel.tv",
         "publisher_id": "132129",
         "relationship": "RESELLER",
@@ -3615,7 +3615,7 @@
         "faults": []
       },
       {
-        "line": 95,
+        "line": 48,
         "domain": "freewheel.tv",
         "publisher_id": "150353",
         "relationship": "DIRECT",
@@ -3624,7 +3624,7 @@
         "faults": []
       },
       {
-        "line": 97,
+        "line": 49,
         "domain": "freewheel.tv",
         "publisher_id": "150361",
         "relationship": "RESELLER",
@@ -3633,7 +3633,7 @@
         "faults": []
       },
       {
-        "line": 99,
+        "line": 50,
         "domain": "freewheel.tv",
         "publisher_id": "184985",
         "relationship": "DIRECT",
@@ -3642,7 +3642,7 @@
         "faults": []
       },
       {
-        "line": 104,
+        "line": 51,
         "domain": "freewheel.tv",
         "publisher_id": "184993",
         "relationship": "RESELLER",
@@ -3651,7 +3651,7 @@
         "faults": []
       },
       {
-        "line": 109,
+        "line": 52,
         "domain": "freewheel.tv",
         "publisher_id": "185001",
         "relationship": "RESELLER",
@@ -3660,7 +3660,7 @@
         "faults": []
       },
       {
-        "line": 112,
+        "line": 53,
         "domain": "freewheel.tv",
         "publisher_id": "185569",
         "relationship": "RESELLER",
@@ -3669,7 +3669,7 @@
         "faults": []
       },
       {
-        "line": 114,
+        "line": 54,
         "domain": "freewheel.tv",
         "publisher_id": "187401",
         "relationship": "DIRECT",
@@ -3678,7 +3678,7 @@
         "faults": []
       },
       {
-        "line": 124,
+        "line": 55,
         "domain": "freewheel.tv",
         "publisher_id": "187409",
         "relationship": "RESELLER",
@@ -3687,7 +3687,7 @@
         "faults": []
       },
       {
-        "line": 126,
+        "line": 56,
         "domain": "freewheel.tv",
         "publisher_id": "187417",
         "relationship": "RESELLER",
@@ -3696,7 +3696,7 @@
         "faults": []
       },
       {
-        "line": 130,
+        "line": 57,
         "domain": "freewheel.tv",
         "publisher_id": "187425",
         "relationship": "DIRECT",
@@ -3705,7 +3705,7 @@
         "faults": []
       },
       {
-        "line": 132,
+        "line": 58,
         "domain": "freewheel.tv",
         "publisher_id": "187433",
         "relationship": "RESELLER",
@@ -3714,7 +3714,7 @@
         "faults": []
       },
       {
-        "line": 138,
+        "line": 59,
         "domain": "freewheel.tv",
         "publisher_id": "187441",
         "relationship": "RESELLER",
@@ -3723,7 +3723,7 @@
         "faults": []
       },
       {
-        "line": 140,
+        "line": 60,
         "domain": "freewheel.tv",
         "publisher_id": "188769",
         "relationship": "DIRECT",
@@ -3732,7 +3732,7 @@
         "faults": []
       },
       {
-        "line": 141,
+        "line": 61,
         "domain": "freewheel.tv",
         "publisher_id": "188777",
         "relationship": "RESELLER",
@@ -3741,7 +3741,7 @@
         "faults": []
       },
       {
-        "line": 144,
+        "line": 62,
         "domain": "freewheel.tv",
         "publisher_id": "188785",
         "relationship": "RESELLER",
@@ -3750,7 +3750,7 @@
         "faults": []
       },
       {
-        "line": 146,
+        "line": 63,
         "domain": "freewheel.tv",
         "publisher_id": "188801",
         "relationship": "DIRECT",
@@ -3759,7 +3759,7 @@
         "faults": []
       },
       {
-        "line": 148,
+        "line": 64,
         "domain": "freewheel.tv",
         "publisher_id": "188809",
         "relationship": "RESELLER",
@@ -3768,7 +3768,7 @@
         "faults": []
       },
       {
-        "line": 151,
+        "line": 65,
         "domain": "freewheel.tv",
         "publisher_id": "188817",
         "relationship": "RESELLER",
@@ -3777,7 +3777,7 @@
         "faults": []
       },
       {
-        "line": 156,
+        "line": 66,
         "domain": "freewheel.tv",
         "publisher_id": "189081",
         "relationship": "DIRECT",
@@ -3786,7 +3786,7 @@
         "faults": []
       },
       {
-        "line": 159,
+        "line": 67,
         "domain": "freewheel.tv",
         "publisher_id": "189089",
         "relationship": "RESELLER",
@@ -3795,7 +3795,7 @@
         "faults": []
       },
       {
-        "line": 162,
+        "line": 68,
         "domain": "freewheel.tv",
         "publisher_id": "189097",
         "relationship": "RESELLER",
@@ -3804,7 +3804,7 @@
         "faults": []
       },
       {
-        "line": 173,
+        "line": 69,
         "domain": "freewheel.tv",
         "publisher_id": "203265",
         "relationship": "DIRECT",
@@ -3813,7 +3813,7 @@
         "faults": []
       },
       {
-        "line": 174,
+        "line": 70,
         "domain": "freewheel.tv",
         "publisher_id": "213562",
         "relationship": "RESELLER",
@@ -3822,7 +3822,7 @@
         "faults": []
       },
       {
-        "line": 177,
+        "line": 71,
         "domain": "freewheel.tv",
         "publisher_id": "213594",
         "relationship": "RESELLER",
@@ -3831,7 +3831,7 @@
         "faults": []
       },
       {
-        "line": 179,
+        "line": 72,
         "domain": "freewheel.tv",
         "publisher_id": "213626",
         "relationship": "RESELLER",
@@ -3840,7 +3840,7 @@
         "faults": []
       },
       {
-        "line": 181,
+        "line": 73,
         "domain": "freewheel.tv",
         "publisher_id": "213650",
         "relationship": "RESELLER",
@@ -3849,7 +3849,7 @@
         "faults": []
       },
       {
-        "line": 183,
+        "line": 74,
         "domain": "freewheel.tv",
         "publisher_id": "213674",
         "relationship": "RESELLER",
@@ -3858,7 +3858,7 @@
         "faults": []
       },
       {
-        "line": 185,
+        "line": 75,
         "domain": "freewheel.tv",
         "publisher_id": "213706",
         "relationship": "RESELLER",
@@ -3867,7 +3867,7 @@
         "faults": []
       },
       {
-        "line": 187,
+        "line": 76,
         "domain": "freewheel.tv",
         "publisher_id": "216314",
         "relationship": "DIRECT",
@@ -3876,7 +3876,7 @@
         "faults": []
       },
       {
-        "line": 190,
+        "line": 77,
         "domain": "freewheel.tv",
         "publisher_id": "216322",
         "relationship": "RESELLER",
@@ -3885,7 +3885,7 @@
         "faults": []
       },
       {
-        "line": 191,
+        "line": 78,
         "domain": "freewheel.tv",
         "publisher_id": "216330",
         "relationship": "RESELLER",
@@ -3894,7 +3894,7 @@
         "faults": []
       },
       {
-        "line": 197,
+        "line": 79,
         "domain": "freewheel.tv",
         "publisher_id": "216602",
         "relationship": "RESELLER",
@@ -3903,7 +3903,7 @@
         "faults": []
       },
       {
-        "line": 199,
+        "line": 80,
         "domain": "freewheel.tv",
         "publisher_id": "216618",
         "relationship": "RESELLER",
@@ -3912,7 +3912,7 @@
         "faults": []
       },
       {
-        "line": 201,
+        "line": 81,
         "domain": "freewheel.tv",
         "publisher_id": "220018",
         "relationship": "RESELLER",
@@ -3921,7 +3921,7 @@
         "faults": []
       },
       {
-        "line": 205,
+        "line": 82,
         "domain": "freewheel.tv",
         "publisher_id": "22289",
         "relationship": "RESELLER",
@@ -3930,7 +3930,7 @@
         "faults": []
       },
       {
-        "line": 207,
+        "line": 83,
         "domain": "freewheel.tv",
         "publisher_id": "22293",
         "relationship": "RESELLER",
@@ -3939,7 +3939,7 @@
         "faults": []
       },
       {
-        "line": 209,
+        "line": 84,
         "domain": "freewheel.tv",
         "publisher_id": "22297",
         "relationship": "RESELLER",
@@ -3948,7 +3948,7 @@
         "faults": []
       },
       {
-        "line": 211,
+        "line": 85,
         "domain": "freewheel.tv",
         "publisher_id": "22301",
         "relationship": "RESELLER",
@@ -3957,7 +3957,7 @@
         "faults": []
       },
       {
-        "line": 217,
+        "line": 86,
         "domain": "freewheel.tv",
         "publisher_id": "22305",
         "relationship": "RESELLER",
@@ -3966,7 +3966,7 @@
         "faults": []
       },
       {
-        "line": 222,
+        "line": 87,
         "domain": "freewheel.tv",
         "publisher_id": "225769",
         "relationship": "DIRECT",
@@ -3975,7 +3975,7 @@
         "faults": []
       },
       {
-        "line": 224,
+        "line": 88,
         "domain": "freewheel.tv",
         "publisher_id": "225777",
         "relationship": "RESELLER",
@@ -3984,7 +3984,7 @@
         "faults": []
       },
       {
-        "line": 226,
+        "line": 89,
         "domain": "freewheel.tv",
         "publisher_id": "227409",
         "relationship": "DIRECT",
@@ -3993,7 +3993,7 @@
         "faults": []
       },
       {
-        "line": 228,
+        "line": 90,
         "domain": "freewheel.tv",
         "publisher_id": "227417",
         "relationship": "RESELLER",
@@ -4002,7 +4002,7 @@
         "faults": []
       },
       {
-        "line": 230,
+        "line": 91,
         "domain": "freewheel.tv",
         "publisher_id": "227425",
         "relationship": "RESELLER",
@@ -4011,7 +4011,7 @@
         "faults": []
       },
       {
-        "line": 233,
+        "line": 92,
         "domain": "freewheel.tv",
         "publisher_id": "227441",
         "relationship": "RESELLER",
@@ -4020,7 +4020,7 @@
         "faults": []
       },
       {
-        "line": 237,
+        "line": 93,
         "domain": "freewheel.tv",
         "publisher_id": "227465",
         "relationship": "RESELLER",
@@ -4029,7 +4029,7 @@
         "faults": []
       },
       {
-        "line": 239,
+        "line": 94,
         "domain": "freewheel.tv",
         "publisher_id": "227489",
         "relationship": "RESELLER",
@@ -4038,7 +4038,7 @@
         "faults": []
       },
       {
-        "line": 242,
+        "line": 95,
         "domain": "freewheel.tv",
         "publisher_id": "227529",
         "relationship": "RESELLER",
@@ -4047,7 +4047,7 @@
         "faults": []
       },
       {
-        "line": 244,
+        "line": 96,
         "domain": "freewheel.tv",
         "publisher_id": "227553",
         "relationship": "RESELLER",
@@ -4056,7 +4056,7 @@
         "faults": []
       },
       {
-        "line": 246,
+        "line": 97,
         "domain": "freewheel.tv",
         "publisher_id": "231689",
         "relationship": "DIRECT",
@@ -4065,7 +4065,7 @@
         "faults": []
       },
       {
-        "line": 249,
+        "line": 98,
         "domain": "freewheel.tv",
         "publisher_id": "231697",
         "relationship": "RESELLER",
@@ -4074,7 +4074,7 @@
         "faults": []
       },
       {
-        "line": 251,
+        "line": 99,
         "domain": "freewheel.tv",
         "publisher_id": "231705",
         "relationship": "RESELLER",
@@ -4083,7 +4083,7 @@
         "faults": []
       },
       {
-        "line": 253,
+        "line": 100,
         "domain": "freewheel.tv",
         "publisher_id": "233409",
         "relationship": "RESELLER",
@@ -4092,7 +4092,7 @@
         "faults": []
       },
       {
-        "line": 257,
+        "line": 101,
         "domain": "freewheel.tv",
         "publisher_id": "234641",
         "relationship": "DIRECT",
@@ -4101,7 +4101,7 @@
         "faults": []
       },
       {
-        "line": 259,
+        "line": 102,
         "domain": "freewheel.tv",
         "publisher_id": "234649",
         "relationship": "DIRECT",
@@ -4110,7 +4110,7 @@
         "faults": []
       },
       {
-        "line": 260,
+        "line": 103,
         "domain": "freewheel.tv",
         "publisher_id": "234657",
         "relationship": "RESELLER",
@@ -4119,7 +4119,7 @@
         "faults": []
       },
       {
-        "line": 263,
+        "line": 104,
         "domain": "freewheel.tv",
         "publisher_id": "234665",
         "relationship": "RESELLER",
@@ -4128,7 +4128,7 @@
         "faults": []
       },
       {
-        "line": 267,
+        "line": 105,
         "domain": "freewheel.tv",
         "publisher_id": "234673",
         "relationship": "RESELLER",
@@ -4137,7 +4137,7 @@
         "faults": []
       },
       {
-        "line": 268,
+        "line": 106,
         "domain": "freewheel.tv",
         "publisher_id": "234681",
         "relationship": "RESELLER",
@@ -4146,7 +4146,7 @@
         "faults": []
       },
       {
-        "line": 271,
+        "line": 107,
         "domain": "freewheel.tv",
         "publisher_id": "258578",
         "relationship": "RESELLER",
@@ -4155,7 +4155,7 @@
         "faults": []
       },
       {
-        "line": 275,
+        "line": 108,
         "domain": "freewheel.tv",
         "publisher_id": "273986",
         "relationship": "DIRECT",
@@ -4164,7 +4164,7 @@
         "faults": []
       },
       {
-        "line": 277,
+        "line": 109,
         "domain": "freewheel.tv",
         "publisher_id": "274002",
         "relationship": "RESELLER",
@@ -4173,7 +4173,7 @@
         "faults": []
       },
       {
-        "line": 279,
+        "line": 110,
         "domain": "freewheel.tv",
         "publisher_id": "274018",
         "relationship": "RESELLER",
@@ -4182,7 +4182,7 @@
         "faults": []
       },
       {
-        "line": 283,
+        "line": 111,
         "domain": "freewheel.tv",
         "publisher_id": "274034",
         "relationship": "DIRECT",
@@ -4191,7 +4191,7 @@
         "faults": []
       },
       {
-        "line": 285,
+        "line": 112,
         "domain": "freewheel.tv",
         "publisher_id": "274050",
         "relationship": "RESELLER",
@@ -4200,7 +4200,7 @@
         "faults": []
       },
       {
-        "line": 289,
+        "line": 113,
         "domain": "freewheel.tv",
         "publisher_id": "274834",
         "relationship": "DIRECT",
@@ -4209,7 +4209,7 @@
         "faults": []
       },
       {
-        "line": 293,
+        "line": 114,
         "domain": "freewheel.tv",
         "publisher_id": "274850",
         "relationship": "RESELLER",
@@ -4218,7 +4218,7 @@
         "faults": []
       },
       {
-        "line": 295,
+        "line": 115,
         "domain": "freewheel.tv",
         "publisher_id": "274866",
         "relationship": "RESELLER",
@@ -4227,7 +4227,7 @@
         "faults": []
       },
       {
-        "line": 299,
+        "line": 116,
         "domain": "freewheel.tv",
         "publisher_id": "321761",
         "relationship": "DIRECT",
@@ -4236,7 +4236,7 @@
         "faults": []
       },
       {
-        "line": 302,
+        "line": 117,
         "domain": "freewheel.tv",
         "publisher_id": "321777",
         "relationship": "RESELLER",
@@ -4245,7 +4245,7 @@
         "faults": []
       },
       {
-        "line": 305,
+        "line": 118,
         "domain": "freewheel.tv",
         "publisher_id": "321793",
         "relationship": "RESELLER",
@@ -4254,7 +4254,7 @@
         "faults": []
       },
       {
-        "line": 307,
+        "line": 119,
         "domain": "freewheel.tv",
         "publisher_id": "379057",
         "relationship": "DIRECT",
@@ -4263,7 +4263,7 @@
         "faults": []
       },
       {
-        "line": 309,
+        "line": 120,
         "domain": "freewheel.tv",
         "publisher_id": "379073",
         "relationship": "RESELLER",
@@ -4272,7 +4272,7 @@
         "faults": []
       },
       {
-        "line": 320,
+        "line": 121,
         "domain": "freewheel.tv",
         "publisher_id": "38121",
         "relationship": "DIRECT",
@@ -4281,7 +4281,7 @@
         "faults": []
       },
       {
-        "line": 323,
+        "line": 122,
         "domain": "freewheel.tv",
         "publisher_id": "38129",
         "relationship": "RESELLER",
@@ -4290,7 +4290,7 @@
         "faults": []
       },
       {
-        "line": 326,
+        "line": 123,
         "domain": "freewheel.tv",
         "publisher_id": "38137",
         "relationship": "RESELLER",
@@ -4299,7 +4299,7 @@
         "faults": []
       },
       {
-        "line": 333,
+        "line": 124,
         "domain": "freewheel.tv",
         "publisher_id": "52425",
         "relationship": "RESELLER",
@@ -4308,7 +4308,7 @@
         "faults": []
       },
       {
-        "line": 335,
+        "line": 125,
         "domain": "freewheel.tv",
         "publisher_id": "52449",
         "relationship": "RESELLER",
@@ -4317,7 +4317,7 @@
         "faults": []
       },
       {
-        "line": 344,
+        "line": 126,
         "domain": "freewheel.tv",
         "publisher_id": "53113",
         "relationship": "RESELLER",
@@ -4326,7 +4326,7 @@
         "faults": []
       },
       {
-        "line": 346,
+        "line": 127,
         "domain": "freewheel.tv",
         "publisher_id": "53321",
         "relationship": "RESELLER",
@@ -4335,7 +4335,7 @@
         "faults": []
       },
       {
-        "line": 348,
+        "line": 128,
         "domain": "freewheel.tv",
         "publisher_id": "66905",
         "relationship": "RESELLER",
@@ -4344,7 +4344,7 @@
         "faults": []
       },
       {
-        "line": 352,
+        "line": 129,
         "domain": "freewheel.tv",
         "publisher_id": "67225",
         "relationship": "RESELLER",
@@ -4353,7 +4353,7 @@
         "faults": []
       },
       {
-        "line": 354,
+        "line": 130,
         "domain": "freewheel.tv",
         "publisher_id": "704914",
         "relationship": "DIRECT",
@@ -4362,7 +4362,7 @@
         "faults": []
       },
       {
-        "line": 356,
+        "line": 131,
         "domain": "freewheel.tv",
         "publisher_id": "708402",
         "relationship": "RESELLER",
@@ -4371,7 +4371,7 @@
         "faults": []
       },
       {
-        "line": 358,
+        "line": 132,
         "domain": "freewheel.tv",
         "publisher_id": "709586",
         "relationship": "RESELLER",
@@ -4380,7 +4380,7 @@
         "faults": []
       },
       {
-        "line": 362,
+        "line": 133,
         "domain": "freewheel.tv",
         "publisher_id": "709602",
         "relationship": "RESELLER",
@@ -4389,7 +4389,7 @@
         "faults": []
       },
       {
-        "line": 364,
+        "line": 134,
         "domain": "freewheel.tv",
         "publisher_id": "710210",
         "relationship": "DIRECT",
@@ -4398,7 +4398,7 @@
         "faults": []
       },
       {
-        "line": 368,
+        "line": 135,
         "domain": "freewheel.tv",
         "publisher_id": "710226",
         "relationship": "RESELLER",
@@ -4407,7 +4407,7 @@
         "faults": []
       },
       {
-        "line": 370,
+        "line": 136,
         "domain": "freewheel.tv",
         "publisher_id": "720722",
         "relationship": "DIRECT",
@@ -4416,7 +4416,7 @@
         "faults": []
       },
       {
-        "line": 372,
+        "line": 137,
         "domain": "freewheel.tv",
         "publisher_id": "720738",
         "relationship": "RESELLER",
@@ -4425,7 +4425,7 @@
         "faults": []
       },
       {
-        "line": 375,
+        "line": 138,
         "domain": "freewheel.tv",
         "publisher_id": "726594",
         "relationship": "DIRECT",
@@ -4434,7 +4434,7 @@
         "faults": []
       },
       {
-        "line": 379,
+        "line": 139,
         "domain": "freewheel.tv",
         "publisher_id": "726610",
         "relationship": "RESELLER",
@@ -4443,7 +4443,7 @@
         "faults": []
       },
       {
-        "line": 382,
+        "line": 140,
         "domain": "freewheel.tv",
         "publisher_id": "732290",
         "relationship": "DIRECT",
@@ -4452,7 +4452,7 @@
         "faults": []
       },
       {
-        "line": 384,
+        "line": 141,
         "domain": "freewheel.tv",
         "publisher_id": "732306",
         "relationship": "DIRECT",
@@ -4461,7 +4461,7 @@
         "faults": []
       },
       {
-        "line": 386,
+        "line": 142,
         "domain": "freewheel.tv",
         "publisher_id": "732322",
         "relationship": "RESELLER",
@@ -4470,7 +4470,7 @@
         "faults": []
       },
       {
-        "line": 389,
+        "line": 143,
         "domain": "freewheel.tv",
         "publisher_id": "732338",
         "relationship": "RESELLER",
@@ -4479,7 +4479,7 @@
         "faults": []
       },
       {
-        "line": 391,
+        "line": 144,
         "domain": "Freewheel.tv",
         "publisher_id": "741650",
         "relationship": "RESELLER",
@@ -4488,13 +4488,13 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Freewheel.tv",
             "hint": "freewheel.tv"
           }
         ]
       },
       {
-        "line": 392,
+        "line": 145,
         "domain": "freewheel.tv",
         "publisher_id": "785009",
         "relationship": "DIRECT",
@@ -4503,7 +4503,7 @@
         "faults": []
       },
       {
-        "line": 401,
+        "line": 146,
         "domain": "freewheel.tv",
         "publisher_id": "836497",
         "relationship": "DIRECT",
@@ -4512,7 +4512,7 @@
         "faults": []
       },
       {
-        "line": 406,
+        "line": 147,
         "domain": "freewheel.tv",
         "publisher_id": "836513",
         "relationship": "RESELLER",
@@ -4521,7 +4521,7 @@
         "faults": []
       },
       {
-        "line": 409,
+        "line": 148,
         "domain": "freewheel.tv",
         "publisher_id": "888689",
         "relationship": "DIRECT",
@@ -4530,7 +4530,7 @@
         "faults": []
       },
       {
-        "line": 421,
+        "line": 149,
         "domain": "freewheel.tv",
         "publisher_id": "888705",
         "relationship": "RESELLER",
@@ -4539,7 +4539,7 @@
         "faults": []
       },
       {
-        "line": 424,
+        "line": 150,
         "domain": "freewheel.tv",
         "publisher_id": "898353",
         "relationship": "DIRECT",
@@ -4548,7 +4548,7 @@
         "faults": []
       },
       {
-        "line": 426,
+        "line": 151,
         "domain": "freewheel.tv",
         "publisher_id": "908337",
         "relationship": "DIRECT",
@@ -4557,7 +4557,7 @@
         "faults": []
       },
       {
-        "line": 428,
+        "line": 152,
         "domain": "freewheel.tv",
         "publisher_id": "992465",
         "relationship": "RESELLER",
@@ -4566,7 +4566,7 @@
         "faults": []
       },
       {
-        "line": 433,
+        "line": 153,
         "domain": "freewheel.tv",
         "publisher_id": "992481",
         "relationship": "RESELLER",
@@ -4575,7 +4575,7 @@
         "faults": []
       },
       {
-        "line": 436,
+        "line": 154,
         "domain": "freewheel.tv",
         "publisher_id": "992497",
         "relationship": "RESELLER",
@@ -4584,7 +4584,7 @@
         "faults": []
       },
       {
-        "line": 438,
+        "line": 155,
         "domain": "freewheel.tv",
         "publisher_id": "992513",
         "relationship": "RESELLER",
@@ -4593,7 +4593,7 @@
         "faults": []
       },
       {
-        "line": 441,
+        "line": 156,
         "domain": "freewheel.tv",
         "publisher_id": "992529",
         "relationship": "RESELLER",
@@ -4602,7 +4602,7 @@
         "faults": []
       },
       {
-        "line": 443,
+        "line": 157,
         "domain": "freewheel.tv",
         "publisher_id": "992545",
         "relationship": "RESELLER",
@@ -4611,7 +4611,7 @@
         "faults": []
       },
       {
-        "line": 446,
+        "line": 158,
         "domain": "freewheel.tv",
         "publisher_id": "997745",
         "relationship": "DIRECT",
@@ -4620,7 +4620,7 @@
         "faults": []
       },
       {
-        "line": 448,
+        "line": 159,
         "domain": "freewheel.tv",
         "publisher_id": "997777",
         "relationship": "DIRECT",
@@ -4629,7 +4629,7 @@
         "faults": []
       },
       {
-        "line": 451,
+        "line": 160,
         "domain": "freewheel.tv",
         "publisher_id": "997809",
         "relationship": "DIRECT",
@@ -4638,7 +4638,7 @@
         "faults": []
       },
       {
-        "line": 453,
+        "line": 161,
         "domain": "freewheel.tv",
         "publisher_id": "997841",
         "relationship": "DIRECT",
@@ -4647,7 +4647,7 @@
         "faults": []
       },
       {
-        "line": 460,
+        "line": 162,
         "domain": "freewheel.tv",
         "publisher_id": "997873",
         "relationship": "DIRECT",
@@ -4656,7 +4656,7 @@
         "faults": []
       },
       {
-        "line": 462,
+        "line": 163,
         "domain": "freewheel.tv",
         "publisher_id": "997905",
         "relationship": "DIRECT",
@@ -4665,7 +4665,7 @@
         "faults": []
       },
       {
-        "line": 465,
+        "line": 164,
         "domain": "freewheel.tv",
         "publisher_id": "997937",
         "relationship": "DIRECT",
@@ -4674,7 +4674,7 @@
         "faults": []
       },
       {
-        "line": 467,
+        "line": 165,
         "domain": "google.com",
         "publisher_id": "pub-2236218997769327",
         "relationship": "DIRECT",
@@ -4683,7 +4683,7 @@
         "faults": []
       },
       {
-        "line": 470,
+        "line": 166,
         "domain": "google.com",
         "publisher_id": "pub-2366164365855963",
         "relationship": "RESELLER",
@@ -4692,7 +4692,7 @@
         "faults": []
       },
       {
-        "line": 473,
+        "line": 167,
         "domain": "google.com",
         "publisher_id": "pub-3057818873023700",
         "relationship": "RESELLER",
@@ -4701,7 +4701,7 @@
         "faults": []
       },
       {
-        "line": 480,
+        "line": 168,
         "domain": "google.com",
         "publisher_id": "pub-3282595691941563",
         "relationship": "DIRECT",
@@ -4710,7 +4710,7 @@
         "faults": []
       },
       {
-        "line": 483,
+        "line": 169,
         "domain": "google.com",
         "publisher_id": "pub-3391936129161967",
         "relationship": "RESELLER",
@@ -4719,7 +4719,7 @@
         "faults": []
       },
       {
-        "line": 485,
+        "line": 170,
         "domain": "google.com",
         "publisher_id": "pub-5603862283412750",
         "relationship": "DIRECT",
@@ -4728,7 +4728,7 @@
         "faults": []
       },
       {
-        "line": 486,
+        "line": 171,
         "domain": "google.com",
         "publisher_id": "pub-6228005252642587",
         "relationship": "RESELLER",
@@ -4737,7 +4737,7 @@
         "faults": []
       },
       {
-        "line": 489,
+        "line": 172,
         "domain": "google.com",
         "publisher_id": "pub-9485981123373313",
         "relationship": "RESELLER",
@@ -4746,7 +4746,7 @@
         "faults": []
       },
       {
-        "line": 491,
+        "line": 173,
         "domain": "gumgum.com",
         "publisher_id": "13244",
         "relationship": "DIRECT",
@@ -4755,7 +4755,7 @@
         "faults": []
       },
       {
-        "line": 493,
+        "line": 174,
         "domain": "hubvisor.io",
         "publisher_id": "01BYK28ENND8X5G8K0AJ2DPK4E",
         "relationship": "DIRECT",
@@ -4764,7 +4764,7 @@
         "faults": []
       },
       {
-        "line": 495,
+        "line": 175,
         "domain": "improvedigital.com",
         "publisher_id": "1005",
         "relationship": "RESELLER",
@@ -4773,7 +4773,7 @@
         "faults": []
       },
       {
-        "line": 497,
+        "line": 176,
         "domain": "improvedigital.com",
         "publisher_id": "1006",
         "relationship": "DIRECT",
@@ -4782,7 +4782,7 @@
         "faults": []
       },
       {
-        "line": 499,
+        "line": 177,
         "domain": "improvedigital.com",
         "publisher_id": "1067",
         "relationship": "RESELLER",
@@ -4791,7 +4791,7 @@
         "faults": []
       },
       {
-        "line": 502,
+        "line": 178,
         "domain": "improvedigital.com",
         "publisher_id": "1220",
         "relationship": "RESELLER",
@@ -4800,7 +4800,7 @@
         "faults": []
       },
       {
-        "line": 504,
+        "line": 179,
         "domain": "improvedigital.com",
         "publisher_id": "335",
         "relationship": "RESELLER",
@@ -4809,7 +4809,7 @@
         "faults": []
       },
       {
-        "line": 506,
+        "line": 180,
         "domain": "indexexchange.com",
         "publisher_id": "184665",
         "relationship": "RESELLER",
@@ -4818,7 +4818,7 @@
         "faults": []
       },
       {
-        "line": 512,
+        "line": 181,
         "domain": "indexexchange.com",
         "publisher_id": "186401",
         "relationship": "DIRECT",
@@ -4827,7 +4827,7 @@
         "faults": []
       },
       {
-        "line": 516,
+        "line": 182,
         "domain": "indexexchange.com",
         "publisher_id": "187149",
         "relationship": "RESELLER",
@@ -4836,7 +4836,7 @@
         "faults": []
       },
       {
-        "line": 518,
+        "line": 183,
         "domain": "indexexchange.com",
         "publisher_id": "188398",
         "relationship": "RESELLER",
@@ -4845,7 +4845,7 @@
         "faults": []
       },
       {
-        "line": 523,
+        "line": 184,
         "domain": "indexexchange.com",
         "publisher_id": "190856",
         "relationship": "RESELLER",
@@ -4854,7 +4854,7 @@
         "faults": []
       },
       {
-        "line": 526,
+        "line": 185,
         "domain": "indexexchange.com",
         "publisher_id": "192098",
         "relationship": "DIRECT",
@@ -4863,7 +4863,7 @@
         "faults": []
       },
       {
-        "line": 537,
+        "line": 186,
         "domain": "lkqd.net",
         "publisher_id": "450",
         "relationship": "RESELLER",
@@ -4872,7 +4872,7 @@
         "faults": []
       },
       {
-        "line": 539,
+        "line": 187,
         "domain": "loopme.com",
         "publisher_id": "5679",
         "relationship": "RESELLER",
@@ -4881,7 +4881,7 @@
         "faults": []
       },
       {
-        "line": 541,
+        "line": 188,
         "domain": "loopme.com",
         "publisher_id": "s-2411",
         "relationship": "RESELLER",
@@ -4890,7 +4890,7 @@
         "faults": []
       },
       {
-        "line": 545,
+        "line": 189,
         "domain": "openx.com",
         "publisher_id": "537149888",
         "relationship": "DIRECT",
@@ -4899,7 +4899,7 @@
         "faults": []
       },
       {
-        "line": 547,
+        "line": 190,
         "domain": "openx.com",
         "publisher_id": "537149888",
         "relationship": "RESELLER",
@@ -4908,7 +4908,7 @@
         "faults": []
       },
       {
-        "line": 549,
+        "line": 191,
         "domain": "openx.com",
         "publisher_id": "540393169",
         "relationship": "RESELLER",
@@ -4917,7 +4917,7 @@
         "faults": []
       },
       {
-        "line": 551,
+        "line": 192,
         "domain": "openx.com",
         "publisher_id": "540841669",
         "relationship": "DIRECT",
@@ -4926,7 +4926,7 @@
         "faults": []
       },
       {
-        "line": 553,
+        "line": 193,
         "domain": "outbrain.com",
         "publisher_id": "004bd6d31e0cf8d6e3a0100969d9e3fcd2",
         "relationship": "DIRECT",
@@ -4935,7 +4935,7 @@
         "faults": []
       },
       {
-        "line": 555,
+        "line": 194,
         "domain": "pubmatic.com",
         "publisher_id": "154037",
         "relationship": "RESELLER",
@@ -4944,7 +4944,7 @@
         "faults": []
       },
       {
-        "line": 557,
+        "line": 195,
         "domain": "pubmatic.com",
         "publisher_id": "156431",
         "relationship": "RESELLER",
@@ -4953,7 +4953,7 @@
         "faults": []
       },
       {
-        "line": 561,
+        "line": 196,
         "domain": "pubmatic.com",
         "publisher_id": "156439",
         "relationship": "RESELLER",
@@ -4962,7 +4962,7 @@
         "faults": []
       },
       {
-        "line": 563,
+        "line": 197,
         "domain": "pubmatic.com",
         "publisher_id": "158615",
         "relationship": "RESELLER",
@@ -4971,7 +4971,7 @@
         "faults": []
       },
       {
-        "line": 566,
+        "line": 198,
         "domain": "quantum-advertising.com",
         "publisher_id": "1778",
         "relationship": "DIRECT",
@@ -4980,7 +4980,7 @@
         "faults": []
       },
       {
-        "line": 568,
+        "line": 199,
         "domain": "quantum-advertising.com",
         "publisher_id": "6071",
         "relationship": "DIRECT",
@@ -4989,7 +4989,7 @@
         "faults": []
       },
       {
-        "line": 574,
+        "line": 202,
         "domain": "rubiconproject.com",
         "publisher_id": "10027",
         "relationship": "RESELLER",
@@ -4998,7 +4998,7 @@
         "faults": []
       },
       {
-        "line": 579,
+        "line": 204,
         "domain": "rubiconproject.com",
         "publisher_id": "12338",
         "relationship": "RESELLER",
@@ -5007,7 +5007,7 @@
         "faults": []
       },
       {
-        "line": 582,
+        "line": 206,
         "domain": "rubiconproject.com",
         "publisher_id": "14976",
         "relationship": "DIRECT",
@@ -5016,7 +5016,7 @@
         "faults": []
       },
       {
-        "line": 585,
+        "line": 208,
         "domain": "rubiconproject.com",
         "publisher_id": "16114",
         "relationship": "RESELLER",
@@ -5025,7 +5025,7 @@
         "faults": []
       },
       {
-        "line": 590,
+        "line": 210,
         "domain": "rubiconproject.com",
         "publisher_id": "16422",
         "relationship": "RESELLER",
@@ -5034,7 +5034,7 @@
         "faults": []
       },
       {
-        "line": 594,
+        "line": 212,
         "domain": "rubiconproject.com",
         "publisher_id": "17130",
         "relationship": "RESELLER",
@@ -5043,7 +5043,7 @@
         "faults": []
       },
       {
-        "line": 598,
+        "line": 214,
         "domain": "rubiconproject.com",
         "publisher_id": "17204",
         "relationship": "RESELLER",
@@ -5052,7 +5052,7 @@
         "faults": []
       },
       {
-        "line": 601,
+        "line": 216,
         "domain": "rubiconproject.com",
         "publisher_id": "19668",
         "relationship": "RESELLER",
@@ -5061,7 +5061,7 @@
         "faults": []
       },
       {
-        "line": 604,
+        "line": 218,
         "domain": "rubiconproject.com",
         "publisher_id": "20736",
         "relationship": "RESELLER",
@@ -5070,7 +5070,7 @@
         "faults": []
       },
       {
-        "line": 606,
+        "line": 220,
         "domain": "rubiconproject.com",
         "publisher_id": "208016",
         "relationship": "RESELLER",
@@ -5079,7 +5079,7 @@
         "faults": []
       },
       {
-        "line": 608,
+        "line": 222,
         "domain": "rubiconproject.com",
         "publisher_id": "211211",
         "relationship": "RESELLER",
@@ -5088,7 +5088,7 @@
         "faults": []
       },
       {
-        "line": 610,
+        "line": 224,
         "domain": "rubiconproject.com",
         "publisher_id": "9585",
         "relationship": "RESELLER",
@@ -5097,7 +5097,7 @@
         "faults": []
       },
       {
-        "line": 612,
+        "line": 226,
         "domain": "Sekindo.com",
         "publisher_id": "19712",
         "relationship": "DIRECT",
@@ -5106,13 +5106,13 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Sekindo.com",
             "hint": "sekindo.com"
           }
         ]
       },
       {
-        "line": 614,
+        "line": 228,
         "domain": "smartadserver.com",
         "publisher_id": "13",
         "relationship": "DIRECT",
@@ -5121,7 +5121,7 @@
         "faults": []
       },
       {
-        "line": 616,
+        "line": 230,
         "domain": "smartadserver.com",
         "publisher_id": "1338",
         "relationship": "RESELLER",
@@ -5130,7 +5130,7 @@
         "faults": []
       },
       {
-        "line": 619,
+        "line": 232,
         "domain": "smartadserver.com",
         "publisher_id": "1827",
         "relationship": "RESELLER",
@@ -5139,7 +5139,7 @@
         "faults": []
       },
       {
-        "line": 623,
+        "line": 234,
         "domain": "smartadserver.com",
         "publisher_id": "3063",
         "relationship": "DIRECT",
@@ -5148,7 +5148,7 @@
         "faults": []
       },
       {
-        "line": 625,
+        "line": 236,
         "domain": "smartadserver.com",
         "publisher_id": "3245",
         "relationship": "DIRECT",
@@ -5157,7 +5157,7 @@
         "faults": []
       },
       {
-        "line": 627,
+        "line": 238,
         "domain": "smartadserver.com",
         "publisher_id": "886",
         "relationship": "RESELLER",
@@ -5166,7 +5166,7 @@
         "faults": []
       },
       {
-        "line": 631,
+        "line": 240,
         "domain": "sovrn.com",
         "publisher_id": "257611",
         "relationship": "DIRECT",
@@ -5175,7 +5175,7 @@
         "faults": []
       },
       {
-        "line": 639,
+        "line": 242,
         "domain": "spotx.tv",
         "publisher_id": "142042",
         "relationship": "RESELLER",
@@ -5184,7 +5184,7 @@
         "faults": []
       },
       {
-        "line": 641,
+        "line": 244,
         "domain": "spotx.tv",
         "publisher_id": "228597",
         "relationship": "RESELLER",
@@ -5193,7 +5193,7 @@
         "faults": []
       },
       {
-        "line": 643,
+        "line": 246,
         "domain": "spotx.tv",
         "publisher_id": "230037",
         "relationship": "RESELLER",
@@ -5202,7 +5202,7 @@
         "faults": []
       },
       {
-        "line": 645,
+        "line": 248,
         "domain": "spotx.tv",
         "publisher_id": "238936",
         "relationship": "RESELLER",
@@ -5211,7 +5211,7 @@
         "faults": []
       },
       {
-        "line": 647,
+        "line": 250,
         "domain": "spotx.tv",
         "publisher_id": "241646",
         "relationship": "RESELLER",
@@ -5220,7 +5220,7 @@
         "faults": []
       },
       {
-        "line": 649,
+        "line": 252,
         "domain": "spotxchange.com",
         "publisher_id": "142042",
         "relationship": "RESELLER",
@@ -5229,7 +5229,7 @@
         "faults": []
       },
       {
-        "line": 651,
+        "line": 254,
         "domain": "spotxchange.com",
         "publisher_id": "225721",
         "relationship": "RESELLER",
@@ -5238,7 +5238,7 @@
         "faults": []
       },
       {
-        "line": 653,
+        "line": 256,
         "domain": "spotxchange.com",
         "publisher_id": "228597",
         "relationship": "RESELLER",
@@ -5247,7 +5247,7 @@
         "faults": []
       },
       {
-        "line": 657,
+        "line": 258,
         "domain": "spotxchange.com",
         "publisher_id": "230037",
         "relationship": "RESELLER",
@@ -5256,7 +5256,7 @@
         "faults": []
       },
       {
-        "line": 659,
+        "line": 260,
         "domain": "spotxchange.com",
         "publisher_id": "238936",
         "relationship": "RESELLER",
@@ -5265,7 +5265,7 @@
         "faults": []
       },
       {
-        "line": 661,
+        "line": 262,
         "domain": "spotxchange.com",
         "publisher_id": "241646",
         "relationship": "RESELLER",
@@ -5274,7 +5274,7 @@
         "faults": []
       },
       {
-        "line": 664,
+        "line": 264,
         "domain": "teads.tv",
         "publisher_id": "15429",
         "relationship": "RESELLER",
@@ -5283,7 +5283,7 @@
         "faults": []
       },
       {
-        "line": 666,
+        "line": 266,
         "domain": "teads.tv",
         "publisher_id": "2727",
         "relationship": "DIRECT",
@@ -5292,7 +5292,7 @@
         "faults": []
       },
       {
-        "line": 670,
+        "line": 268,
         "domain": "teads.tv",
         "publisher_id": "6053",
         "relationship": "DIRECT",
@@ -5301,7 +5301,7 @@
         "faults": []
       },
       {
-        "line": 672,
+        "line": 270,
         "domain": "teads.tv",
         "publisher_id": "9965",
         "relationship": "DIRECT",
@@ -5310,7 +5310,7 @@
         "faults": []
       },
       {
-        "line": 681,
+        "line": 272,
         "domain": "themediagrid.com",
         "publisher_id": "NB56PT",
         "relationship": "DIRECT",
@@ -5319,7 +5319,7 @@
         "faults": []
       },
       {
-        "line": 683,
+        "line": 274,
         "domain": "tremorhub.com",
         "publisher_id": "ewut4-b6zwq",
         "relationship": "RESELLER",
@@ -5328,7 +5328,7 @@
         "faults": []
       },
       {
-        "line": 687,
+        "line": 276,
         "domain": "tremorhub.com",
         "publisher_id": "q017o-78mlk",
         "relationship": "RESELLER",
@@ -5337,7 +5337,7 @@
         "faults": []
       },
       {
-        "line": 689,
+        "line": 278,
         "domain": "triplelift.com",
         "publisher_id": "3355",
         "relationship": "RESELLER",
@@ -5346,7 +5346,7 @@
         "faults": []
       },
       {
-        "line": 691,
+        "line": 280,
         "domain": "triplelift.com",
         "publisher_id": "7293",
         "relationship": "DIRECT",
@@ -5355,7 +5355,7 @@
         "faults": []
       },
       {
-        "line": 693,
+        "line": 282,
         "domain": "vidazoo.com",
         "publisher_id": "1773068026",
         "relationship": "RESELLER",
@@ -5364,7 +5364,7 @@
         "faults": []
       },
       {
-        "line": 696,
+        "line": 286,
         "domain": "xad.com",
         "publisher_id": "958",
         "relationship": "RESELLER",
@@ -5379,7 +5379,7 @@
     "source": "rmc.bfmtv.com",
     "recs": [
       {
-        "line": 57,
+        "line": 199,
         "domain": "adstanding.com",
         "publisher_id": "3179",
         "relationship": "DIRECT",
@@ -5388,7 +5388,7 @@
         "faults": []
       },
       {
-        "line": 64,
+        "line": 201,
         "domain": "adtech.com",
         "publisher_id": "1135.1",
         "relationship": "RESELLER",
@@ -5397,7 +5397,7 @@
         "faults": []
       },
       {
-        "line": 66,
+        "line": 202,
         "domain": "advertising.com",
         "publisher_id": "26154",
         "relationship": "RESELLER",
@@ -5406,7 +5406,7 @@
         "faults": []
       },
       {
-        "line": 68,
+        "line": 204,
         "domain": "advertising.com",
         "publisher_id": "28038",
         "relationship": "RESELLER",
@@ -5415,7 +5415,7 @@
         "faults": []
       },
       {
-        "line": 71,
+        "line": 206,
         "domain": "adyoulike.com",
         "publisher_id": "095b488441206fe2df327a0050e578a4",
         "relationship": "DIRECT",
@@ -5424,7 +5424,7 @@
         "faults": []
       },
       {
-        "line": 75,
+        "line": 208,
         "domain": "adyoulike.com",
         "publisher_id": "662483e9c6600a0e9e743273545577f2",
         "relationship": "RESELLER",
@@ -5433,7 +5433,7 @@
         "faults": []
       },
       {
-        "line": 77,
+        "line": 210,
         "domain": "adyoulike.com",
         "publisher_id": "ac29a43656efe7ec96ad4d1f42766f0b",
         "relationship": "RESELLER",
@@ -5442,7 +5442,7 @@
         "faults": []
       },
       {
-        "line": 79,
+        "line": 212,
         "domain": "aolcloud.net",
         "publisher_id": "1135.1",
         "relationship": "RESELLER",
@@ -5451,7 +5451,7 @@
         "faults": []
       },
       {
-        "line": 82,
+        "line": 214,
         "domain": "appnexus.com",
         "publisher_id": "1314",
         "relationship": "RESELLER",
@@ -5460,7 +5460,7 @@
         "faults": []
       },
       {
-        "line": 95,
+        "line": 216,
         "domain": "appnexus.com",
         "publisher_id": "1504",
         "relationship": "RESELLER",
@@ -5469,7 +5469,7 @@
         "faults": []
       },
       {
-        "line": 97,
+        "line": 218,
         "domain": "appnexus.com",
         "publisher_id": "1608",
         "relationship": "RESELLER",
@@ -5478,7 +5478,7 @@
         "faults": []
       },
       {
-        "line": 99,
+        "line": 220,
         "domain": "appnexus.com",
         "publisher_id": "1851",
         "relationship": "RESELLER",
@@ -5487,7 +5487,7 @@
         "faults": []
       },
       {
-        "line": 102,
+        "line": 222,
         "domain": "appnexus.com",
         "publisher_id": "2579",
         "relationship": "DIRECT",
@@ -5496,7 +5496,7 @@
         "faults": []
       },
       {
-        "line": 104,
+        "line": 224,
         "domain": "appnexus.com",
         "publisher_id": "3500",
         "relationship": "RESELLER",
@@ -5505,7 +5505,7 @@
         "faults": []
       },
       {
-        "line": 106,
+        "line": 226,
         "domain": "appnexus.com",
         "publisher_id": "3528",
         "relationship": "RESELLER",
@@ -5514,7 +5514,7 @@
         "faults": []
       },
       {
-        "line": 111,
+        "line": 228,
         "domain": "appnexus.com",
         "publisher_id": "3538",
         "relationship": "RESELLER",
@@ -5523,7 +5523,7 @@
         "faults": []
       },
       {
-        "line": 115,
+        "line": 230,
         "domain": "appnexus.com",
         "publisher_id": "3539",
         "relationship": "RESELLER",
@@ -5532,7 +5532,7 @@
         "faults": []
       },
       {
-        "line": 117,
+        "line": 232,
         "domain": "appnexus.com",
         "publisher_id": "3540",
         "relationship": "RESELLER",
@@ -5541,7 +5541,7 @@
         "faults": []
       },
       {
-        "line": 119,
+        "line": 234,
         "domain": "appnexus.com",
         "publisher_id": "3703",
         "relationship": "DIRECT",
@@ -5550,7 +5550,7 @@
         "faults": []
       },
       {
-        "line": 122,
+        "line": 236,
         "domain": "appnexus.com",
         "publisher_id": "3703",
         "relationship": "RESELLER",
@@ -5559,7 +5559,7 @@
         "faults": []
       },
       {
-        "line": 126,
+        "line": 238,
         "domain": "appnexus.com",
         "publisher_id": "3741",
         "relationship": "RESELLER",
@@ -5568,7 +5568,7 @@
         "faults": []
       },
       {
-        "line": 128,
+        "line": 240,
         "domain": "appnexus.com",
         "publisher_id": "3927",
         "relationship": "RESELLER",
@@ -5577,7 +5577,7 @@
         "faults": []
       },
       {
-        "line": 132,
+        "line": 242,
         "domain": "appnexus.com",
         "publisher_id": "7597",
         "relationship": "RESELLER",
@@ -5586,7 +5586,7 @@
         "faults": []
       },
       {
-        "line": 134,
+        "line": 244,
         "domain": "appnexus.com",
         "publisher_id": "8494",
         "relationship": "RESELLER",
@@ -5595,7 +5595,7 @@
         "faults": []
       },
       {
-        "line": 136,
+        "line": 246,
         "domain": "appnexus.com",
         "publisher_id": "9242",
         "relationship": "RESELLER",
@@ -5604,7 +5604,7 @@
         "faults": []
       },
       {
-        "line": 141,
+        "line": 248,
         "domain": "aps.amazon.com",
         "publisher_id": "3403",
         "relationship": "DIRECT",
@@ -5613,7 +5613,7 @@
         "faults": []
       },
       {
-        "line": 146,
+        "line": 250,
         "domain": "contextweb.com",
         "publisher_id": "560288",
         "relationship": "DIRECT",
@@ -5622,7 +5622,7 @@
         "faults": []
       },
       {
-        "line": 148,
+        "line": 252,
         "domain": "contextweb.com",
         "publisher_id": "560288",
         "relationship": "RESELLER",
@@ -5631,7 +5631,7 @@
         "faults": []
       },
       {
-        "line": 151,
+        "line": 254,
         "domain": "contextweb.com",
         "publisher_id": "562145",
         "relationship": "RESELLER",
@@ -5640,7 +5640,7 @@
         "faults": []
       },
       {
-        "line": 153,
+        "line": 256,
         "domain": "districtm.io",
         "publisher_id": "101760",
         "relationship": "RESELLER",
@@ -5649,7 +5649,7 @@
         "faults": []
       },
       {
-        "line": 156,
+        "line": 258,
         "domain": "freewheel.tv",
         "publisher_id": "10002",
         "relationship": "DIRECT",
@@ -5658,7 +5658,7 @@
         "faults": []
       },
       {
-        "line": 160,
+        "line": 260,
         "domain": "freewheel.tv",
         "publisher_id": "1000353",
         "relationship": "DIRECT",
@@ -5667,7 +5667,7 @@
         "faults": []
       },
       {
-        "line": 162,
+        "line": 262,
         "domain": "freewheel.tv",
         "publisher_id": "1036625",
         "relationship": "DIRECT",
@@ -5676,7 +5676,7 @@
         "faults": []
       },
       {
-        "line": 164,
+        "line": 264,
         "domain": "freewheel.tv",
         "publisher_id": "1041073",
         "relationship": "DIRECT",
@@ -5685,7 +5685,7 @@
         "faults": []
       },
       {
-        "line": 166,
+        "line": 266,
         "domain": "freewheel.tv",
         "publisher_id": "1041089",
         "relationship": "RESELLER",
@@ -5694,7 +5694,7 @@
         "faults": []
       },
       {
-        "line": 168,
+        "line": 268,
         "domain": "freewheel.tv",
         "publisher_id": "1073089",
         "relationship": "RESELLER",
@@ -5703,7 +5703,7 @@
         "faults": []
       },
       {
-        "line": 171,
+        "line": 270,
         "domain": "freewheel.tv",
         "publisher_id": "1073105",
         "relationship": "RESELLER",
@@ -5712,7 +5712,7 @@
         "faults": []
       },
       {
-        "line": 173,
+        "line": 272,
         "domain": "freewheel.tv",
         "publisher_id": "1073121",
         "relationship": "RESELLER",
@@ -5721,7 +5721,7 @@
         "faults": []
       },
       {
-        "line": 183,
+        "line": 274,
         "domain": "freewheel.tv",
         "publisher_id": "1073137",
         "relationship": "RESELLER",
@@ -5730,7 +5730,7 @@
         "faults": []
       },
       {
-        "line": 185,
+        "line": 276,
         "domain": "freewheel.tv",
         "publisher_id": "1073153",
         "relationship": "RESELLER",
@@ -5739,7 +5739,7 @@
         "faults": []
       },
       {
-        "line": 187,
+        "line": 278,
         "domain": "freewheel.tv",
         "publisher_id": "1073169",
         "relationship": "RESELLER",
@@ -5748,7 +5748,7 @@
         "faults": []
       },
       {
-        "line": 190,
+        "line": 280,
         "domain": "freewheel.tv",
         "publisher_id": "1073185",
         "relationship": "RESELLER",
@@ -5757,7 +5757,7 @@
         "faults": []
       },
       {
-        "line": 192,
+        "line": 282,
         "domain": "freewheel.tv",
         "publisher_id": "1073201",
         "relationship": "RESELLER",
@@ -5766,7 +5766,7 @@
         "faults": []
       },
       {
-        "line": 194,
+        "line": 284,
         "domain": "freewheel.tv",
         "publisher_id": "1073217",
         "relationship": "RESELLER",
@@ -5775,7 +5775,7 @@
         "faults": []
       },
       {
-        "line": 197,
+        "line": 1,
         "domain": "freewheel.tv",
         "publisher_id": "1073233",
         "relationship": "RESELLER",
@@ -5784,7 +5784,7 @@
         "faults": []
       },
       {
-        "line": 199,
+        "line": 3,
         "domain": "freewheel.tv",
         "publisher_id": "122137",
         "relationship": "RESELLER",
@@ -5793,7 +5793,7 @@
         "faults": []
       },
       {
-        "line": 201,
+        "line": 5,
         "domain": "freewheel.tv",
         "publisher_id": "132089",
         "relationship": "DIRECT",
@@ -5802,7 +5802,7 @@
         "faults": []
       },
       {
-        "line": 203,
+        "line": 7,
         "domain": "freewheel.tv",
         "publisher_id": "132129",
         "relationship": "RESELLER",
@@ -5811,7 +5811,7 @@
         "faults": []
       },
       {
-        "line": 205,
+        "line": 9,
         "domain": "freewheel.tv",
         "publisher_id": "150353",
         "relationship": "DIRECT",
@@ -5820,7 +5820,7 @@
         "faults": []
       },
       {
-        "line": 207,
+        "line": 11,
         "domain": "freewheel.tv",
         "publisher_id": "150361",
         "relationship": "RESELLER",
@@ -5829,7 +5829,7 @@
         "faults": []
       },
       {
-        "line": 213,
+        "line": 13,
         "domain": "freewheel.tv",
         "publisher_id": "184985",
         "relationship": "DIRECT",
@@ -5838,7 +5838,7 @@
         "faults": []
       },
       {
-        "line": 215,
+        "line": 15,
         "domain": "freewheel.tv",
         "publisher_id": "184993",
         "relationship": "RESELLER",
@@ -5847,7 +5847,7 @@
         "faults": []
       },
       {
-        "line": 217,
+        "line": 17,
         "domain": "freewheel.tv",
         "publisher_id": "185001",
         "relationship": "RESELLER",
@@ -5856,7 +5856,7 @@
         "faults": []
       },
       {
-        "line": 219,
+        "line": 19,
         "domain": "freewheel.tv",
         "publisher_id": "185569",
         "relationship": "RESELLER",
@@ -5865,7 +5865,7 @@
         "faults": []
       },
       {
-        "line": 222,
+        "line": 21,
         "domain": "freewheel.tv",
         "publisher_id": "187401",
         "relationship": "DIRECT",
@@ -5874,7 +5874,7 @@
         "faults": []
       },
       {
-        "line": 224,
+        "line": 22,
         "domain": "freewheel.tv",
         "publisher_id": "187409",
         "relationship": "RESELLER",
@@ -5883,7 +5883,7 @@
         "faults": []
       },
       {
-        "line": 226,
+        "line": 24,
         "domain": "freewheel.tv",
         "publisher_id": "187417",
         "relationship": "RESELLER",
@@ -5892,7 +5892,7 @@
         "faults": []
       },
       {
-        "line": 228,
+        "line": 26,
         "domain": "freewheel.tv",
         "publisher_id": "187425",
         "relationship": "DIRECT",
@@ -5901,7 +5901,7 @@
         "faults": []
       },
       {
-        "line": 230,
+        "line": 28,
         "domain": "freewheel.tv",
         "publisher_id": "187433",
         "relationship": "RESELLER",
@@ -5910,7 +5910,7 @@
         "faults": []
       },
       {
-        "line": 233,
+        "line": 30,
         "domain": "freewheel.tv",
         "publisher_id": "187441",
         "relationship": "RESELLER",
@@ -5919,7 +5919,7 @@
         "faults": []
       },
       {
-        "line": 235,
+        "line": 32,
         "domain": "freewheel.tv",
         "publisher_id": "188769",
         "relationship": "DIRECT",
@@ -5928,7 +5928,7 @@
         "faults": []
       },
       {
-        "line": 237,
+        "line": 34,
         "domain": "freewheel.tv",
         "publisher_id": "188777",
         "relationship": "RESELLER",
@@ -5937,7 +5937,7 @@
         "faults": []
       },
       {
-        "line": 239,
+        "line": 36,
         "domain": "freewheel.tv",
         "publisher_id": "188785",
         "relationship": "RESELLER",
@@ -5946,7 +5946,7 @@
         "faults": []
       },
       {
-        "line": 242,
+        "line": 38,
         "domain": "freewheel.tv",
         "publisher_id": "188801",
         "relationship": "DIRECT",
@@ -5955,7 +5955,7 @@
         "faults": []
       },
       {
-        "line": 247,
+        "line": 40,
         "domain": "freewheel.tv",
         "publisher_id": "188809",
         "relationship": "RESELLER",
@@ -5964,7 +5964,7 @@
         "faults": []
       },
       {
-        "line": 249,
+        "line": 42,
         "domain": "freewheel.tv",
         "publisher_id": "188817",
         "relationship": "RESELLER",
@@ -5973,7 +5973,7 @@
         "faults": []
       },
       {
-        "line": 253,
+        "line": 44,
         "domain": "freewheel.tv",
         "publisher_id": "189081",
         "relationship": "DIRECT",
@@ -5982,7 +5982,7 @@
         "faults": []
       },
       {
-        "line": 255,
+        "line": 46,
         "domain": "freewheel.tv",
         "publisher_id": "189089",
         "relationship": "RESELLER",
@@ -5991,7 +5991,7 @@
         "faults": []
       },
       {
-        "line": 257,
+        "line": 48,
         "domain": "freewheel.tv",
         "publisher_id": "189097",
         "relationship": "RESELLER",
@@ -6000,7 +6000,7 @@
         "faults": []
       },
       {
-        "line": 259,
+        "line": 50,
         "domain": "freewheel.tv",
         "publisher_id": "203265",
         "relationship": "DIRECT",
@@ -6009,7 +6009,7 @@
         "faults": []
       },
       {
-        "line": 265,
+        "line": 52,
         "domain": "freewheel.tv",
         "publisher_id": "213562",
         "relationship": "RESELLER",
@@ -6018,7 +6018,7 @@
         "faults": []
       },
       {
-        "line": 267,
+        "line": 54,
         "domain": "freewheel.tv",
         "publisher_id": "213594",
         "relationship": "RESELLER",
@@ -6027,7 +6027,7 @@
         "faults": []
       },
       {
-        "line": 273,
+        "line": 56,
         "domain": "freewheel.tv",
         "publisher_id": "213626",
         "relationship": "RESELLER",
@@ -6036,7 +6036,7 @@
         "faults": []
       },
       {
-        "line": 277,
+        "line": 59,
         "domain": "freewheel.tv",
         "publisher_id": "213650",
         "relationship": "RESELLER",
@@ -6045,7 +6045,7 @@
         "faults": []
       },
       {
-        "line": 279,
+        "line": 61,
         "domain": "freewheel.tv",
         "publisher_id": "213674",
         "relationship": "RESELLER",
@@ -6054,7 +6054,7 @@
         "faults": []
       },
       {
-        "line": 281,
+        "line": 63,
         "domain": "freewheel.tv",
         "publisher_id": "213706",
         "relationship": "RESELLER",
@@ -6063,7 +6063,7 @@
         "faults": []
       },
       {
-        "line": 287,
+        "line": 65,
         "domain": "freewheel.tv",
         "publisher_id": "216314",
         "relationship": "DIRECT",
@@ -6072,7 +6072,7 @@
         "faults": []
       },
       {
-        "line": 289,
+        "line": 67,
         "domain": "freewheel.tv",
         "publisher_id": "216322",
         "relationship": "RESELLER",
@@ -6081,7 +6081,7 @@
         "faults": []
       },
       {
-        "line": 291,
+        "line": 69,
         "domain": "freewheel.tv",
         "publisher_id": "216330",
         "relationship": "RESELLER",
@@ -6090,7 +6090,7 @@
         "faults": []
       },
       {
-        "line": 293,
+        "line": 71,
         "domain": "freewheel.tv",
         "publisher_id": "216602",
         "relationship": "RESELLER",
@@ -6099,7 +6099,7 @@
         "faults": []
       },
       {
-        "line": 295,
+        "line": 73,
         "domain": "freewheel.tv",
         "publisher_id": "216618",
         "relationship": "RESELLER",
@@ -6108,7 +6108,7 @@
         "faults": []
       },
       {
-        "line": 298,
+        "line": 75,
         "domain": "freewheel.tv",
         "publisher_id": "220018",
         "relationship": "RESELLER",
@@ -6117,7 +6117,7 @@
         "faults": []
       },
       {
-        "line": 299,
+        "line": 77,
         "domain": "freewheel.tv",
         "publisher_id": "22289",
         "relationship": "RESELLER",
@@ -6126,7 +6126,7 @@
         "faults": []
       },
       {
-        "line": 302,
+        "line": 79,
         "domain": "freewheel.tv",
         "publisher_id": "22293",
         "relationship": "RESELLER",
@@ -6135,7 +6135,7 @@
         "faults": []
       },
       {
-        "line": 309,
+        "line": 81,
         "domain": "freewheel.tv",
         "publisher_id": "22297",
         "relationship": "RESELLER",
@@ -6144,7 +6144,7 @@
         "faults": []
       },
       {
-        "line": 312,
+        "line": 83,
         "domain": "freewheel.tv",
         "publisher_id": "22301",
         "relationship": "RESELLER",
@@ -6153,7 +6153,7 @@
         "faults": []
       },
       {
-        "line": 314,
+        "line": 85,
         "domain": "freewheel.tv",
         "publisher_id": "22305",
         "relationship": "RESELLER",
@@ -6162,7 +6162,7 @@
         "faults": []
       },
       {
-        "line": 316,
+        "line": 87,
         "domain": "freewheel.tv",
         "publisher_id": "225769",
         "relationship": "DIRECT",
@@ -6171,7 +6171,7 @@
         "faults": []
       },
       {
-        "line": 318,
+        "line": 89,
         "domain": "freewheel.tv",
         "publisher_id": "225777",
         "relationship": "RESELLER",
@@ -6180,7 +6180,7 @@
         "faults": []
       },
       {
-        "line": 322,
+        "line": 91,
         "domain": "freewheel.tv",
         "publisher_id": "227409",
         "relationship": "DIRECT",
@@ -6189,7 +6189,7 @@
         "faults": []
       },
       {
-        "line": 326,
+        "line": 93,
         "domain": "freewheel.tv",
         "publisher_id": "227417",
         "relationship": "RESELLER",
@@ -6198,7 +6198,7 @@
         "faults": []
       },
       {
-        "line": 328,
+        "line": 95,
         "domain": "freewheel.tv",
         "publisher_id": "227425",
         "relationship": "RESELLER",
@@ -6207,7 +6207,7 @@
         "faults": []
       },
       {
-        "line": 331,
+        "line": 97,
         "domain": "freewheel.tv",
         "publisher_id": "227441",
         "relationship": "RESELLER",
@@ -6216,7 +6216,7 @@
         "faults": []
       },
       {
-        "line": 333,
+        "line": 99,
         "domain": "freewheel.tv",
         "publisher_id": "227465",
         "relationship": "RESELLER",
@@ -6225,7 +6225,7 @@
         "faults": []
       },
       {
-        "line": 335,
+        "line": 101,
         "domain": "freewheel.tv",
         "publisher_id": "227489",
         "relationship": "RESELLER",
@@ -6234,7 +6234,7 @@
         "faults": []
       },
       {
-        "line": 337,
+        "line": 103,
         "domain": "freewheel.tv",
         "publisher_id": "227529",
         "relationship": "RESELLER",
@@ -6243,7 +6243,7 @@
         "faults": []
       },
       {
-        "line": 339,
+        "line": 105,
         "domain": "freewheel.tv",
         "publisher_id": "227553",
         "relationship": "RESELLER",
@@ -6252,7 +6252,7 @@
         "faults": []
       },
       {
-        "line": 342,
+        "line": 107,
         "domain": "freewheel.tv",
         "publisher_id": "231689",
         "relationship": "DIRECT",
@@ -6261,7 +6261,7 @@
         "faults": []
       },
       {
-        "line": 344,
+        "line": 109,
         "domain": "freewheel.tv",
         "publisher_id": "231697",
         "relationship": "RESELLER",
@@ -6270,7 +6270,7 @@
         "faults": []
       },
       {
-        "line": 350,
+        "line": 111,
         "domain": "freewheel.tv",
         "publisher_id": "231705",
         "relationship": "RESELLER",
@@ -6279,7 +6279,7 @@
         "faults": []
       },
       {
-        "line": 358,
+        "line": 113,
         "domain": "freewheel.tv",
         "publisher_id": "233409",
         "relationship": "RESELLER",
@@ -6288,7 +6288,7 @@
         "faults": []
       },
       {
-        "line": 360,
+        "line": 115,
         "domain": "freewheel.tv",
         "publisher_id": "234641",
         "relationship": "DIRECT",
@@ -6297,7 +6297,7 @@
         "faults": []
       },
       {
-        "line": 364,
+        "line": 117,
         "domain": "freewheel.tv",
         "publisher_id": "234649",
         "relationship": "DIRECT",
@@ -6306,7 +6306,7 @@
         "faults": []
       },
       {
-        "line": 366,
+        "line": 119,
         "domain": "freewheel.tv",
         "publisher_id": "234657",
         "relationship": "RESELLER",
@@ -6315,7 +6315,7 @@
         "faults": []
       },
       {
-        "line": 368,
+        "line": 121,
         "domain": "freewheel.tv",
         "publisher_id": "234665",
         "relationship": "RESELLER",
@@ -6324,7 +6324,7 @@
         "faults": []
       },
       {
-        "line": 370,
+        "line": 122,
         "domain": "freewheel.tv",
         "publisher_id": "234673",
         "relationship": "RESELLER",
@@ -6333,7 +6333,7 @@
         "faults": []
       },
       {
-        "line": 372,
+        "line": 123,
         "domain": "freewheel.tv",
         "publisher_id": "234681",
         "relationship": "RESELLER",
@@ -6342,7 +6342,7 @@
         "faults": []
       },
       {
-        "line": 375,
+        "line": 124,
         "domain": "freewheel.tv",
         "publisher_id": "258578",
         "relationship": "RESELLER",
@@ -6351,7 +6351,7 @@
         "faults": []
       },
       {
-        "line": 377,
+        "line": 125,
         "domain": "freewheel.tv",
         "publisher_id": "273986",
         "relationship": "DIRECT",
@@ -6360,7 +6360,7 @@
         "faults": []
       },
       {
-        "line": 379,
+        "line": 126,
         "domain": "freewheel.tv",
         "publisher_id": "274002",
         "relationship": "RESELLER",
@@ -6369,7 +6369,7 @@
         "faults": []
       },
       {
-        "line": 382,
+        "line": 128,
         "domain": "freewheel.tv",
         "publisher_id": "274018",
         "relationship": "RESELLER",
@@ -6378,7 +6378,7 @@
         "faults": []
       },
       {
-        "line": 385,
+        "line": 130,
         "domain": "freewheel.tv",
         "publisher_id": "274034",
         "relationship": "DIRECT",
@@ -6387,7 +6387,7 @@
         "faults": []
       },
       {
-        "line": 389,
+        "line": 132,
         "domain": "freewheel.tv",
         "publisher_id": "274050",
         "relationship": "RESELLER",
@@ -6396,7 +6396,7 @@
         "faults": []
       },
       {
-        "line": 392,
+        "line": 134,
         "domain": "freewheel.tv",
         "publisher_id": "274834",
         "relationship": "DIRECT",
@@ -6405,7 +6405,7 @@
         "faults": []
       },
       {
-        "line": 393,
+        "line": 136,
         "domain": "freewheel.tv",
         "publisher_id": "274850",
         "relationship": "RESELLER",
@@ -6414,7 +6414,7 @@
         "faults": []
       },
       {
-        "line": 396,
+        "line": 138,
         "domain": "freewheel.tv",
         "publisher_id": "274866",
         "relationship": "RESELLER",
@@ -6423,7 +6423,7 @@
         "faults": []
       },
       {
-        "line": 398,
+        "line": 140,
         "domain": "freewheel.tv",
         "publisher_id": "321761",
         "relationship": "DIRECT",
@@ -6432,7 +6432,7 @@
         "faults": []
       },
       {
-        "line": 400,
+        "line": 142,
         "domain": "freewheel.tv",
         "publisher_id": "321777",
         "relationship": "RESELLER",
@@ -6441,7 +6441,7 @@
         "faults": []
       },
       {
-        "line": 404,
+        "line": 144,
         "domain": "freewheel.tv",
         "publisher_id": "321793",
         "relationship": "RESELLER",
@@ -6450,7 +6450,7 @@
         "faults": []
       },
       {
-        "line": 406,
+        "line": 146,
         "domain": "freewheel.tv",
         "publisher_id": "379057",
         "relationship": "DIRECT",
@@ -6459,7 +6459,7 @@
         "faults": []
       },
       {
-        "line": 409,
+        "line": 148,
         "domain": "freewheel.tv",
         "publisher_id": "379073",
         "relationship": "RESELLER",
@@ -6468,7 +6468,7 @@
         "faults": []
       },
       {
-        "line": 411,
+        "line": 150,
         "domain": "freewheel.tv",
         "publisher_id": "38121",
         "relationship": "DIRECT",
@@ -6477,7 +6477,7 @@
         "faults": []
       },
       {
-        "line": 413,
+        "line": 152,
         "domain": "freewheel.tv",
         "publisher_id": "38129",
         "relationship": "RESELLER",
@@ -6486,7 +6486,7 @@
         "faults": []
       },
       {
-        "line": 415,
+        "line": 154,
         "domain": "freewheel.tv",
         "publisher_id": "38137",
         "relationship": "RESELLER",
@@ -6495,7 +6495,7 @@
         "faults": []
       },
       {
-        "line": 418,
+        "line": 156,
         "domain": "freewheel.tv",
         "publisher_id": "52425",
         "relationship": "RESELLER",
@@ -6504,7 +6504,7 @@
         "faults": []
       },
       {
-        "line": 420,
+        "line": 158,
         "domain": "freewheel.tv",
         "publisher_id": "52449",
         "relationship": "RESELLER",
@@ -6513,7 +6513,7 @@
         "faults": []
       },
       {
-        "line": 421,
+        "line": 159,
         "domain": "freewheel.tv",
         "publisher_id": "53113",
         "relationship": "RESELLER",
@@ -6522,7 +6522,7 @@
         "faults": []
       },
       {
-        "line": 424,
+        "line": 161,
         "domain": "freewheel.tv",
         "publisher_id": "53321",
         "relationship": "RESELLER",
@@ -6531,7 +6531,7 @@
         "faults": []
       },
       {
-        "line": 426,
+        "line": 163,
         "domain": "freewheel.tv",
         "publisher_id": "66905",
         "relationship": "RESELLER",
@@ -6540,7 +6540,7 @@
         "faults": []
       },
       {
-        "line": 429,
+        "line": 165,
         "domain": "freewheel.tv",
         "publisher_id": "66937",
         "relationship": "RESELLER",
@@ -6549,7 +6549,7 @@
         "faults": []
       },
       {
-        "line": 433,
+        "line": 167,
         "domain": "freewheel.tv",
         "publisher_id": "704914",
         "relationship": "DIRECT",
@@ -6558,7 +6558,7 @@
         "faults": []
       },
       {
-        "line": 434,
+        "line": 169,
         "domain": "freewheel.tv",
         "publisher_id": "708402",
         "relationship": "RESELLER",
@@ -6567,7 +6567,7 @@
         "faults": []
       },
       {
-        "line": 440,
+        "line": 171,
         "domain": "freewheel.tv",
         "publisher_id": "709586",
         "relationship": "RESELLER",
@@ -6576,7 +6576,7 @@
         "faults": []
       },
       {
-        "line": 443,
+        "line": 173,
         "domain": "freewheel.tv",
         "publisher_id": "709602",
         "relationship": "RESELLER",
@@ -6585,7 +6585,7 @@
         "faults": []
       },
       {
-        "line": 449,
+        "line": 175,
         "domain": "freewheel.tv",
         "publisher_id": "710210",
         "relationship": "DIRECT",
@@ -6594,7 +6594,7 @@
         "faults": []
       },
       {
-        "line": 451,
+        "line": 177,
         "domain": "freewheel.tv",
         "publisher_id": "710226",
         "relationship": "RESELLER",
@@ -6603,7 +6603,7 @@
         "faults": []
       },
       {
-        "line": 453,
+        "line": 179,
         "domain": "freewheel.tv",
         "publisher_id": "720722",
         "relationship": "DIRECT",
@@ -6612,7 +6612,7 @@
         "faults": []
       },
       {
-        "line": 455,
+        "line": 181,
         "domain": "freewheel.tv",
         "publisher_id": "720738",
         "relationship": "RESELLER",
@@ -6621,7 +6621,7 @@
         "faults": []
       },
       {
-        "line": 457,
+        "line": 183,
         "domain": "freewheel.tv",
         "publisher_id": "726594",
         "relationship": "DIRECT",
@@ -6630,7 +6630,7 @@
         "faults": []
       },
       {
-        "line": 460,
+        "line": 185,
         "domain": "freewheel.tv",
         "publisher_id": "726610",
         "relationship": "RESELLER",
@@ -6639,7 +6639,7 @@
         "faults": []
       },
       {
-        "line": 463,
+        "line": 187,
         "domain": "freewheel.tv",
         "publisher_id": "732290",
         "relationship": "DIRECT",
@@ -6648,7 +6648,7 @@
         "faults": []
       },
       {
-        "line": 470,
+        "line": 189,
         "domain": "freewheel.tv",
         "publisher_id": "732306",
         "relationship": "DIRECT",
@@ -6657,7 +6657,7 @@
         "faults": []
       },
       {
-        "line": 473,
+        "line": 191,
         "domain": "freewheel.tv",
         "publisher_id": "732322",
         "relationship": "RESELLER",
@@ -6666,7 +6666,7 @@
         "faults": []
       },
       {
-        "line": 477,
+        "line": 193,
         "domain": "freewheel.tv",
         "publisher_id": "732338",
         "relationship": "RESELLER",
@@ -6675,7 +6675,7 @@
         "faults": []
       },
       {
-        "line": 479,
+        "line": 195,
         "domain": "Freewheel.tv",
         "publisher_id": "741650",
         "relationship": "RESELLER",
@@ -6684,13 +6684,13 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Freewheel.tv",
             "hint": "freewheel.tv"
           }
         ]
       },
       {
-        "line": 480,
+        "line": 197,
         "domain": "freewheel.tv",
         "publisher_id": "785009",
         "relationship": "DIRECT",
@@ -6699,7 +6699,7 @@
         "faults": []
       },
       {
-        "line": 486,
+        "line": 199,
         "domain": "freewheel.tv",
         "publisher_id": "836497",
         "relationship": "DIRECT",
@@ -6708,7 +6708,7 @@
         "faults": []
       },
       {
-        "line": 489,
+        "line": 201,
         "domain": "freewheel.tv",
         "publisher_id": "836513",
         "relationship": "RESELLER",
@@ -6717,7 +6717,7 @@
         "faults": []
       },
       {
-        "line": 502,
+        "line": 203,
         "domain": "freewheel.tv",
         "publisher_id": "888689",
         "relationship": "DIRECT",
@@ -6726,7 +6726,7 @@
         "faults": []
       },
       {
-        "line": 504,
+        "line": 205,
         "domain": "freewheel.tv",
         "publisher_id": "888705",
         "relationship": "RESELLER",
@@ -6735,7 +6735,7 @@
         "faults": []
       },
       {
-        "line": 508,
+        "line": 207,
         "domain": "freewheel.tv",
         "publisher_id": "898353",
         "relationship": "DIRECT",
@@ -6744,7 +6744,7 @@
         "faults": []
       },
       {
-        "line": 510,
+        "line": 209,
         "domain": "freewheel.tv",
         "publisher_id": "908337",
         "relationship": "DIRECT",
@@ -6753,7 +6753,7 @@
         "faults": []
       },
       {
-        "line": 512,
+        "line": 211,
         "domain": "freewheel.tv",
         "publisher_id": "992465",
         "relationship": "RESELLER",
@@ -6762,7 +6762,7 @@
         "faults": []
       },
       {
-        "line": 514,
+        "line": 213,
         "domain": "freewheel.tv",
         "publisher_id": "992481",
         "relationship": "RESELLER",
@@ -6771,7 +6771,7 @@
         "faults": []
       },
       {
-        "line": 520,
+        "line": 215,
         "domain": "freewheel.tv",
         "publisher_id": "992497",
         "relationship": "RESELLER",
@@ -6780,7 +6780,7 @@
         "faults": []
       },
       {
-        "line": 522,
+        "line": 217,
         "domain": "freewheel.tv",
         "publisher_id": "992513",
         "relationship": "RESELLER",
@@ -6789,7 +6789,7 @@
         "faults": []
       },
       {
-        "line": 523,
+        "line": 219,
         "domain": "freewheel.tv",
         "publisher_id": "992529",
         "relationship": "RESELLER",
@@ -6798,7 +6798,7 @@
         "faults": []
       },
       {
-        "line": 526,
+        "line": 221,
         "domain": "freewheel.tv",
         "publisher_id": "992545",
         "relationship": "RESELLER",
@@ -6807,7 +6807,7 @@
         "faults": []
       },
       {
-        "line": 528,
+        "line": 223,
         "domain": "freewheel.tv",
         "publisher_id": "997745",
         "relationship": "DIRECT",
@@ -6816,7 +6816,7 @@
         "faults": []
       },
       {
-        "line": 530,
+        "line": 225,
         "domain": "freewheel.tv",
         "publisher_id": "997777",
         "relationship": "DIRECT",
@@ -6825,7 +6825,7 @@
         "faults": []
       },
       {
-        "line": 532,
+        "line": 227,
         "domain": "freewheel.tv",
         "publisher_id": "997809",
         "relationship": "DIRECT",
@@ -6834,7 +6834,7 @@
         "faults": []
       },
       {
-        "line": 535,
+        "line": 229,
         "domain": "freewheel.tv",
         "publisher_id": "997841",
         "relationship": "DIRECT",
@@ -6843,7 +6843,7 @@
         "faults": []
       },
       {
-        "line": 539,
+        "line": 231,
         "domain": "freewheel.tv",
         "publisher_id": "997873",
         "relationship": "DIRECT",
@@ -6852,7 +6852,7 @@
         "faults": []
       },
       {
-        "line": 541,
+        "line": 233,
         "domain": "freewheel.tv",
         "publisher_id": "997905",
         "relationship": "DIRECT",
@@ -6861,7 +6861,7 @@
         "faults": []
       },
       {
-        "line": 545,
+        "line": 235,
         "domain": "freewheel.tv",
         "publisher_id": "997937",
         "relationship": "DIRECT",
@@ -6870,7 +6870,7 @@
         "faults": []
       },
       {
-        "line": 547,
+        "line": 237,
         "domain": "google.com",
         "publisher_id": "pub-2236218997769327",
         "relationship": "DIRECT",
@@ -6879,7 +6879,7 @@
         "faults": []
       },
       {
-        "line": 549,
+        "line": 239,
         "domain": "google.com",
         "publisher_id": "pub-2366164365855963",
         "relationship": "RESELLER",
@@ -6888,7 +6888,7 @@
         "faults": []
       },
       {
-        "line": 551,
+        "line": 241,
         "domain": "google.com",
         "publisher_id": "pub-3057818873023700",
         "relationship": "RESELLER",
@@ -6897,7 +6897,7 @@
         "faults": []
       },
       {
-        "line": 553,
+        "line": 243,
         "domain": "google.com",
         "publisher_id": "pub-3282595691941563",
         "relationship": "DIRECT",
@@ -6906,7 +6906,7 @@
         "faults": []
       },
       {
-        "line": 555,
+        "line": 245,
         "domain": "google.com",
         "publisher_id": "pub-3391936129161967",
         "relationship": "RESELLER",
@@ -6915,7 +6915,7 @@
         "faults": []
       },
       {
-        "line": 557,
+        "line": 247,
         "domain": "google.com",
         "publisher_id": "pub-5603862283412750",
         "relationship": "DIRECT",
@@ -6924,7 +6924,7 @@
         "faults": []
       },
       {
-        "line": 559,
+        "line": 250,
         "domain": "google.com",
         "publisher_id": "pub-6228005252642587",
         "relationship": "RESELLER",
@@ -6933,7 +6933,7 @@
         "faults": []
       },
       {
-        "line": 565,
+        "line": 252,
         "domain": "google.com",
         "publisher_id": "pub-9485981123373313",
         "relationship": "RESELLER",
@@ -6942,7 +6942,7 @@
         "faults": []
       },
       {
-        "line": 570,
+        "line": 254,
         "domain": "gumgum.com",
         "publisher_id": "13244",
         "relationship": "DIRECT",
@@ -6951,7 +6951,7 @@
         "faults": []
       },
       {
-        "line": 572,
+        "line": 256,
         "domain": "hubvisor.io",
         "publisher_id": "01BYK28ENND8X5G8K0AJ2DPK4E",
         "relationship": "DIRECT",
@@ -6960,7 +6960,7 @@
         "faults": []
       },
       {
-        "line": 574,
+        "line": 258,
         "domain": "improvedigital.com",
         "publisher_id": "1005",
         "relationship": "RESELLER",
@@ -6969,7 +6969,7 @@
         "faults": []
       },
       {
-        "line": 576,
+        "line": 260,
         "domain": "improvedigital.com",
         "publisher_id": "1006",
         "relationship": "DIRECT",
@@ -6978,7 +6978,7 @@
         "faults": []
       },
       {
-        "line": 581,
+        "line": 262,
         "domain": "improvedigital.com",
         "publisher_id": "1067",
         "relationship": "RESELLER",
@@ -6987,7 +6987,7 @@
         "faults": []
       },
       {
-        "line": 582,
+        "line": 264,
         "domain": "improvedigital.com",
         "publisher_id": "1220",
         "relationship": "RESELLER",
@@ -6996,7 +6996,7 @@
         "faults": []
       },
       {
-        "line": 586,
+        "line": 266,
         "domain": "improvedigital.com",
         "publisher_id": "335",
         "relationship": "RESELLER",
@@ -7005,7 +7005,7 @@
         "faults": []
       },
       {
-        "line": 589,
+        "line": 268,
         "domain": "indexexchange.com",
         "publisher_id": "184665",
         "relationship": "RESELLER",
@@ -7014,7 +7014,7 @@
         "faults": []
       },
       {
-        "line": 592,
+        "line": 270,
         "domain": "indexexchange.com",
         "publisher_id": "186401",
         "relationship": "DIRECT",
@@ -7023,7 +7023,7 @@
         "faults": []
       },
       {
-        "line": 594,
+        "line": 272,
         "domain": "indexexchange.com",
         "publisher_id": "187149",
         "relationship": "RESELLER",
@@ -7032,7 +7032,7 @@
         "faults": []
       },
       {
-        "line": 596,
+        "line": 274,
         "domain": "indexexchange.com",
         "publisher_id": "188398",
         "relationship": "RESELLER",
@@ -7041,7 +7041,7 @@
         "faults": []
       },
       {
-        "line": 601,
+        "line": 276,
         "domain": "indexexchange.com",
         "publisher_id": "190856",
         "relationship": "RESELLER",
@@ -7050,7 +7050,7 @@
         "faults": []
       },
       {
-        "line": 604,
+        "line": 277,
         "domain": "indexexchange.com",
         "publisher_id": "192098",
         "relationship": "DIRECT",
@@ -7059,7 +7059,7 @@
         "faults": []
       },
       {
-        "line": 608,
+        "line": 280,
         "domain": "lkqd.net",
         "publisher_id": "450",
         "relationship": "RESELLER",
@@ -7068,7 +7068,7 @@
         "faults": []
       },
       {
-        "line": 610,
+        "line": 282,
         "domain": "loopme.com",
         "publisher_id": "5679",
         "relationship": "RESELLER",
@@ -7077,7 +7077,7 @@
         "faults": []
       },
       {
-        "line": 621,
+        "line": 284,
         "domain": "loopme.com",
         "publisher_id": "s-2411",
         "relationship": "RESELLER",
@@ -7086,7 +7086,7 @@
         "faults": []
       },
       {
-        "line": 623,
+        "line": 285,
         "domain": "openx.com",
         "publisher_id": "537149888",
         "relationship": "DIRECT",
@@ -7095,7 +7095,7 @@
         "faults": []
       },
       {
-        "line": 625,
+        "line": 287,
         "domain": "openx.com",
         "publisher_id": "537149888",
         "relationship": "RESELLER",
@@ -7104,7 +7104,7 @@
         "faults": []
       },
       {
-        "line": 627,
+        "line": 289,
         "domain": "openx.com",
         "publisher_id": "540393169",
         "relationship": "RESELLER",
@@ -7113,7 +7113,7 @@
         "faults": []
       },
       {
-        "line": 629,
+        "line": 291,
         "domain": "openx.com",
         "publisher_id": "540841669",
         "relationship": "DIRECT",
@@ -7122,7 +7122,7 @@
         "faults": []
       },
       {
-        "line": 633,
+        "line": 293,
         "domain": "outbrain.com",
         "publisher_id": "005b761fa94321bf55071d16f4fc0e7c63",
         "relationship": "DIRECT",
@@ -7131,7 +7131,7 @@
         "faults": []
       },
       {
-        "line": 635,
+        "line": 295,
         "domain": "pubmatic.com",
         "publisher_id": "154037",
         "relationship": "RESELLER",
@@ -7140,7 +7140,7 @@
         "faults": []
       },
       {
-        "line": 637,
+        "line": 297,
         "domain": "pubmatic.com",
         "publisher_id": "156431",
         "relationship": "RESELLER",
@@ -7149,7 +7149,7 @@
         "faults": []
       },
       {
-        "line": 641,
+        "line": 299,
         "domain": "pubmatic.com",
         "publisher_id": "156439",
         "relationship": "RESELLER",
@@ -7158,7 +7158,7 @@
         "faults": []
       },
       {
-        "line": 643,
+        "line": 301,
         "domain": "pubmatic.com",
         "publisher_id": "158615",
         "relationship": "RESELLER",
@@ -7167,7 +7167,7 @@
         "faults": []
       },
       {
-        "line": 645,
+        "line": 303,
         "domain": "quantum-advertising.com",
         "publisher_id": "1778",
         "relationship": "DIRECT",
@@ -7176,7 +7176,7 @@
         "faults": []
       },
       {
-        "line": 649,
+        "line": 305,
         "domain": "quantum-advertising.com",
         "publisher_id": "6071",
         "relationship": "DIRECT",
@@ -7185,7 +7185,7 @@
         "faults": []
       },
       {
-        "line": 651,
+        "line": 307,
         "domain": "rubiconproject.com",
         "publisher_id": "10027",
         "relationship": "RESELLER",
@@ -7194,7 +7194,7 @@
         "faults": []
       },
       {
-        "line": 653,
+        "line": 309,
         "domain": "rubiconproject.com",
         "publisher_id": "12338",
         "relationship": "RESELLER",
@@ -7203,7 +7203,7 @@
         "faults": []
       },
       {
-        "line": 654,
+        "line": 311,
         "domain": "rubiconproject.com",
         "publisher_id": "14976",
         "relationship": "DIRECT",
@@ -7212,7 +7212,7 @@
         "faults": []
       },
       {
-        "line": 659,
+        "line": 313,
         "domain": "rubiconproject.com",
         "publisher_id": "16114",
         "relationship": "RESELLER",
@@ -7221,7 +7221,7 @@
         "faults": []
       },
       {
-        "line": 661,
+        "line": 315,
         "domain": "rubiconproject.com",
         "publisher_id": "16422",
         "relationship": "RESELLER",
@@ -7230,7 +7230,7 @@
         "faults": []
       },
       {
-        "line": 664,
+        "line": 317,
         "domain": "rubiconproject.com",
         "publisher_id": "17130",
         "relationship": "RESELLER",
@@ -7239,7 +7239,7 @@
         "faults": []
       },
       {
-        "line": 666,
+        "line": 319,
         "domain": "rubiconproject.com",
         "publisher_id": "17204",
         "relationship": "RESELLER",
@@ -7248,7 +7248,7 @@
         "faults": []
       },
       {
-        "line": 668,
+        "line": 321,
         "domain": "rubiconproject.com",
         "publisher_id": "19668",
         "relationship": "RESELLER",
@@ -7257,7 +7257,7 @@
         "faults": []
       },
       {
-        "line": 674,
+        "line": 323,
         "domain": "rubiconproject.com",
         "publisher_id": "20736",
         "relationship": "RESELLER",
@@ -7266,7 +7266,7 @@
         "faults": []
       },
       {
-        "line": 676,
+        "line": 326,
         "domain": "rubiconproject.com",
         "publisher_id": "208016",
         "relationship": "RESELLER",
@@ -7275,7 +7275,7 @@
         "faults": []
       },
       {
-        "line": 678,
+        "line": 328,
         "domain": "rubiconproject.com",
         "publisher_id": "211211",
         "relationship": "RESELLER",
@@ -7284,7 +7284,7 @@
         "faults": []
       },
       {
-        "line": 680,
+        "line": 330,
         "domain": "rubiconproject.com",
         "publisher_id": "9585",
         "relationship": "RESELLER",
@@ -7293,7 +7293,7 @@
         "faults": []
       },
       {
-        "line": 683,
+        "line": 332,
         "domain": "Sekindo.com",
         "publisher_id": "19712",
         "relationship": "DIRECT",
@@ -7302,13 +7302,13 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Sekindo.com",
             "hint": "sekindo.com"
           }
         ]
       },
       {
-        "line": 684,
+        "line": 334,
         "domain": "smartadserver.com",
         "publisher_id": "13",
         "relationship": "DIRECT",
@@ -7317,7 +7317,7 @@
         "faults": []
       },
       {
-        "line": 687,
+        "line": 336,
         "domain": "smartadserver.com",
         "publisher_id": "1338",
         "relationship": "RESELLER",
@@ -7326,7 +7326,7 @@
         "faults": []
       },
       {
-        "line": 689,
+        "line": 338,
         "domain": "smartadserver.com",
         "publisher_id": "1827",
         "relationship": "RESELLER",
@@ -7335,7 +7335,7 @@
         "faults": []
       },
       {
-        "line": 691,
+        "line": 340,
         "domain": "smartadserver.com",
         "publisher_id": "3063",
         "relationship": "DIRECT",
@@ -7344,7 +7344,7 @@
         "faults": []
       },
       {
-        "line": 693,
+        "line": 342,
         "domain": "smartadserver.com",
         "publisher_id": "3245",
         "relationship": "DIRECT",
@@ -7353,7 +7353,7 @@
         "faults": []
       },
       {
-        "line": 696,
+        "line": 344,
         "domain": "smartadserver.com",
         "publisher_id": "886",
         "relationship": "RESELLER",
@@ -7362,7 +7362,7 @@
         "faults": []
       },
       {
-        "line": 3,
+        "line": 345,
         "domain": "sovrn.com",
         "publisher_id": "257611",
         "relationship": "DIRECT",
@@ -7371,7 +7371,7 @@
         "faults": []
       },
       {
-        "line": 5,
+        "line": 347,
         "domain": "spotx.tv",
         "publisher_id": "142042",
         "relationship": "RESELLER",
@@ -7380,7 +7380,7 @@
         "faults": []
       },
       {
-        "line": 7,
+        "line": 349,
         "domain": "spotx.tv",
         "publisher_id": "228597",
         "relationship": "RESELLER",
@@ -7389,7 +7389,7 @@
         "faults": []
       },
       {
-        "line": 9,
+        "line": 351,
         "domain": "spotx.tv",
         "publisher_id": "230037",
         "relationship": "RESELLER",
@@ -7398,7 +7398,7 @@
         "faults": []
       },
       {
-        "line": 11,
+        "line": 353,
         "domain": "spotx.tv",
         "publisher_id": "238936",
         "relationship": "RESELLER",
@@ -7407,7 +7407,7 @@
         "faults": []
       },
       {
-        "line": 13,
+        "line": 355,
         "domain": "spotx.tv",
         "publisher_id": "241646",
         "relationship": "RESELLER",
@@ -7416,7 +7416,7 @@
         "faults": []
       },
       {
-        "line": 15,
+        "line": 358,
         "domain": "spotxchange.com",
         "publisher_id": "142042",
         "relationship": "RESELLER",
@@ -7425,7 +7425,7 @@
         "faults": []
       },
       {
-        "line": 17,
+        "line": 359,
         "domain": "spotxchange.com",
         "publisher_id": "225721",
         "relationship": "RESELLER",
@@ -7434,7 +7434,7 @@
         "faults": []
       },
       {
-        "line": 19,
+        "line": 361,
         "domain": "spotxchange.com",
         "publisher_id": "228597",
         "relationship": "RESELLER",
@@ -7443,7 +7443,7 @@
         "faults": []
       },
       {
-        "line": 21,
+        "line": 363,
         "domain": "spotxchange.com",
         "publisher_id": "230037",
         "relationship": "RESELLER",
@@ -7452,7 +7452,7 @@
         "faults": []
       },
       {
-        "line": 23,
+        "line": 365,
         "domain": "spotxchange.com",
         "publisher_id": "238936",
         "relationship": "RESELLER",
@@ -7461,7 +7461,7 @@
         "faults": []
       },
       {
-        "line": 25,
+        "line": 367,
         "domain": "spotxchange.com",
         "publisher_id": "241646",
         "relationship": "RESELLER",
@@ -7470,7 +7470,7 @@
         "faults": []
       },
       {
-        "line": 27,
+        "line": 369,
         "domain": "teads.tv",
         "publisher_id": "15429",
         "relationship": "RESELLER",
@@ -7479,7 +7479,7 @@
         "faults": []
       },
       {
-        "line": 29,
+        "line": 371,
         "domain": "teads.tv",
         "publisher_id": "2727",
         "relationship": "DIRECT",
@@ -7488,7 +7488,7 @@
         "faults": []
       },
       {
-        "line": 31,
+        "line": 373,
         "domain": "teads.tv",
         "publisher_id": "6053",
         "relationship": "DIRECT",
@@ -7497,7 +7497,7 @@
         "faults": []
       },
       {
-        "line": 33,
+        "line": 375,
         "domain": "teads.tv",
         "publisher_id": "9965",
         "relationship": "DIRECT",
@@ -7506,7 +7506,7 @@
         "faults": []
       },
       {
-        "line": 35,
+        "line": 377,
         "domain": "themediagrid.com",
         "publisher_id": "NB56PT",
         "relationship": "DIRECT",
@@ -7515,7 +7515,7 @@
         "faults": []
       },
       {
-        "line": 37,
+        "line": 379,
         "domain": "tremorhub.com",
         "publisher_id": "ewut4-b6zwq",
         "relationship": "RESELLER",
@@ -7524,7 +7524,7 @@
         "faults": []
       },
       {
-        "line": 39,
+        "line": 381,
         "domain": "tremorhub.com",
         "publisher_id": "q017o-78mlk",
         "relationship": "RESELLER",
@@ -7533,7 +7533,7 @@
         "faults": []
       },
       {
-        "line": 41,
+        "line": 383,
         "domain": "triplelift.com",
         "publisher_id": "3355",
         "relationship": "RESELLER",
@@ -7542,7 +7542,7 @@
         "faults": []
       },
       {
-        "line": 43,
+        "line": 385,
         "domain": "triplelift.com",
         "publisher_id": "7292",
         "relationship": "DIRECT",
@@ -7551,7 +7551,7 @@
         "faults": []
       },
       {
-        "line": 45,
+        "line": 387,
         "domain": "vidazoo.com",
         "publisher_id": "1773068026",
         "relationship": "RESELLER",
@@ -7560,7 +7560,7 @@
         "faults": []
       },
       {
-        "line": 47,
+        "line": 389,
         "domain": "xad.com",
         "publisher_id": "958",
         "relationship": "RESELLER",
@@ -7575,7 +7575,7 @@
     "source": "bfmbusiness.bfmtv.com",
     "recs": [
       {
-        "line": 10,
+        "line": 284,
         "domain": "adagio.io",
         "publisher_id": "1017",
         "relationship": "DIRECT",
@@ -7584,7 +7584,7 @@
         "faults": []
       },
       {
-        "line": 12,
+        "line": 286,
         "domain": "adform.com",
         "publisher_id": "183",
         "relationship": "RESELLER",
@@ -7593,7 +7593,7 @@
         "faults": []
       },
       {
-        "line": 14,
+        "line": 1,
         "domain": "adform.com",
         "publisher_id": "768",
         "relationship": "RESELLER",
@@ -7602,7 +7602,7 @@
         "faults": []
       },
       {
-        "line": 16,
+        "line": 3,
         "domain": "admixer.net",
         "publisher_id": "d2a81185-2f98-4a5d-82b0-746defebc581",
         "relationship": "DIRECT",
@@ -7611,7 +7611,7 @@
         "faults": []
       },
       {
-        "line": 18,
+        "line": 5,
         "domain": "adstanding.com",
         "publisher_id": "2613",
         "relationship": "direct",
@@ -7620,7 +7620,7 @@
         "faults": []
       },
       {
-        "line": 20,
+        "line": 7,
         "domain": "adtech.com",
         "publisher_id": "1135.1",
         "relationship": "RESELLER",
@@ -7629,7 +7629,7 @@
         "faults": []
       },
       {
-        "line": 22,
+        "line": 9,
         "domain": "adtech.com",
         "publisher_id": "11411",
         "relationship": "DIRECT",
@@ -7638,7 +7638,7 @@
         "faults": []
       },
       {
-        "line": 24,
+        "line": 11,
         "domain": "adtech.com",
         "publisher_id": "12069",
         "relationship": "RESELLER",
@@ -7647,7 +7647,7 @@
         "faults": []
       },
       {
-        "line": 26,
+        "line": 13,
         "domain": "adtech.com",
         "publisher_id": "1620",
         "relationship": "DIRECT",
@@ -7656,7 +7656,7 @@
         "faults": []
       },
       {
-        "line": 28,
+        "line": 15,
         "domain": "adtech.com",
         "publisher_id": "4922",
         "relationship": "DIRECT",
@@ -7665,7 +7665,7 @@
         "faults": []
       },
       {
-        "line": 30,
+        "line": 17,
         "domain": "advertising.com",
         "publisher_id": "26154",
         "relationship": "RESELLER",
@@ -7674,7 +7674,7 @@
         "faults": []
       },
       {
-        "line": 32,
+        "line": 19,
         "domain": "advertising.com",
         "publisher_id": "28038",
         "relationship": "RESELLER",
@@ -7683,7 +7683,7 @@
         "faults": []
       },
       {
-        "line": 34,
+        "line": 22,
         "domain": "adyoulike.com",
         "publisher_id": "095b488441206fe2df327a0050e578a4",
         "relationship": "DIRECT",
@@ -7692,7 +7692,7 @@
         "faults": []
       },
       {
-        "line": 36,
+        "line": 24,
         "domain": "adyoulike.com",
         "publisher_id": "4506651901d02d97be2bcfbefae279b8",
         "relationship": "DIRECT",
@@ -7701,7 +7701,7 @@
         "faults": []
       },
       {
-        "line": 38,
+        "line": 26,
         "domain": "adyoulike.com",
         "publisher_id": "4506651901d02d97be2bcfbefae279b8",
         "relationship": "RESELLER",
@@ -7710,7 +7710,7 @@
         "faults": []
       },
       {
-        "line": 40,
+        "line": 28,
         "domain": "adyoulike.com",
         "publisher_id": "662483e9c6600a0e9e743273545577f2",
         "relationship": "DIRECT",
@@ -7719,7 +7719,7 @@
         "faults": []
       },
       {
-        "line": 42,
+        "line": 30,
         "domain": "adyoulike.com",
         "publisher_id": "ac29a43656efe7ec96ad4d1f42766f0b",
         "relationship": "RESELLER",
@@ -7728,7 +7728,7 @@
         "faults": []
       },
       {
-        "line": 44,
+        "line": 32,
         "domain": "aolcloud.net",
         "publisher_id": "1135.1",
         "relationship": "RESELLER",
@@ -7737,7 +7737,7 @@
         "faults": []
       },
       {
-        "line": 46,
+        "line": 34,
         "domain": "appnexus.com",
         "publisher_id": "1226",
         "relationship": "RESELLER",
@@ -7746,7 +7746,7 @@
         "faults": []
       },
       {
-        "line": 48,
+        "line": 36,
         "domain": "appnexus.com",
         "publisher_id": "1314",
         "relationship": "RESELLER",
@@ -7755,7 +7755,7 @@
         "faults": []
       },
       {
-        "line": 50,
+        "line": 38,
         "domain": "appnexus.com",
         "publisher_id": "1356",
         "relationship": "RESELLER",
@@ -7764,7 +7764,7 @@
         "faults": []
       },
       {
-        "line": 52,
+        "line": 40,
         "domain": "appnexus.com",
         "publisher_id": "1360",
         "relationship": "RESELLER",
@@ -7773,7 +7773,7 @@
         "faults": []
       },
       {
-        "line": 54,
+        "line": 42,
         "domain": "appnexus.com",
         "publisher_id": "1608",
         "relationship": "RESELLER",
@@ -7782,7 +7782,7 @@
         "faults": []
       },
       {
-        "line": 57,
+        "line": 44,
         "domain": "appnexus.com",
         "publisher_id": "1851",
         "relationship": "RESELLER",
@@ -7791,7 +7791,7 @@
         "faults": []
       },
       {
-        "line": 59,
+        "line": 46,
         "domain": "appnexus.com",
         "publisher_id": "1908",
         "relationship": "RESELLER",
@@ -7800,7 +7800,7 @@
         "faults": []
       },
       {
-        "line": 61,
+        "line": 48,
         "domain": "appnexus.com",
         "publisher_id": "2579",
         "relationship": "DIRECT",
@@ -7809,7 +7809,7 @@
         "faults": []
       },
       {
-        "line": 63,
+        "line": 50,
         "domain": "appnexus.com",
         "publisher_id": "3153",
         "relationship": "RESELLER",
@@ -7818,7 +7818,7 @@
         "faults": []
       },
       {
-        "line": 68,
+        "line": 52,
         "domain": "appnexus.com",
         "publisher_id": "3500",
         "relationship": "RESELLER",
@@ -7827,7 +7827,7 @@
         "faults": []
       },
       {
-        "line": 72,
+        "line": 54,
         "domain": "appnexus.com",
         "publisher_id": "3528",
         "relationship": "RESELLER",
@@ -7836,7 +7836,7 @@
         "faults": []
       },
       {
-        "line": 75,
+        "line": 56,
         "domain": "appnexus.com",
         "publisher_id": "3538",
         "relationship": "RESELLER",
@@ -7845,7 +7845,7 @@
         "faults": []
       },
       {
-        "line": 77,
+        "line": 58,
         "domain": "appnexus.com",
         "publisher_id": "3539",
         "relationship": "RESELLER",
@@ -7854,7 +7854,7 @@
         "faults": []
       },
       {
-        "line": 79,
+        "line": 59,
         "domain": "appnexus.com",
         "publisher_id": "3540",
         "relationship": "RESELLER",
@@ -7863,7 +7863,7 @@
         "faults": []
       },
       {
-        "line": 82,
+        "line": 61,
         "domain": "appnexus.com",
         "publisher_id": "3623",
         "relationship": "RESELLER",
@@ -7872,7 +7872,7 @@
         "faults": []
       },
       {
-        "line": 84,
+        "line": 63,
         "domain": "appnexus.com",
         "publisher_id": "3703",
         "relationship": "DIRECT",
@@ -7881,7 +7881,7 @@
         "faults": []
       },
       {
-        "line": 86,
+        "line": 65,
         "domain": "appnexus.com",
         "publisher_id": "3703",
         "relationship": "RESELLER",
@@ -7890,7 +7890,7 @@
         "faults": []
       },
       {
-        "line": 89,
+        "line": 67,
         "domain": "appnexus.com",
         "publisher_id": "3741",
         "relationship": "RESELLER",
@@ -7899,7 +7899,7 @@
         "faults": []
       },
       {
-        "line": 91,
+        "line": 69,
         "domain": "appnexus.com",
         "publisher_id": "3927",
         "relationship": "RESELLER",
@@ -7908,7 +7908,7 @@
         "faults": []
       },
       {
-        "line": 93,
+        "line": 71,
         "domain": "appnexus.com",
         "publisher_id": "6925",
         "relationship": "DIRECT",
@@ -7917,7 +7917,7 @@
         "faults": []
       },
       {
-        "line": 100,
+        "line": 73,
         "domain": "appnexus.com",
         "publisher_id": "7118",
         "relationship": "RESELLER",
@@ -7926,7 +7926,7 @@
         "faults": []
       },
       {
-        "line": 102,
+        "line": 75,
         "domain": "appnexus.com",
         "publisher_id": "7597",
         "relationship": "RESELLER",
@@ -7935,7 +7935,7 @@
         "faults": []
       },
       {
-        "line": 104,
+        "line": 77,
         "domain": "appnexus.com",
         "publisher_id": "8494",
         "relationship": "RESELLER",
@@ -7944,7 +7944,7 @@
         "faults": []
       },
       {
-        "line": 106,
+        "line": 79,
         "domain": "appnexus.com",
         "publisher_id": "884",
         "relationship": "RESELLER",
@@ -7953,7 +7953,7 @@
         "faults": []
       },
       {
-        "line": 109,
+        "line": 81,
         "domain": "appnexus.com",
         "publisher_id": "9242",
         "relationship": "RESELLER",
@@ -7962,7 +7962,7 @@
         "faults": []
       },
       {
-        "line": 111,
+        "line": 83,
         "domain": "aps.amazon.com",
         "publisher_id": "3403",
         "relationship": "DIRECT",
@@ -7971,7 +7971,7 @@
         "faults": []
       },
       {
-        "line": 112,
+        "line": 85,
         "domain": "betweendigital.com",
         "publisher_id": "42589",
         "relationship": "DIRECT",
@@ -7980,7 +7980,7 @@
         "faults": []
       },
       {
-        "line": 115,
+        "line": 87,
         "domain": "connectad.io",
         "publisher_id": "73",
         "relationship": "DIRECT",
@@ -7989,7 +7989,7 @@
         "faults": []
       },
       {
-        "line": 117,
+        "line": 89,
         "domain": "contextweb.com",
         "publisher_id": "558299",
         "relationship": "RESELLER",
@@ -7998,7 +7998,7 @@
         "faults": []
       },
       {
-        "line": 119,
+        "line": 91,
         "domain": "contextweb.com",
         "publisher_id": "560288",
         "relationship": "DIRECT",
@@ -8007,7 +8007,7 @@
         "faults": []
       },
       {
-        "line": 122,
+        "line": 93,
         "domain": "contextweb.com",
         "publisher_id": "560288",
         "relationship": "RESELLER",
@@ -8016,7 +8016,7 @@
         "faults": []
       },
       {
-        "line": 124,
+        "line": 95,
         "domain": "contextweb.com",
         "publisher_id": "560489",
         "relationship": "RESELLER",
@@ -8025,7 +8025,7 @@
         "faults": []
       },
       {
-        "line": 128,
+        "line": 97,
         "domain": "contextweb.com",
         "publisher_id": "562145",
         "relationship": "RESELLER",
@@ -8034,7 +8034,7 @@
         "faults": []
       },
       {
-        "line": 130,
+        "line": 99,
         "domain": "coxmt.com",
         "publisher_id": "2000067907202",
         "relationship": "RESELLER",
@@ -8043,7 +8043,7 @@
         "faults": []
       },
       {
-        "line": 134,
+        "line": 101,
         "domain": "districtm.io",
         "publisher_id": "100334",
         "relationship": "DIRECT",
@@ -8052,7 +8052,7 @@
         "faults": []
       },
       {
-        "line": 136,
+        "line": 103,
         "domain": "districtm.io",
         "publisher_id": "100750",
         "relationship": "DIRECT",
@@ -8061,7 +8061,7 @@
         "faults": []
       },
       {
-        "line": 138,
+        "line": 105,
         "domain": "districtm.io",
         "publisher_id": "101760",
         "relationship": "RESELLER",
@@ -8070,7 +8070,7 @@
         "faults": []
       },
       {
-        "line": 140,
+        "line": 107,
         "domain": "EMXDGT.com",
         "publisher_id": "1246",
         "relationship": "RESELLER",
@@ -8079,13 +8079,13 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: EMXDGT.com",
             "hint": "emxdgt.com"
           }
         ]
       },
       {
-        "line": 144,
+        "line": 109,
         "domain": "e-planning.net",
         "publisher_id": "1822520af30cf0b5",
         "relationship": "DIRECT",
@@ -8094,7 +8094,7 @@
         "faults": []
       },
       {
-        "line": 149,
+        "line": 111,
         "domain": "e-planning.net",
         "publisher_id": "d1084ef6c4a31893",
         "relationship": "DIRECT",
@@ -8103,7 +8103,7 @@
         "faults": []
       },
       {
-        "line": 151,
+        "line": 113,
         "domain": "freewheel.tv",
         "publisher_id": "10002",
         "relationship": "DIRECT",
@@ -8112,7 +8112,7 @@
         "faults": []
       },
       {
-        "line": 153,
+        "line": 115,
         "domain": "freewheel.tv",
         "publisher_id": "10004",
         "relationship": "RESELLER",
@@ -8121,7 +8121,7 @@
         "faults": []
       },
       {
-        "line": 156,
+        "line": 117,
         "domain": "freewheel.tv",
         "publisher_id": "1043665",
         "relationship": "RESELLER",
@@ -8130,7 +8130,7 @@
         "faults": []
       },
       {
-        "line": 159,
+        "line": 119,
         "domain": "freewheel.tv",
         "publisher_id": "1043681",
         "relationship": "RESELLER",
@@ -8139,7 +8139,7 @@
         "faults": []
       },
       {
-        "line": 162,
+        "line": 126,
         "domain": "freewheel.tv",
         "publisher_id": "1043697",
         "relationship": "RESELLER",
@@ -8148,7 +8148,7 @@
         "faults": []
       },
       {
-        "line": 164,
+        "line": 128,
         "domain": "freewheel.tv",
         "publisher_id": "132089",
         "relationship": "DIRECT",
@@ -8157,7 +8157,7 @@
         "faults": []
       },
       {
-        "line": 166,
+        "line": 130,
         "domain": "freewheel.tv",
         "publisher_id": "132129",
         "relationship": "RESELLER",
@@ -8166,7 +8166,7 @@
         "faults": []
       },
       {
-        "line": 168,
+        "line": 132,
         "domain": "freewheel.tv",
         "publisher_id": "132137",
         "relationship": "RESELLER",
@@ -8175,7 +8175,7 @@
         "faults": []
       },
       {
-        "line": 171,
+        "line": 134,
         "domain": "freewheel.tv",
         "publisher_id": "150353",
         "relationship": "DIRECT",
@@ -8184,7 +8184,7 @@
         "faults": []
       },
       {
-        "line": 174,
+        "line": 136,
         "domain": "freewheel.tv",
         "publisher_id": "150361",
         "relationship": "RESELLER",
@@ -8193,7 +8193,7 @@
         "faults": []
       },
       {
-        "line": 177,
+        "line": 138,
         "domain": "freewheel.tv",
         "publisher_id": "150369",
         "relationship": "RESELLER",
@@ -8202,7 +8202,7 @@
         "faults": []
       },
       {
-        "line": 179,
+        "line": 140,
         "domain": "freewheel.tv",
         "publisher_id": "184985",
         "relationship": "DIRECT",
@@ -8211,7 +8211,7 @@
         "faults": []
       },
       {
-        "line": 181,
+        "line": 142,
         "domain": "freewheel.tv",
         "publisher_id": "184993",
         "relationship": "RESELLER",
@@ -8220,7 +8220,7 @@
         "faults": []
       },
       {
-        "line": 183,
+        "line": 144,
         "domain": "freewheel.tv",
         "publisher_id": "185001",
         "relationship": "RESELLER",
@@ -8229,7 +8229,7 @@
         "faults": []
       },
       {
-        "line": 191,
+        "line": 146,
         "domain": "freewheel.tv",
         "publisher_id": "187401",
         "relationship": "DIRECT",
@@ -8238,7 +8238,7 @@
         "faults": []
       },
       {
-        "line": 194,
+        "line": 148,
         "domain": "freewheel.tv",
         "publisher_id": "187409",
         "relationship": "RESELLER",
@@ -8247,7 +8247,7 @@
         "faults": []
       },
       {
-        "line": 203,
+        "line": 150,
         "domain": "freewheel.tv",
         "publisher_id": "187417",
         "relationship": "RESELLER",
@@ -8256,7 +8256,7 @@
         "faults": []
       },
       {
-        "line": 209,
+        "line": 152,
         "domain": "freewheel.tv",
         "publisher_id": "187425",
         "relationship": "DIRECT",
@@ -8265,7 +8265,7 @@
         "faults": []
       },
       {
-        "line": 211,
+        "line": 154,
         "domain": "freewheel.tv",
         "publisher_id": "187433",
         "relationship": "RESELLER",
@@ -8274,7 +8274,7 @@
         "faults": []
       },
       {
-        "line": 213,
+        "line": 156,
         "domain": "freewheel.tv",
         "publisher_id": "187441",
         "relationship": "RESELLER",
@@ -8283,7 +8283,7 @@
         "faults": []
       },
       {
-        "line": 215,
+        "line": 158,
         "domain": "freewheel.tv",
         "publisher_id": "188769",
         "relationship": "DIRECT",
@@ -8292,7 +8292,7 @@
         "faults": []
       },
       {
-        "line": 217,
+        "line": 161,
         "domain": "freewheel.tv",
         "publisher_id": "188777",
         "relationship": "RESELLER",
@@ -8301,7 +8301,7 @@
         "faults": []
       },
       {
-        "line": 219,
+        "line": 163,
         "domain": "freewheel.tv",
         "publisher_id": "188785",
         "relationship": "RESELLER",
@@ -8310,7 +8310,7 @@
         "faults": []
       },
       {
-        "line": 229,
+        "line": 165,
         "domain": "freewheel.tv",
         "publisher_id": "188801",
         "relationship": "DIRECT",
@@ -8319,7 +8319,7 @@
         "faults": []
       },
       {
-        "line": 235,
+        "line": 167,
         "domain": "freewheel.tv",
         "publisher_id": "188809",
         "relationship": "RESELLER",
@@ -8328,7 +8328,7 @@
         "faults": []
       },
       {
-        "line": 237,
+        "line": 169,
         "domain": "freewheel.tv",
         "publisher_id": "188817",
         "relationship": "RESELLER",
@@ -8337,7 +8337,7 @@
         "faults": []
       },
       {
-        "line": 244,
+        "line": 171,
         "domain": "freewheel.tv",
         "publisher_id": "189081",
         "relationship": "DIRECT",
@@ -8346,7 +8346,7 @@
         "faults": []
       },
       {
-        "line": 246,
+        "line": 173,
         "domain": "freewheel.tv",
         "publisher_id": "189089",
         "relationship": "RESELLER",
@@ -8355,7 +8355,7 @@
         "faults": []
       },
       {
-        "line": 251,
+        "line": 175,
         "domain": "freewheel.tv",
         "publisher_id": "189097",
         "relationship": "RESELLER",
@@ -8364,7 +8364,7 @@
         "faults": []
       },
       {
-        "line": 255,
+        "line": 177,
         "domain": "freewheel.tv",
         "publisher_id": "203265",
         "relationship": "DIRECT",
@@ -8373,7 +8373,7 @@
         "faults": []
       },
       {
-        "line": 258,
+        "line": 179,
         "domain": "freewheel.tv",
         "publisher_id": "204881",
         "relationship": "Reseller",
@@ -8382,7 +8382,7 @@
         "faults": []
       },
       {
-        "line": 263,
+        "line": 181,
         "domain": "freewheel.tv",
         "publisher_id": "204889",
         "relationship": "Reseller",
@@ -8391,7 +8391,7 @@
         "faults": []
       },
       {
-        "line": 265,
+        "line": 183,
         "domain": "freewheel.tv",
         "publisher_id": "216314",
         "relationship": "DIRECT",
@@ -8400,7 +8400,7 @@
         "faults": []
       },
       {
-        "line": 268,
+        "line": 185,
         "domain": "freewheel.tv",
         "publisher_id": "216322",
         "relationship": "RESELLER",
@@ -8409,7 +8409,7 @@
         "faults": []
       },
       {
-        "line": 271,
+        "line": 187,
         "domain": "freewheel.tv",
         "publisher_id": "216330",
         "relationship": "RESELLER",
@@ -8418,7 +8418,7 @@
         "faults": []
       },
       {
-        "line": 273,
+        "line": 189,
         "domain": "freewheel.tv",
         "publisher_id": "216618",
         "relationship": "RESELLER",
@@ -8427,7 +8427,7 @@
         "faults": []
       },
       {
-        "line": 275,
+        "line": 191,
         "domain": "freewheel.tv",
         "publisher_id": "216626",
         "relationship": "RESELLER",
@@ -8436,7 +8436,7 @@
         "faults": []
       },
       {
-        "line": 281,
+        "line": 193,
         "domain": "freewheel.tv",
         "publisher_id": "22305",
         "relationship": "RESELLER",
@@ -8445,7 +8445,7 @@
         "faults": []
       },
       {
-        "line": 283,
+        "line": 195,
         "domain": "freewheel.tv",
         "publisher_id": "225769",
         "relationship": "DIRECT",
@@ -8454,7 +8454,7 @@
         "faults": []
       },
       {
-        "line": 285,
+        "line": 197,
         "domain": "freewheel.tv",
         "publisher_id": "225777",
         "relationship": "RESELLER",
@@ -8463,7 +8463,7 @@
         "faults": []
       },
       {
-        "line": 287,
+        "line": 199,
         "domain": "freewheel.tv",
         "publisher_id": "225785",
         "relationship": "RESELLER",
@@ -8472,7 +8472,7 @@
         "faults": []
       },
       {
-        "line": 291,
+        "line": 201,
         "domain": "freewheel.tv",
         "publisher_id": "227409",
         "relationship": "DIRECT",
@@ -8481,7 +8481,7 @@
         "faults": []
       },
       {
-        "line": 295,
+        "line": 203,
         "domain": "freewheel.tv",
         "publisher_id": "227417",
         "relationship": "RESELLER",
@@ -8490,7 +8490,7 @@
         "faults": []
       },
       {
-        "line": 298,
+        "line": 205,
         "domain": "freewheel.tv",
         "publisher_id": "227425",
         "relationship": "RESELLER",
@@ -8499,7 +8499,7 @@
         "faults": []
       },
       {
-        "line": 302,
+        "line": 207,
         "domain": "freewheel.tv",
         "publisher_id": "231689",
         "relationship": "DIRECT",
@@ -8508,7 +8508,7 @@
         "faults": []
       },
       {
-        "line": 305,
+        "line": 209,
         "domain": "freewheel.tv",
         "publisher_id": "231697",
         "relationship": "RESELLER",
@@ -8517,7 +8517,7 @@
         "faults": []
       },
       {
-        "line": 307,
+        "line": 211,
         "domain": "freewheel.tv",
         "publisher_id": "231705",
         "relationship": "RESELLER",
@@ -8526,7 +8526,7 @@
         "faults": []
       },
       {
-        "line": 309,
+        "line": 213,
         "domain": "freewheel.tv",
         "publisher_id": "234641",
         "relationship": "DIRECT",
@@ -8535,7 +8535,7 @@
         "faults": []
       },
       {
-        "line": 312,
+        "line": 215,
         "domain": "freewheel.tv",
         "publisher_id": "234649",
         "relationship": "DIRECT",
@@ -8544,7 +8544,7 @@
         "faults": []
       },
       {
-        "line": 314,
+        "line": 217,
         "domain": "freewheel.tv",
         "publisher_id": "234657",
         "relationship": "RESELLER",
@@ -8553,7 +8553,7 @@
         "faults": []
       },
       {
-        "line": 316,
+        "line": 219,
         "domain": "freewheel.tv",
         "publisher_id": "234665",
         "relationship": "RESELLER",
@@ -8562,7 +8562,7 @@
         "faults": []
       },
       {
-        "line": 318,
+        "line": 221,
         "domain": "freewheel.tv",
         "publisher_id": "234673",
         "relationship": "RESELLER",
@@ -8571,7 +8571,7 @@
         "faults": []
       },
       {
-        "line": 320,
+        "line": 223,
         "domain": "freewheel.tv",
         "publisher_id": "234681",
         "relationship": "RESELLER",
@@ -8580,7 +8580,7 @@
         "faults": []
       },
       {
-        "line": 322,
+        "line": 225,
         "domain": "freewheel.tv",
         "publisher_id": "273986",
         "relationship": "DIRECT",
@@ -8589,7 +8589,7 @@
         "faults": []
       },
       {
-        "line": 323,
+        "line": 227,
         "domain": "freewheel.tv",
         "publisher_id": "274002",
         "relationship": "RESELLER",
@@ -8598,7 +8598,7 @@
         "faults": []
       },
       {
-        "line": 326,
+        "line": 229,
         "domain": "freewheel.tv",
         "publisher_id": "274018",
         "relationship": "RESELLER",
@@ -8607,7 +8607,7 @@
         "faults": []
       },
       {
-        "line": 328,
+        "line": 231,
         "domain": "freewheel.tv",
         "publisher_id": "274034",
         "relationship": "DIRECT",
@@ -8616,7 +8616,7 @@
         "faults": []
       },
       {
-        "line": 331,
+        "line": 233,
         "domain": "freewheel.tv",
         "publisher_id": "274050",
         "relationship": "RESELLER",
@@ -8625,7 +8625,7 @@
         "faults": []
       },
       {
-        "line": 335,
+        "line": 235,
         "domain": "freewheel.tv",
         "publisher_id": "274066",
         "relationship": "RESELLER",
@@ -8634,7 +8634,7 @@
         "faults": []
       },
       {
-        "line": 337,
+        "line": 237,
         "domain": "freewheel.tv",
         "publisher_id": "274834",
         "relationship": "DIRECT",
@@ -8643,7 +8643,7 @@
         "faults": []
       },
       {
-        "line": 339,
+        "line": 239,
         "domain": "freewheel.tv",
         "publisher_id": "274850",
         "relationship": "RESELLER",
@@ -8652,7 +8652,7 @@
         "faults": []
       },
       {
-        "line": 342,
+        "line": 241,
         "domain": "freewheel.tv",
         "publisher_id": "274866",
         "relationship": "RESELLER",
@@ -8661,7 +8661,7 @@
         "faults": []
       },
       {
-        "line": 346,
+        "line": 243,
         "domain": "freewheel.tv",
         "publisher_id": "321761",
         "relationship": "DIRECT",
@@ -8670,7 +8670,7 @@
         "faults": []
       },
       {
-        "line": 348,
+        "line": 245,
         "domain": "freewheel.tv",
         "publisher_id": "321777",
         "relationship": "RESELLER",
@@ -8679,7 +8679,7 @@
         "faults": []
       },
       {
-        "line": 350,
+        "line": 247,
         "domain": "freewheel.tv",
         "publisher_id": "321793",
         "relationship": "RESELLER",
@@ -8688,7 +8688,7 @@
         "faults": []
       },
       {
-        "line": 352,
+        "line": 248,
         "domain": "freewheel.tv",
         "publisher_id": "33081",
         "relationship": "RESELLER",
@@ -8697,7 +8697,7 @@
         "faults": []
       },
       {
-        "line": 354,
+        "line": 250,
         "domain": "freewheel.tv",
         "publisher_id": "33601",
         "relationship": "RESELLER",
@@ -8706,7 +8706,7 @@
         "faults": []
       },
       {
-        "line": 356,
+        "line": 252,
         "domain": "freewheel.tv",
         "publisher_id": "379057",
         "relationship": "DIRECT",
@@ -8715,7 +8715,7 @@
         "faults": []
       },
       {
-        "line": 360,
+        "line": 254,
         "domain": "freewheel.tv",
         "publisher_id": "379073",
         "relationship": "RESELLER",
@@ -8724,7 +8724,7 @@
         "faults": []
       },
       {
-        "line": 362,
+        "line": 256,
         "domain": "freewheel.tv",
         "publisher_id": "379089",
         "relationship": "RESELLER",
@@ -8733,7 +8733,7 @@
         "faults": []
       },
       {
-        "line": 366,
+        "line": 258,
         "domain": "freewheel.tv",
         "publisher_id": "38121",
         "relationship": "DIRECT",
@@ -8742,7 +8742,7 @@
         "faults": []
       },
       {
-        "line": 370,
+        "line": 260,
         "domain": "freewheel.tv",
         "publisher_id": "38129",
         "relationship": "RESELLER",
@@ -8751,7 +8751,7 @@
         "faults": []
       },
       {
-        "line": 375,
+        "line": 262,
         "domain": "freewheel.tv",
         "publisher_id": "38137",
         "relationship": "RESELLER",
@@ -8760,7 +8760,7 @@
         "faults": []
       },
       {
-        "line": 379,
+        "line": 264,
         "domain": "freewheel.tv",
         "publisher_id": "5621",
         "relationship": "RESELLER",
@@ -8769,7 +8769,7 @@
         "faults": []
       },
       {
-        "line": 384,
+        "line": 266,
         "domain": "freewheel.tv",
         "publisher_id": "67641",
         "relationship": "RESELLER",
@@ -8778,7 +8778,7 @@
         "faults": []
       },
       {
-        "line": 386,
+        "line": 268,
         "domain": "freewheel.tv",
         "publisher_id": "704914",
         "relationship": "DIRECT",
@@ -8787,7 +8787,7 @@
         "faults": []
       },
       {
-        "line": 393,
+        "line": 270,
         "domain": "freewheel.tv",
         "publisher_id": "708402",
         "relationship": "RESELLER",
@@ -8796,7 +8796,7 @@
         "faults": []
       },
       {
-        "line": 396,
+        "line": 272,
         "domain": "freewheel.tv",
         "publisher_id": "709586",
         "relationship": "RESELLER",
@@ -8805,7 +8805,7 @@
         "faults": []
       },
       {
-        "line": 398,
+        "line": 274,
         "domain": "freewheel.tv",
         "publisher_id": "709602",
         "relationship": "RESELLER",
@@ -8814,7 +8814,7 @@
         "faults": []
       },
       {
-        "line": 400,
+        "line": 276,
         "domain": "freewheel.tv",
         "publisher_id": "710210",
         "relationship": "DIRECT",
@@ -8823,7 +8823,7 @@
         "faults": []
       },
       {
-        "line": 401,
+        "line": 279,
         "domain": "freewheel.tv",
         "publisher_id": "710226",
         "relationship": "RESELLER",
@@ -8832,7 +8832,7 @@
         "faults": []
       },
       {
-        "line": 404,
+        "line": 280,
         "domain": "freewheel.tv",
         "publisher_id": "720722",
         "relationship": "DIRECT",
@@ -8841,7 +8841,7 @@
         "faults": []
       },
       {
-        "line": 406,
+        "line": 283,
         "domain": "freewheel.tv",
         "publisher_id": "720738",
         "relationship": "RESELLER",
@@ -8850,7 +8850,7 @@
         "faults": []
       },
       {
-        "line": 409,
+        "line": 284,
         "domain": "freewheel.tv",
         "publisher_id": "726594",
         "relationship": "DIRECT",
@@ -8859,7 +8859,7 @@
         "faults": []
       },
       {
-        "line": 411,
+        "line": 287,
         "domain": "freewheel.tv",
         "publisher_id": "726610",
         "relationship": "RESELLER",
@@ -8868,7 +8868,7 @@
         "faults": []
       },
       {
-        "line": 413,
+        "line": 289,
         "domain": "freewheel.tv",
         "publisher_id": "732290",
         "relationship": "DIRECT",
@@ -8877,7 +8877,7 @@
         "faults": []
       },
       {
-        "line": 416,
+        "line": 291,
         "domain": "freewheel.tv",
         "publisher_id": "732306",
         "relationship": "DIRECT",
@@ -8886,7 +8886,7 @@
         "faults": []
       },
       {
-        "line": 418,
+        "line": 293,
         "domain": "freewheel.tv",
         "publisher_id": "732322",
         "relationship": "RESELLER",
@@ -8895,7 +8895,7 @@
         "faults": []
       },
       {
-        "line": 420,
+        "line": 295,
         "domain": "freewheel.tv",
         "publisher_id": "732338",
         "relationship": "RESELLER",
@@ -8904,7 +8904,7 @@
         "faults": []
       },
       {
-        "line": 425,
+        "line": 297,
         "domain": "Freewheel.tv",
         "publisher_id": "741650",
         "relationship": "RESELLER",
@@ -8913,13 +8913,13 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Freewheel.tv",
             "hint": "freewheel.tv"
           }
         ]
       },
       {
-        "line": 429,
+        "line": 299,
         "domain": "freewheel.tv",
         "publisher_id": "745362",
         "relationship": "RESELLER",
@@ -8928,7 +8928,7 @@
         "faults": []
       },
       {
-        "line": 431,
+        "line": 301,
         "domain": "freewheel.tv",
         "publisher_id": "745378",
         "relationship": "RESELLER",
@@ -8937,7 +8937,7 @@
         "faults": []
       },
       {
-        "line": 433,
+        "line": 303,
         "domain": "freewheel.tv",
         "publisher_id": "785009",
         "relationship": "DIRECT",
@@ -8946,7 +8946,7 @@
         "faults": []
       },
       {
-        "line": 438,
+        "line": 305,
         "domain": "freewheel.tv",
         "publisher_id": "785041",
         "relationship": "RESELLER",
@@ -8955,7 +8955,7 @@
         "faults": []
       },
       {
-        "line": 440,
+        "line": 307,
         "domain": "freewheel.tv",
         "publisher_id": "836497",
         "relationship": "DIRECT",
@@ -8964,7 +8964,7 @@
         "faults": []
       },
       {
-        "line": 443,
+        "line": 309,
         "domain": "freewheel.tv",
         "publisher_id": "836513",
         "relationship": "RESELLER",
@@ -8973,7 +8973,7 @@
         "faults": []
       },
       {
-        "line": 446,
+        "line": 311,
         "domain": "freewheel.tv",
         "publisher_id": "888689",
         "relationship": "DIRECT",
@@ -8982,7 +8982,7 @@
         "faults": []
       },
       {
-        "line": 448,
+        "line": 313,
         "domain": "freewheel.tv",
         "publisher_id": "888705",
         "relationship": "RESELLER",
@@ -8991,7 +8991,7 @@
         "faults": []
       },
       {
-        "line": 453,
+        "line": 315,
         "domain": "freewheel.tv",
         "publisher_id": "898353",
         "relationship": "DIRECT",
@@ -9000,7 +9000,7 @@
         "faults": []
       },
       {
-        "line": 455,
+        "line": 317,
         "domain": "freewheel.tv",
         "publisher_id": "898385",
         "relationship": "RESELLER",
@@ -9009,7 +9009,7 @@
         "faults": []
       },
       {
-        "line": 457,
+        "line": 319,
         "domain": "freewheel.tv",
         "publisher_id": "981",
         "relationship": "RESELLER",
@@ -9018,7 +9018,7 @@
         "faults": []
       },
       {
-        "line": 460,
+        "line": 321,
         "domain": "google.com",
         "publisher_id": "pub-0942427266003794",
         "relationship": "RESELLER",
@@ -9027,7 +9027,7 @@
         "faults": []
       },
       {
-        "line": 462,
+        "line": 323,
         "domain": "google.com",
         "publisher_id": "pub-2163792983970113",
         "relationship": "DIRECT",
@@ -9036,7 +9036,7 @@
         "faults": []
       },
       {
-        "line": 465,
+        "line": 325,
         "domain": "google.com",
         "publisher_id": "pub-2236218997769327",
         "relationship": "RESELLER",
@@ -9045,7 +9045,7 @@
         "faults": []
       },
       {
-        "line": 467,
+        "line": 326,
         "domain": "google.com",
         "publisher_id": "pub-2366164365855963",
         "relationship": "RESELLER",
@@ -9054,7 +9054,7 @@
         "faults": []
       },
       {
-        "line": 470,
+        "line": 328,
         "domain": "google.com",
         "publisher_id": "pub-3057818873023700",
         "relationship": "RESELLER",
@@ -9063,7 +9063,7 @@
         "faults": []
       },
       {
-        "line": 473,
+        "line": 330,
         "domain": "google.com",
         "publisher_id": "pub-3391936129161967",
         "relationship": "RESELLER",
@@ -9072,7 +9072,7 @@
         "faults": []
       },
       {
-        "line": 475,
+        "line": 332,
         "domain": "google.com",
         "publisher_id": "pub-3960095709930134",
         "relationship": "RESELLER",
@@ -9081,7 +9081,7 @@
         "faults": []
       },
       {
-        "line": 477,
+        "line": 334,
         "domain": "google.com",
         "publisher_id": "pub-5289985627731322",
         "relationship": "RESELLER",
@@ -9090,7 +9090,7 @@
         "faults": []
       },
       {
-        "line": 479,
+        "line": 336,
         "domain": "google.com",
         "publisher_id": "pub-6210713259841025",
         "relationship": "DIRECT",
@@ -9099,7 +9099,7 @@
         "faults": []
       },
       {
-        "line": 483,
+        "line": 338,
         "domain": "google.com",
         "publisher_id": "pub-6228005252642587",
         "relationship": "RESELLER",
@@ -9108,7 +9108,7 @@
         "faults": []
       },
       {
-        "line": 485,
+        "line": 340,
         "domain": "google.com",
         "publisher_id": "pub-8172268348509349",
         "relationship": "RESELLER",
@@ -9117,7 +9117,7 @@
         "faults": []
       },
       {
-        "line": 489,
+        "line": 342,
         "domain": "google.com",
         "publisher_id": "pub-8278416939377896",
         "relationship": "DIRECT",
@@ -9126,7 +9126,7 @@
         "faults": []
       },
       {
-        "line": 491,
+        "line": 345,
         "domain": "groundtruth.com",
         "publisher_id": "107",
         "relationship": "RESELLER",
@@ -9135,7 +9135,7 @@
         "faults": []
       },
       {
-        "line": 493,
+        "line": 347,
         "domain": "gumgum.com",
         "publisher_id": "11645",
         "relationship": "RESELLER",
@@ -9144,7 +9144,7 @@
         "faults": []
       },
       {
-        "line": 495,
+        "line": 349,
         "domain": "gumgum.com",
         "publisher_id": "13244",
         "relationship": "DIRECT",
@@ -9153,7 +9153,7 @@
         "faults": []
       },
       {
-        "line": 497,
+        "line": 351,
         "domain": "improvedigital.com",
         "publisher_id": "1005",
         "relationship": "RESELLER",
@@ -9162,7 +9162,7 @@
         "faults": []
       },
       {
-        "line": 499,
+        "line": 353,
         "domain": "improvedigital.com",
         "publisher_id": "1006",
         "relationship": "DIRECT",
@@ -9171,7 +9171,7 @@
         "faults": []
       },
       {
-        "line": 506,
+        "line": 355,
         "domain": "improvedigital.com",
         "publisher_id": "1017",
         "relationship": "RESELLER",
@@ -9180,7 +9180,7 @@
         "faults": []
       },
       {
-        "line": 508,
+        "line": 357,
         "domain": "improvedigital.com",
         "publisher_id": "1067",
         "relationship": "RESELLER",
@@ -9189,7 +9189,7 @@
         "faults": []
       },
       {
-        "line": 510,
+        "line": 359,
         "domain": "improvedigital.com",
         "publisher_id": "1102",
         "relationship": "RESELLER",
@@ -9198,7 +9198,7 @@
         "faults": []
       },
       {
-        "line": 514,
+        "line": 361,
         "domain": "improvedigital.com",
         "publisher_id": "1220",
         "relationship": "RESELLER",
@@ -9207,7 +9207,7 @@
         "faults": []
       },
       {
-        "line": 516,
+        "line": 363,
         "domain": "improvedigital.com",
         "publisher_id": "1269",
         "relationship": "DIRECT",
@@ -9216,7 +9216,7 @@
         "faults": []
       },
       {
-        "line": 518,
+        "line": 365,
         "domain": "improvedigital.com",
         "publisher_id": "185",
         "relationship": "RESELLER",
@@ -9225,7 +9225,7 @@
         "faults": []
       },
       {
-        "line": 520,
+        "line": 367,
         "domain": "improvedigital.com",
         "publisher_id": "335",
         "relationship": "RESELLER",
@@ -9234,7 +9234,7 @@
         "faults": []
       },
       {
-        "line": 522,
+        "line": 369,
         "domain": "indexexchange.com",
         "publisher_id": "175407",
         "relationship": "RESELLER",
@@ -9243,7 +9243,7 @@
         "faults": []
       },
       {
-        "line": 526,
+        "line": 371,
         "domain": "indexexchange.com",
         "publisher_id": "181202",
         "relationship": "RESELLER",
@@ -9252,7 +9252,7 @@
         "faults": []
       },
       {
-        "line": 528,
+        "line": 373,
         "domain": "indexexchange.com",
         "publisher_id": "182960",
         "relationship": "RESELLER",
@@ -9261,7 +9261,7 @@
         "faults": []
       },
       {
-        "line": 530,
+        "line": 375,
         "domain": "indexexchange.com",
         "publisher_id": "184315",
         "relationship": "RESELLER",
@@ -9270,7 +9270,7 @@
         "faults": []
       },
       {
-        "line": 532,
+        "line": 377,
         "domain": "indexexchange.com",
         "publisher_id": "184601",
         "relationship": "RESELLER",
@@ -9279,7 +9279,7 @@
         "faults": []
       },
       {
-        "line": 535,
+        "line": 379,
         "domain": "indexexchange.com",
         "publisher_id": "184665",
         "relationship": "RESELLER",
@@ -9288,7 +9288,7 @@
         "faults": []
       },
       {
-        "line": 537,
+        "line": 381,
         "domain": "indexexchange.com",
         "publisher_id": "186401",
         "relationship": "DIRECT",
@@ -9297,7 +9297,7 @@
         "faults": []
       },
       {
-        "line": 541,
+        "line": 383,
         "domain": "indexexchange.com",
         "publisher_id": "187149",
         "relationship": "RESELLER",
@@ -9306,7 +9306,7 @@
         "faults": []
       },
       {
-        "line": 543,
+        "line": 385,
         "domain": "indexexchange.com",
         "publisher_id": "188398",
         "relationship": "RESELLER",
@@ -9315,7 +9315,7 @@
         "faults": []
       },
       {
-        "line": 550,
+        "line": 387,
         "domain": "indexexchange.com",
         "publisher_id": "189761",
         "relationship": "DIRECT",
@@ -9324,7 +9324,7 @@
         "faults": []
       },
       {
-        "line": 561,
+        "line": 389,
         "domain": "indexexchange.com",
         "publisher_id": "190243",
         "relationship": "DIRECT",
@@ -9333,7 +9333,7 @@
         "faults": []
       },
       {
-        "line": 563,
+        "line": 0,
         "domain": "indexexchange.com",
         "publisher_id": "190856",
         "relationship": "RESELLER",
@@ -9342,7 +9342,7 @@
         "faults": []
       },
       {
-        "line": 565,
+        "line": 1,
         "domain": "lijit.com",
         "publisher_id": "263700",
         "relationship": "DIRECT",
@@ -9351,7 +9351,7 @@
         "faults": []
       },
       {
-        "line": 568,
+        "line": 2,
         "domain": "lijit.com",
         "publisher_id": "263700-eb",
         "relationship": "DIRECT",
@@ -9360,7 +9360,7 @@
         "faults": []
       },
       {
-        "line": 570,
+        "line": 3,
         "domain": "lkqd.net",
         "publisher_id": "450",
         "relationship": "RESELLER",
@@ -9369,7 +9369,7 @@
         "faults": []
       },
       {
-        "line": 572,
+        "line": 4,
         "domain": "lkqd.net",
         "publisher_id": "504",
         "relationship": "RESELLER",
@@ -9378,7 +9378,7 @@
         "faults": []
       },
       {
-        "line": 574,
+        "line": 5,
         "domain": "loopme.com",
         "publisher_id": "5679",
         "relationship": "RESELLER",
@@ -9387,7 +9387,7 @@
         "faults": []
       },
       {
-        "line": 576,
+        "line": 6,
         "domain": "loopme.com",
         "publisher_id": "s-2411",
         "relationship": "RESELLER",
@@ -9396,7 +9396,7 @@
         "faults": []
       },
       {
-        "line": 579,
+        "line": 7,
         "domain": "Mediabong.com",
         "publisher_id": "1700",
         "relationship": "DIRECT",
@@ -9405,13 +9405,13 @@
         "faults": [
           {
             "level": 2,
-            "reason": "domain must be in lower case",
+            "reason": "Domain: Must be in lower case: Mediabong.com",
             "hint": "mediabong.com"
           }
         ]
       },
       {
-        "line": 581,
+        "line": 8,
         "domain": "openx.com",
         "publisher_id": "537125356",
         "relationship": "RESELLER",
@@ -9420,7 +9420,7 @@
         "faults": []
       },
       {
-        "line": 585,
+        "line": 9,
         "domain": "openx.com",
         "publisher_id": "537125356",
         "relationship": "RESELLER",
@@ -9429,7 +9429,7 @@
         "faults": []
       },
       {
-        "line": 586,
+        "line": 10,
         "domain": "openx.com",
         "publisher_id": "537143344",
         "relationship": "RESELLER",
@@ -9438,7 +9438,7 @@
         "faults": []
       },
       {
-        "line": 589,
+        "line": 11,
         "domain": "openx.com",
         "publisher_id": "537145117",
         "relationship": "RESELLER",
@@ -9447,7 +9447,7 @@
         "faults": []
       },
       {
-        "line": 592,
+        "line": 12,
         "domain": "openx.com",
         "publisher_id": "537149888",
         "relationship": "DIRECT",
@@ -9456,7 +9456,7 @@
         "faults": []
       },
       {
-        "line": 594,
+        "line": 13,
         "domain": "openx.com",
         "publisher_id": "537149888",
         "relationship": "RESELLER",
@@ -9465,7 +9465,7 @@
         "faults": []
       },
       {
-        "line": 596,
+        "line": 14,
         "domain": "openx.com",
         "publisher_id": "538959099",
         "relationship": "RESELLER",
@@ -9474,7 +9474,7 @@
         "faults": []
       },
       {
-        "line": 598,
+        "line": 15,
         "domain": "openx.com",
         "publisher_id": "539835074",
         "relationship": "RESELLER",
@@ -9483,7 +9483,7 @@
         "faults": []
       },
       {
-        "line": 601,
+        "line": 16,
         "domain": "openx.com",
         "publisher_id": "539924617",
         "relationship": "RESELLER",
@@ -9492,7 +9492,7 @@
         "faults": []
       },
       {
-        "line": 606,
+        "line": 17,
         "domain": "openx.com",
         "publisher_id": "540393169",
         "relationship": "RESELLER",
@@ -9501,7 +9501,7 @@
         "faults": []
       },
       {
-        "line": 610,
+        "line": 18,
         "domain": "openx.com",
         "publisher_id": "540841669",
         "relationship": "DIRECT",
@@ -9510,7 +9510,7 @@
         "faults": []
       },
       {
-        "line": 612,
+        "line": 19,
         "domain": "openx.com",
         "publisher_id": "540868955",
         "relationship": "DIRECT",
@@ -9519,7 +9519,7 @@
         "faults": []
       },
       {
-        "line": 614,
+        "line": 20,
         "domain": "outbrain.com",
         "publisher_id": "00a8fdf746a9fb55fef75114e21d9d1b16",
         "relationship": "DIRECT",
@@ -9528,7 +9528,7 @@
         "faults": []
       },
       {
-        "line": 616,
+        "line": 21,
         "domain": "pubmatic.com",
         "publisher_id": "137711",
         "relationship": "RESELLER",
@@ -9537,7 +9537,7 @@
         "faults": []
       },
       {
-        "line": 619,
+        "line": 22,
         "domain": "pubmatic.com",
         "publisher_id": "154037",
         "relationship": "RESELLER",
@@ -9546,7 +9546,7 @@
         "faults": []
       },
       {
-        "line": 621,
+        "line": 23,
         "domain": "pubmatic.com",
         "publisher_id": "155967",
         "relationship": "RESELLER",
@@ -9555,7 +9555,7 @@
         "faults": []
       },
       {
-        "line": 627,
+        "line": 24,
         "domain": "pubmatic.com",
         "publisher_id": "156030",
         "relationship": "RESELLER",
@@ -9564,7 +9564,7 @@
         "faults": []
       },
       {
-        "line": 631,
+        "line": 25,
         "domain": "pubmatic.com",
         "publisher_id": "156077",
         "relationship": "RESELLER",
@@ -9573,7 +9573,7 @@
         "faults": []
       },
       {
-        "line": 633,
+        "line": 26,
         "domain": "pubmatic.com",
         "publisher_id": "156078",
         "relationship": "RESELLER",
@@ -9582,7 +9582,7 @@
         "faults": []
       },
       {
-        "line": 635,
+        "line": 27,
         "domain": "pubmatic.com",
         "publisher_id": "156212",
         "relationship": "RESELLER",
@@ -9591,7 +9591,7 @@
         "faults": []
       },
       {
-        "line": 637,
+        "line": 28,
         "domain": "pubmatic.com",
         "publisher_id": "156325",
         "relationship": "RESELLER",
@@ -9600,7 +9600,7 @@
         "faults": []
       },
       {
-        "line": 639,
+        "line": 29,
         "domain": "pubmatic.com",
         "publisher_id": "156377",
         "relationship": "RESELLER",
@@ -9609,7 +9609,7 @@
         "faults": []
       },
       {
-        "line": 647,
+        "line": 30,
         "domain": "pubmatic.com",
         "publisher_id": "156431",
         "relationship": "RESELLER",
@@ -9618,7 +9618,7 @@
         "faults": []
       },
       {
-        "line": 654,
+        "line": 31,
         "domain": "pubmatic.com",
         "publisher_id": "156439",
         "relationship": "RESELLER",
@@ -9627,7 +9627,7 @@
         "faults": []
       },
       {
-        "line": 657,
+        "line": 32,
         "domain": "pubmatic.com",
         "publisher_id": "156631",
         "relationship": "RESELLER",
@@ -9636,7 +9636,7 @@
         "faults": []
       },
       {
-        "line": 659,
+        "line": 33,
         "domain": "pubmatic.com",
         "publisher_id": "156700",
         "relationship": "RESELLER",
@@ -9645,7 +9645,7 @@
         "faults": []
       },
       {
-        "line": 668,
+        "line": 34,
         "domain": "pubmatic.com",
         "publisher_id": "158615",
         "relationship": "RESELLER",
@@ -9654,7 +9654,7 @@
         "faults": []
       },
       {
-        "line": 670,
+        "line": 35,
         "domain": "quantum-advertising.com",
         "publisher_id": "1778",
         "relationship": "DIRECT",
@@ -9663,7 +9663,7 @@
         "faults": []
       },
       {
-        "line": 672,
+        "line": 36,
         "domain": "quantum-advertising.com",
         "publisher_id": "6071",
         "relationship": "DIRECT",
@@ -9672,7 +9672,7 @@
         "faults": []
       },
       {
-        "line": 674,
+        "line": 37,
         "domain": "rhythmone.com",
         "publisher_id": "1767353092",
         "relationship": "RESELLER",
@@ -9681,7 +9681,7 @@
         "faults": []
       },
       {
-        "line": 676,
+        "line": 38,
         "domain": "rubiconproject.com",
         "publisher_id": "10027",
         "relationship": "RESELLER",
@@ -9690,7 +9690,7 @@
         "faults": []
       },
       {
-        "line": 678,
+        "line": 39,
         "domain": "rubiconproject.com",
         "publisher_id": "12186",
         "relationship": "RESELLER",
@@ -9699,7 +9699,7 @@
         "faults": []
       },
       {
-        "line": 680,
+        "line": 40,
         "domain": "rubiconproject.com",
         "publisher_id": "12338",
         "relationship": "RESELLER",
@@ -9708,7 +9708,7 @@
         "faults": []
       },
       {
-        "line": 684,
+        "line": 41,
         "domain": "rubiconproject.com",
         "publisher_id": "13132",
         "relationship": "RESELLER",
@@ -9717,7 +9717,7 @@
         "faults": []
       },
       {
-        "line": 688,
+        "line": 42,
         "domain": "rubiconproject.com",
         "publisher_id": "14976",
         "relationship": "DIRECT",
@@ -9726,7 +9726,7 @@
         "faults": []
       },
       {
-        "line": 696,
+        "line": 43,
         "domain": "rubiconproject.com",
         "publisher_id": "16114",
         "relationship": "RESELLER",
@@ -9735,7 +9735,7 @@
         "faults": []
       },
       {
-        "line": 2,
+        "line": 44,
         "domain": "rubiconproject.com",
         "publisher_id": "16422",
         "relationship": "RESELLER",
@@ -9744,7 +9744,7 @@
         "faults": []
       },
       {
-        "line": 3,
+        "line": 45,
         "domain": "rubiconproject.com",
         "publisher_id": "16720",
         "relationship": "RESELLER",
@@ -9753,7 +9753,7 @@
         "faults": []
       },
       {
-        "line": 5,
+        "line": 46,
         "domain": "rubiconproject.com",
         "publisher_id": "17130",
         "relationship": "RESELLER",
@@ -9762,7 +9762,7 @@
         "faults": []
       },
       {
-        "line": 7,
+        "line": 47,
         "domain": "rubiconproject.com",
         "publisher_id": "17204",
         "relationship": "RESELLER",
@@ -9771,7 +9771,7 @@
         "faults": []
       },
       {
-        "line": 9,
+        "line": 48,
         "domain": "rubiconproject.com",
         "publisher_id": "17960",
         "relationship": "RESELLER",
@@ -9780,7 +9780,7 @@
         "faults": []
       },
       {
-        "line": 11,
+        "line": 49,
         "domain": "rubiconproject.com",
         "publisher_id": "19668",
         "relationship": "RESELLER",
@@ -9789,7 +9789,7 @@
         "faults": []
       },
       {
-        "line": 13,
+        "line": 50,
         "domain": "rubiconproject.com",
         "publisher_id": "19724",
         "relationship": "RESELLER",
@@ -9798,7 +9798,7 @@
         "faults": []
       },
       {
-        "line": 15,
+        "line": 51,
         "domain": "rubiconproject.com",
         "publisher_id": "20736",
         "relationship": "RESELLER",
@@ -9807,7 +9807,7 @@
         "faults": []
       },
       {
-        "line": 17,
+        "line": 52,
         "domain": "rubiconproject.com",
         "publisher_id": "208016",
         "relationship": "RESELLER",
@@ -9816,7 +9816,7 @@
         "faults": []
       },
       {
-        "line": 19,
+        "line": 53,
         "domain": "rubiconproject.com",
         "publisher_id": "211211",
         "relationship": "RESELLER",
@@ -9825,7 +9825,7 @@
         "faults": []
       },
       {
-        "line": 21,
+        "line": 54,
         "domain": "rubiconproject.com",
         "publisher_id": "9585",
         "relationship": "RESELLER",
@@ -9834,7 +9834,7 @@
         "faults": []
       },
       {
-        "line": 23,
+        "line": 55,
         "domain": "sekindo.com",
         "publisher_id": "19712",
         "relationship": "DIRECT",
@@ -9843,7 +9843,7 @@
         "faults": []
       },
       {
-        "line": 25,
+        "line": 56,
         "domain": "smartadserver.com",
         "publisher_id": "13",
         "relationship": "DIRECT",
@@ -9852,7 +9852,7 @@
         "faults": []
       },
       {
-        "line": 27,
+        "line": 57,
         "domain": "smartadserver.com",
         "publisher_id": "1338",
         "relationship": "RESELLER",
@@ -9861,7 +9861,7 @@
         "faults": []
       },
       {
-        "line": 29,
+        "line": 58,
         "domain": "smartadserver.com",
         "publisher_id": "1827",
         "relationship": "RESELLER",
@@ -9870,7 +9870,7 @@
         "faults": []
       },
       {
-        "line": 31,
+        "line": 59,
         "domain": "smartadserver.com",
         "publisher_id": "2900",
         "relationship": "DIRECT",
@@ -9879,7 +9879,7 @@
         "faults": []
       },
       {
-        "line": 33,
+        "line": 60,
         "domain": "smartadserver.com",
         "publisher_id": "2900",
         "relationship": "RESELLER",
@@ -9888,7 +9888,7 @@
         "faults": []
       },
       {
-        "line": 35,
+        "line": 61,
         "domain": "smartadserver.com",
         "publisher_id": "3063",
         "relationship": "DIRECT",
@@ -9897,7 +9897,7 @@
         "faults": []
       },
       {
-        "line": 37,
+        "line": 62,
         "domain": "smartadserver.com",
         "publisher_id": "3245",
         "relationship": "DIRECT",
@@ -9906,7 +9906,7 @@
         "faults": []
       },
       {
-        "line": 39,
+        "line": 63,
         "domain": "smartadserver.com",
         "publisher_id": "3354",
         "relationship": "RESELLER",
@@ -9915,7 +9915,7 @@
         "faults": []
       },
       {
-        "line": 41,
+        "line": 64,
         "domain": "smartadserver.com",
         "publisher_id": "886",
         "relationship": "RESELLER",
@@ -9924,7 +9924,7 @@
         "faults": []
       },
       {
-        "line": 43,
+        "line": 65,
         "domain": "sovrn.com",
         "publisher_id": "257611",
         "relationship": "DIRECT",
@@ -9933,7 +9933,7 @@
         "faults": []
       },
       {
-        "line": 45,
+        "line": 66,
         "domain": "sovrn.com",
         "publisher_id": "257611",
         "relationship": "RESELLER",
@@ -9942,7 +9942,7 @@
         "faults": []
       },
       {
-        "line": 47,
+        "line": 67,
         "domain": "sovrn.com",
         "publisher_id": "263700",
         "relationship": "DIRECT",
@@ -9951,7 +9951,7 @@
         "faults": []
       },
       {
-        "line": 0,
+        "line": 68,
         "domain": "spotx.tv",
         "publisher_id": "108933",
         "relationship": "RESELLER",
@@ -9960,7 +9960,7 @@
         "faults": []
       },
       {
-        "line": 1,
+        "line": 69,
         "domain": "spotx.tv",
         "publisher_id": "142042",
         "relationship": "RESELLER",
@@ -9969,7 +9969,7 @@
         "faults": []
       },
       {
-        "line": 2,
+        "line": 70,
         "domain": "spotx.tv",
         "publisher_id": "228597",
         "relationship": "RESELLER",
@@ -9978,7 +9978,7 @@
         "faults": []
       },
       {
-        "line": 3,
+        "line": 71,
         "domain": "spotx.tv",
         "publisher_id": "230037",
         "relationship": "RESELLER",
@@ -9987,7 +9987,7 @@
         "faults": []
       },
       {
-        "line": 4,
+        "line": 72,
         "domain": "spotx.tv",
         "publisher_id": "238936",
         "relationship": "RESELLER",
@@ -9996,7 +9996,7 @@
         "faults": []
       },
       {
-        "line": 5,
+        "line": 73,
         "domain": "spotx.tv",
         "publisher_id": "241646",
         "relationship": "RESELLER",
@@ -10005,7 +10005,7 @@
         "faults": []
       },
       {
-        "line": 6,
+        "line": 74,
         "domain": "spotx.tv",
         "publisher_id": "267275",
         "relationship": "DIRECT",
@@ -10014,7 +10014,7 @@
         "faults": []
       },
       {
-        "line": 7,
+        "line": 75,
         "domain": "spotxchange.com",
         "publisher_id": "108933",
         "relationship": "RESELLER",
@@ -10023,7 +10023,7 @@
         "faults": []
       },
       {
-        "line": 8,
+        "line": 76,
         "domain": "spotxchange.com",
         "publisher_id": "142042",
         "relationship": "RESELLER",
@@ -10032,7 +10032,7 @@
         "faults": []
       },
       {
-        "line": 9,
+        "line": 77,
         "domain": "spotxchange.com",
         "publisher_id": "225721",
         "relationship": "RESELLER",
@@ -10041,7 +10041,7 @@
         "faults": []
       },
       {
-        "line": 10,
+        "line": 78,
         "domain": "spotxchange.com",
         "publisher_id": "228597",
         "relationship": "RESELLER",
@@ -10050,7 +10050,7 @@
         "faults": []
       },
       {
-        "line": 11,
+        "line": 79,
         "domain": "spotxchange.com",
         "publisher_id": "230037",
         "relationship": "RESELLER",
@@ -10059,7 +10059,7 @@
         "faults": []
       },
       {
-        "line": 12,
+        "line": 80,
         "domain": "spotxchange.com",
         "publisher_id": "238936",
         "relationship": "RESELLER",
@@ -10068,7 +10068,7 @@
         "faults": []
       },
       {
-        "line": 13,
+        "line": 81,
         "domain": "spotxchange.com",
         "publisher_id": "241646",
         "relationship": "RESELLER",
@@ -10077,7 +10077,7 @@
         "faults": []
       },
       {
-        "line": 14,
+        "line": 82,
         "domain": "spotxchange.com",
         "publisher_id": "267275",
         "relationship": "DIRECT",
@@ -10086,7 +10086,7 @@
         "faults": []
       },
       {
-        "line": 15,
+        "line": 83,
         "domain": "teads.tv",
         "publisher_id": "15429",
         "relationship": "RESELLER",
@@ -10095,7 +10095,7 @@
         "faults": []
       },
       {
-        "line": 16,
+        "line": 84,
         "domain": "teads.tv",
         "publisher_id": "2727",
         "relationship": "DIRECT",
@@ -10104,7 +10104,7 @@
         "faults": []
       },
       {
-        "line": 17,
+        "line": 85,
         "domain": "teads.tv",
         "publisher_id": "6053",
         "relationship": "DIRECT",
@@ -10113,7 +10113,7 @@
         "faults": []
       },
       {
-        "line": 18,
+        "line": 86,
         "domain": "teads.tv",
         "publisher_id": "9965",
         "relationship": "DIRECT",
@@ -10122,7 +10122,7 @@
         "faults": []
       },
       {
-        "line": 19,
+        "line": 87,
         "domain": "tremorhub.com",
         "publisher_id": "ewut4-b6zwq",
         "relationship": "RESELLER",
@@ -10131,7 +10131,7 @@
         "faults": []
       },
       {
-        "line": 20,
+        "line": 88,
         "domain": "tremorhub.com",
         "publisher_id": "q017o-78mlk",
         "relationship": "RESELLER",
@@ -10140,7 +10140,7 @@
         "faults": []
       },
       {
-        "line": 21,
+        "line": 89,
         "domain": "triplelift.com",
         "publisher_id": "3355",
         "relationship": "RESELLER",
@@ -10149,7 +10149,7 @@
         "faults": []
       },
       {
-        "line": 22,
+        "line": 90,
         "domain": "triplelift.com",
         "publisher_id": "6907",
         "relationship": "DIRECT",
@@ -10158,7 +10158,7 @@
         "faults": []
       },
       {
-        "line": 23,
+        "line": 91,
         "domain": "triplelift.com",
         "publisher_id": "7291",
         "relationship": "DIRECT",
@@ -10167,7 +10167,7 @@
         "faults": []
       },
       {
-        "line": 24,
+        "line": 92,
         "domain": "vidazoo.com",
         "publisher_id": "1773068026",
         "relationship": "RESELLER",
@@ -10176,7 +10176,7 @@
         "faults": []
       },
       {
-        "line": 25,
+        "line": 93,
         "domain": "xad.com",
         "publisher_id": "958",
         "relationship": "RESELLER",

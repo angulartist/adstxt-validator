@@ -25,29 +25,37 @@ def domain(string: str):
         return False
 
 
-def check_domain(string: str, *, faults: list):
-    if not string.islower():
+def check_domain(item: str, *, faults: list):
+    if not item.islower():
         faults.append(Fault(
             level=ErrorLevel.WARN,
-            reason='domain must be in lower case',
-            hint=string.lower(),
+            reason=f'Domain: Must be in lower case: {item}',
+            hint=item.lower(),
         ))
 
-    if not domain(string):
+    if not domain(item):
         faults.append(Fault(
             level=ErrorLevel.DANG,
-            reason='unexpected format',
+            reason=f'Domain: Unexpected format: {item}',
             hint=None
         ))
 
     return faults
 
 
-def check_in_set(item, *, set_, faults: list):
-    if item not in set_:
+def check_in_set(item, *, field, set_, faults: list):
+    if not item:
         fault: Fault = Fault(
             level=ErrorLevel.DANG,
-            reason='unexpected value',
+            reason=f'Field is mandatory: {field}',
+            hint=set_)
+
+        faults.append(fault)
+
+    if item and item not in set_:
+        fault: Fault = Fault(
+            level=ErrorLevel.DANG,
+            reason=f'Unexpected value: {item} (for: {field})',
             hint=set_)
 
         faults.append(fault)

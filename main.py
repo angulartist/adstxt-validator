@@ -13,7 +13,7 @@ import typedload
 from consecution import Pipeline, GlobalState
 
 from lib.nodes import ValidateRecordsNode, ValidateVariablesNode, UncommentNode, TokenizeNode, AggregateNode, \
-    TrimNode, LineNode, orchestrate
+    TrimNode, LineNode, orchestrate, OutlierNode
 
 # node shared state
 global_state = GlobalState(
@@ -59,8 +59,15 @@ def recursive_parser(url: str = None, sld: bool = False):
         | TrimNode('trim all whitespaces')
         | LineNode('add line number')
         | TokenizeNode('tokenize lines')
-        | [ValidateRecordsNode('get_recs'), ValidateVariablesNode('get_vars'), orchestrate]
-        | AggregateNode('create entries', source=netloc, sub_level_domain=sld),
+        | [
+            ValidateRecordsNode('get_recs'),
+            ValidateVariablesNode('get_vars'),
+            OutlierNode('outliers'),
+            orchestrate
+        ]
+        | AggregateNode('create entries',
+                        source=netloc,
+                        sub_level_domain=sld),
         global_state=global_state)
 
     # convert raw text to list of lines

@@ -25,7 +25,13 @@ def orchestrate(item: Input):
     elif item.num_slots == NUM_VARIABLE_SLOTS:
         return 'get_vars'
     else:
-        return None
+        return 'outliers'
+
+
+class OutlierNode(Node):
+    """ Just skip outliers :) """
+    def process(self, item):
+        pass
 
 
 class TrimNode(Node):
@@ -95,9 +101,9 @@ class TokenizeNode(Node):
         string, line = item
 
         # filter out empty string
-        if not re.match(r'^\s*$', string):
+        if not re.match(r"^\s*$", string):
             # split comma separated strings and key=value pairs
-            tokens = re.split(',|=', string)
+            tokens = re.split('[,=]', string)
             # create a new Input
             input_ = Input(tokens, len(tokens), line)
 
@@ -153,7 +159,11 @@ class ValidateVariablesNode(Node):
         key, value = tokens
 
         # validate given variable key
-        faults = check_in_set(key.upper(), set_=VALID_VARIABLES, faults=faults)
+        faults = check_in_set(
+            key.upper(),
+            field='value',
+            set_=VALID_VARIABLES,
+            faults=faults)
 
         # if variable is a subdomain
         # then validate subdomain format
@@ -183,7 +193,11 @@ class ValidateRecordsNode(Node):
         domain, publisher_id, relationship, *cid = tokens
 
         # validate relationship
-        faults = check_in_set(relationship.upper(), set_=VALID_RELATIONSHIPS, faults=faults)
+        faults = check_in_set(
+            relationship.upper(),
+            field='relationship',
+            set_=VALID_RELATIONSHIPS,
+            faults=faults)
 
         # validate *domain format
         faults = check_domain(domain, faults=faults)
