@@ -12,8 +12,8 @@ import requests
 import typedload
 from consecution import Pipeline, GlobalState
 
-from lib.entities import Variable
-from lib.nodes import ToRecordsNode, ToVariablesNode, UncommentNode, TokenizeNode, OrchestrateNode, AggregateNode
+from lib.nodes import ToRecordsNode, ToVariablesNode, UncommentNode, TokenizeNode, OrchestrateNode, AggregateNode, \
+    TrimNode
 
 # node shared state
 global_state = GlobalState(
@@ -54,7 +54,8 @@ def recursive_parser(url: str = None, sld: bool = False):
 
     # extraction pipeline
     pipe = Pipeline(
-        UncommentNode('remove comments')
+        UncommentNode('remove comments', cs='#')
+        | TrimNode('trim all whitespaces')
         | TokenizeNode('tokenize lines')
         | OrchestrateNode('orchestrate types')
         | [ToRecordsNode('get records'), ToVariablesNode('get variables')]
@@ -72,8 +73,8 @@ def recursive_parser(url: str = None, sld: bool = False):
     # to subdomains. Subdomains should not refer to
     # other subdomains. -- (IAB)
     if sld:
-        def get_next_location(sub_domain: Variable):
-            return f'{scheme}://{sub_domain.value}/ads.txt'
+        def get_next_location(sub_domain):
+            return f'{scheme}://{sub_domain}/ads.txt'
 
         # extract optional subdomains ads.txt from the root domain
         next_locations = filter(

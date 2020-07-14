@@ -119,4 +119,4 @@ class Entry:
 
     @property
     def sub_domains(self):
-        return [x for x in self.vars if x.key.upper() == 'SUBDOMAIN']
+        return [x.value for x in self.vars if x.key.upper() == 'SUBDOMAIN']

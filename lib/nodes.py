@@ -23,17 +23,29 @@ class OrchestrateNode(Node):
         self._push((origin, tokens, line))
 
 
-class UncommentNode(Node):
+class TrimNode(Node):
     def process(self, item: str):
-        cs = '#'
+        trimmed = item.replace(' ', '').strip()
 
-        def go():
-            return lambda s: ''.join(
-                takewhile(lambda c: c not in cs, s)
-            ).strip()
+        self._push(trimmed)
 
+
+class UncommentNode(Node):
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        self.cs = kwargs['cs']
+
+    def begin(self):
+        self.cs = '#'
+
+    def go(self):
+        return lambda s: ''.join(
+            takewhile(lambda c: c not in self.cs, s)
+        ).strip()
+
+    def process(self, item: str):
         cleaned = '\n'.join(map(
-            go(),
+            self.go(),
             item.splitlines()
         ))
 
@@ -43,10 +55,7 @@ class UncommentNode(Node):
 class TokenizeNode(Node):
     def process(self, item: str):
         if not re.match(r'^\s*$', item):
-            string = item.replace(' ', '').strip()
-            tokens = re.split(',|=', string)
-            tokens = [token for token in tokens]
-
+            tokens = re.split(',|=', item)
             input_ = Input(tokens, len(tokens), 0)
 
             self._push(input_)
