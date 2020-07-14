@@ -1,7 +1,7 @@
 from collections import namedtuple
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List
+from typing import List, Union
 
 
 class ErrorLevel(Enum):
@@ -14,6 +14,8 @@ class Origin(Enum):
     RECORD = 1
     VARIABLE = 2
 
+
+Fault = namedtuple('Fault', 'level reason hint')
 
 # RECORDS
 
@@ -60,14 +62,23 @@ current certification authority is the Trustworthy
 Accountability Group (aka TAG), and the TAGID
 would be included here [11].
 '''
-Record = namedtuple('Record', ['line',
-                               'domain',
-                               'publisher_id',
-                               'relationship',
-                               'certification_id',
-                               'num_faults',
-                               'faults'
-                               ])
+
+
+@dataclass
+class Record:
+    line: int
+    domain: str
+    publisher_id: str
+    relationship: str
+    certification_id: str
+    faults: List[Fault]
+    duplicated: bool
+    num_faults: int = 0
+
+    @property
+    def identity(self):
+        return hash(f'{self.domain}_{self.publisher_id}_{self.relationship}')
+
 
 # VARIABLES
 
@@ -91,21 +102,33 @@ process. Only root domains should refer crawlers
 to subdomains. Subdomains should not refer to
 other subdomains. 
 '''
-Variable = namedtuple('Variable', 'line key value num_faults faults')
 
-Fault = namedtuple('Fault', 'level reason hint')
+
+@dataclass
+class Variable:
+    line: int
+    key: str
+    value: str
+    faults: List[Fault]
+    duplicated: bool
+    num_faults: int = 0
+
+    @property
+    def identity(self):
+        return hash(f'{self.key}_{self.value}')
+
 
 Input = namedtuple('Input', 'tokens num_slots line')
 
 
-@dataclass
+@dataclass(repr=True)
 class Entry:
     source: str
     sub_level_domain: bool
     recs: List[Record] = field(default_factory=list)
     vars: List[Variable] = field(default_factory=list)
 
-    def put(self, item):
+    def put(self, item: Union[Record, Variable]):
         switcher = {
             'Record': (
                 lambda x: self.recs.append(x)

@@ -19,6 +19,7 @@ from lib.nodes import ValidateRecordsNode, ValidateVariablesNode, UncommentNode,
 global_state = GlobalState(
     results=[],
     next_locations=[],
+    fingerprints=[],
     lines=0
 )
 
@@ -70,8 +71,12 @@ def recursive_parser(url: str = None, sld: bool = False):
                         sub_level_domain=sld),
         global_state=global_state)
 
+    with open('./test/demo.ads.txt', 'r') as fh:
+        tmp = fh.readlines()
+
     # convert raw text to list of lines
-    lines = document.rsplit('\n')
+    # lines = document.rsplit('\n')
+    lines = tmp
 
     pipe.consume(lines)
 

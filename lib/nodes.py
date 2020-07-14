@@ -30,6 +30,7 @@ def orchestrate(item: Input):
 
 class OutlierNode(Node):
     """ Just skip outliers :) """
+
     def process(self, item):
         pass
 
@@ -132,7 +133,13 @@ class AggregateNode(Node):
         )
 
     @yell
-    def process(self, item: List[Union[Record, Variable]]):
+    def process(self, item: Union[Record, Variable]):
+        # track duplicated lines
+        if item.identity in self.global_state.fingerprints:
+            item.duplicated = True
+        else:
+            self.global_state.fingerprints.append(item.identity)
+
         # update Entry's internal storage
         self.entry.put(item)
 
@@ -176,6 +183,7 @@ class ValidateVariablesNode(Node):
             value=value,
             num_faults=len(faults),
             faults=faults,
+            duplicated=False,
         )
 
         self._push(variable)
@@ -213,6 +221,7 @@ class ValidateRecordsNode(Node):
             certification_id=certification_id,
             num_faults=len(faults),
             faults=faults,
+            duplicated=False,
         )
 
         self._push(record)
