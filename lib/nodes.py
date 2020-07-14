@@ -5,7 +5,9 @@ from typing import List
 from consecution import Node
 
 from lib import validators
+from lib.decorators import yell
 from lib.entities import Record, Input, Variable, Fault, ErrorLevel, Entry
+from lib.validators import check_in_set
 from lib.vars import VALID_VARIABLES, NUM_MIN_RECORD_SLOTS, NUM_VARIABLE_SLOTS, VALID_RELATIONSHIPS
 
 
@@ -21,6 +23,7 @@ def orchestrate(item):
 
 
 class TrimNode(Node):
+    @yell
     def process(self, item: str):
         trimmed = item.replace(' ', '').strip()
 
@@ -40,6 +43,7 @@ class UncommentNode(Node):
             takewhile(lambda c: c not in self.cs, s)
         ).strip()
 
+    @yell
     def process(self, item: str):
         cleaned = '\n'.join(map(
             self.go(),
@@ -50,6 +54,7 @@ class UncommentNode(Node):
 
 
 class LineNode(Node):
+    @yell
     def process(self, item: str):
         line = self.global_state.lines
 
@@ -62,6 +67,7 @@ class LineNode(Node):
 
 
 class TokenizeNode(Node):
+    @yell
     def process(self, item: str):
         string, line = item
 
@@ -88,6 +94,7 @@ class AggregateNode(Node):
             sub_level_domain=self.sub_level_domain
         )
 
+    @yell
     def process(self, item):
         self.entry.put(item)
 
@@ -97,6 +104,7 @@ class AggregateNode(Node):
 
 
 class ToVariablesNode(Node):
+    @yell
     def process(self, item):
         faults: List[Fault] = []
 
@@ -104,12 +112,7 @@ class ToVariablesNode(Node):
 
         key, value = tokens
 
-        if key.upper() not in VALID_VARIABLES:
-            faults.append(Fault(
-                level=ErrorLevel.DANG,
-                reason='unexpected variable',
-                hint=VALID_VARIABLES,
-            ))
+        faults = check_in_set(key.upper(), set_=VALID_VARIABLES, faults=faults)
 
         if key.upper() == 'SUBDOMAIN':
             if not value.islower():
@@ -138,6 +141,7 @@ class ToVariablesNode(Node):
 
 
 class ToRecordsNode(Node):
+    @yell
     def process(self, item):
         faults: List[Fault] = []
 
@@ -153,12 +157,7 @@ class ToRecordsNode(Node):
                 hint=None,
             ))
 
-        if relationship.upper() not in VALID_RELATIONSHIPS:
-            faults.append(Fault(
-                level=ErrorLevel.DANG,
-                reason='unexpected relationship',
-                hint=VALID_RELATIONSHIPS,
-            ))
+        faults = check_in_set(relationship.upper(), set_=VALID_RELATIONSHIPS, faults=faults)
 
         if not domain.islower():
             faults.append(Fault(
