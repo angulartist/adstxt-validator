@@ -111,6 +111,26 @@ class TokenizeNode(Node):
             self._push(input_)
 
 
+class DuplicateNode(Node):
+    def begin(self):
+        self.global_state.fingerprints = []
+
+    @yell
+    def process(self, item: Union[Record, Variable]):
+        # track duplicated lines
+        if item.identity in self.global_state.fingerprints:
+            item.duplicated = True
+        else:
+            self.global_state.fingerprints.append(item.identity)
+
+        # push item downstream
+        self._push(item)
+
+    def end(self):
+        # reset duplicated tracking list
+        self.global_state.fingerprints = []
+
+
 class AggregateNode(Node):
     """ Creates a new Entry and merge its records and variables. """
 
@@ -134,12 +154,6 @@ class AggregateNode(Node):
 
     @yell
     def process(self, item: Union[Record, Variable]):
-        # track duplicated lines
-        if item.identity in self.global_state.fingerprints:
-            item.duplicated = True
-        else:
-            self.global_state.fingerprints.append(item.identity)
-
         # update Entry's internal storage
         self.entry.put(item)
 

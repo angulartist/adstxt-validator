@@ -5,7 +5,6 @@ doc_ver: 1.0.2
 """
 import argparse
 import json
-from concurrent.futures.thread import ThreadPoolExecutor
 from urllib.parse import urlparse
 
 import requests
@@ -13,7 +12,7 @@ import typedload
 from consecution import Pipeline, GlobalState
 
 from lib.nodes import ValidateRecordsNode, ValidateVariablesNode, UncommentNode, TokenizeNode, AggregateNode, \
-    TrimNode, LineNode, orchestrate, OutlierNode
+    TrimNode, LineNode, orchestrate, OutlierNode, DuplicateNode
 
 # node shared state
 global_state = GlobalState(
@@ -42,7 +41,7 @@ def resolve(url: str = None):
 
         return resp.text, (scheme, netloc)
     except Exception as e:
-        print('resolver failed:', e)
+        print('Resolver failed:', e)
 
 
 def recursive_parser(url: str = None, sld: bool = False):
@@ -66,9 +65,11 @@ def recursive_parser(url: str = None, sld: bool = False):
             OutlierNode('outliers'),
             orchestrate
         ]
-        | AggregateNode('create entries',
-                        source=netloc,
-                        sub_level_domain=sld),
+        | DuplicateNode('mark duplicated')
+        | AggregateNode(
+            'create entries',
+            source=netloc,
+            sub_level_domain=sld),
         global_state=global_state)
 
     # convert raw text to list of lines
@@ -90,10 +91,10 @@ def recursive_parser(url: str = None, sld: bool = False):
             lambda x: x != url,
             map(get_next_location, global_state.next_locations)
         )
-        # recursive concurrent call
-        with ThreadPoolExecutor(max_workers=4) as executor:
-            for _ in executor.map(recursive_parser, next_locations):
-                pass
+
+        # recursive calls
+        for location in next_locations:
+            recursive_parser(location)
 
 
 def main():

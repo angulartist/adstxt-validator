@@ -77,7 +77,7 @@ class Record:
 
     @property
     def identity(self):
-        return hash(f'{self.domain}_{self.publisher_id}_{self.relationship}')
+        return f'{self.domain}_{self.publisher_id}_{self.relationship}'
 
 
 # VARIABLES
@@ -115,7 +115,7 @@ class Variable:
 
     @property
     def identity(self):
-        return hash(f'{self.key}_{self.value}')
+        return f'{self.key}_{self.value}'
 
 
 Input = namedtuple('Input', 'tokens num_slots line')
