@@ -34,4 +34,4 @@ def check_in_set(item, *, set_, faults: list):
 
         faults.append(fault)
 
-        return faults
+    return faults
