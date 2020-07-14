@@ -12,7 +12,7 @@ import requests
 import typedload
 from consecution import Pipeline, GlobalState
 
-from lib.nodes import ToRecordsNode, ToVariablesNode, UncommentNode, TokenizeNode, AggregateNode, \
+from lib.nodes import ValidateRecordsNode, ValidateVariablesNode, UncommentNode, TokenizeNode, AggregateNode, \
     TrimNode, LineNode, orchestrate
 
 # node shared state
@@ -59,7 +59,7 @@ def recursive_parser(url: str = None, sld: bool = False):
         | TrimNode('trim all whitespaces')
         | LineNode('add line number')
         | TokenizeNode('tokenize lines')
-        | [ToRecordsNode('get_recs'), ToVariablesNode('get_vars'), orchestrate]
+        | [ValidateRecordsNode('get_recs'), ValidateVariablesNode('get_vars'), orchestrate]
         | AggregateNode('create entries', source=netloc, sub_level_domain=sld),
         global_state=global_state)
 

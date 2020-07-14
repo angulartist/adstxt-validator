@@ -102,7 +102,7 @@ class AggregateNode(Node):
         self.global_state.results.append(self.entry)
 
 
-class ToVariablesNode(Node):
+class ValidateVariablesNode(Node):
     @yell
     def process(self, item):
         faults: List[Fault] = []
@@ -127,7 +127,7 @@ class ToVariablesNode(Node):
         self._push(variable)
 
 
-class ToRecordsNode(Node):
+class ValidateRecordsNode(Node):
     @yell
     def process(self, item):
         faults: List[Fault] = []
