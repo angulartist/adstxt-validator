@@ -11,8 +11,8 @@ import requests
 import typedload
 from consecution import Pipeline, GlobalState
 
-from lib.nodes import ValidateRecordsNode, ValidateVariablesNode, UncommentNode, TokenizeNode, AggregateNode, \
-    TrimNode, LineNode, orchestrate, OutlierNode, DuplicateNode, EmptyLineNode
+from lib.nodes import ValidateRecordsNode, ValidateVariablesNode, FilterCommentsNode, TokenizeNode, AggregateNode, \
+    TrimSpacesNode, CountLinesNode, orchestrate, FilterOutliersNode, MarkDuplicatesNode, FilterEmptyLinesNode
 
 # node shared state
 global_state = GlobalState(
@@ -55,19 +55,19 @@ def recursive_parser(url: str = None, sld: bool = False):
 
     # extraction pipeline
     pipe = Pipeline(
-        UncommentNode('remove comments', cs='#')
-        | TrimNode('trim all whitespaces')
-        | LineNode('add line number')
-        | EmptyLineNode('filter out empty line')
+        FilterCommentsNode('remove comments', cs='#')
+        | TrimSpacesNode('trim all whitespaces')
+        | CountLinesNode('add line number')
+        | FilterEmptyLinesNode('filter out empty line')
         | TokenizeNode('tokenize lines')
         |
         [
             ValidateRecordsNode('get_recs'),
             ValidateVariablesNode('get_vars'),
-            OutlierNode('outliers'),
+            FilterOutliersNode('outliers'),
             orchestrate
         ]
-        | DuplicateNode('mark duplicated')
+        | MarkDuplicatesNode('mark duplicated')
         | AggregateNode(
             'create entries',
             source=netloc,

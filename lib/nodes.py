@@ -28,14 +28,14 @@ def orchestrate(item: Input):
         return 'outliers'
 
 
-class OutlierNode(Node):
+class FilterOutliersNode(Node):
     """ Just skip outliers :) """
 
     def process(self, item):
         pass
 
 
-class TrimNode(Node):
+class TrimSpacesNode(Node):
     """ Removes all whitespaces from the passed string. """
 
     @yell
@@ -45,7 +45,7 @@ class TrimNode(Node):
         self._push(trimmed)
 
 
-class UncommentNode(Node):
+class FilterCommentsNode(Node):
     """ Removes comments from the passed string. """
 
     def __init__(self, name: str, **kwargs):
@@ -74,7 +74,7 @@ class UncommentNode(Node):
         self._push(cleaned)
 
 
-class LineNode(Node):
+class CountLinesNode(Node):
     """
     Affects a line number to the current string.
     Uses the global state to track the number of lines.
@@ -94,7 +94,7 @@ class LineNode(Node):
         self.global_state.lines = 0
 
 
-class EmptyLineNode(Node):
+class FilterEmptyLinesNode(Node):
     """ Filters out empty strings """
 
     @yell
@@ -123,7 +123,7 @@ class TokenizeNode(Node):
         self._push(input_)
 
 
-class DuplicateNode(Node):
+class MarkDuplicatesNode(Node):
     def begin(self):
         self.global_state.fingerprints = []
 
