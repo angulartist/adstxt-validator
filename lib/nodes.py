@@ -5,24 +5,24 @@ from typing import List, Union
 from consecution import Node
 
 from lib.decorators import yell
-from lib.entities import Record, Input, Variable, Fault, Entry
+from lib.entities import Fault, Entry, LineExtended, VariableExtended, RecordExtended
 from lib.validators import check_in_set, check_domain
 from lib.vars import VALID_VARIABLES, NUM_MIN_RECORD_SLOTS, NUM_VARIABLE_SLOTS, VALID_RELATIONSHIPS
 
 
-def orchestrate(item: Input):
+def orchestrate(item: LineExtended):
     """
-    Takes an input and defines the next
+    Takes a line and defines the next
     pipeline operation according to its nature.
-    :param item: Input
+    :param item: LineExtended
     :return: next pipeline op signature
     """
-    if not isinstance(item, Input):
-        raise ValueError(f'Expected Input, received {type(item)}')
+    if not isinstance(item, LineExtended):
+        raise ValueError(f'Expected type LineExtended, received type {type(item)}')
 
-    if item.num_slots >= NUM_MIN_RECORD_SLOTS:
+    if item.num_tokens >= NUM_MIN_RECORD_SLOTS:
         return 'get_recs'
-    elif item.num_slots == NUM_VARIABLE_SLOTS:
+    elif item.num_tokens == NUM_VARIABLE_SLOTS:
         return 'get_vars'
     else:
         return 'outliers'
@@ -39,10 +39,12 @@ class TrimSpacesNode(Node):
     """ Removes all whitespaces from the passed string. """
 
     @yell
-    def process(self, item: str):
-        trimmed = item.replace(' ', '').strip()
+    def process(self, item: LineExtended):
+        trimmed = item.string.replace(' ', '').strip()
 
-        self._push(trimmed)
+        item = item._replace(string=trimmed)
+
+        self._push(item)
 
 
 class FilterCommentsNode(Node):
@@ -65,13 +67,15 @@ class FilterCommentsNode(Node):
         ).strip()
 
     @yell
-    def process(self, item: str):
-        cleaned = '\n'.join(map(
+    def process(self, item: LineExtended):
+        filtered = '\n'.join(map(
             self.go(),
-            item.splitlines()
+            item.string.splitlines()
         ))
 
-        self._push(cleaned)
+        item = item._replace(string=filtered)
+
+        self._push(item)
 
 
 class CountLinesNode(Node):
@@ -82,9 +86,11 @@ class CountLinesNode(Node):
 
     @yell
     def process(self, item: str):
-        line = self.global_state.lines
+        num_line = self.global_state.lines
 
-        self._push((item, line))
+        item = LineExtended(position=num_line, string=item)
+
+        self._push(item)
 
         # incr the global counter
         self.global_state.lines += 1
@@ -98,12 +104,10 @@ class FilterEmptyLinesNode(Node):
     """ Filters out empty strings """
 
     @yell
-    def process(self, item):
-        string, _ = item
-
+    def process(self, item: LineExtended):
         # if not empty/blank
         # then push it downstream
-        if not re.match(r"^\s*$", string):
+        if not re.match(r"^\s*$", item.string):
             self._push(item)
 
 
@@ -111,16 +115,14 @@ class TokenizeNode(Node):
     """ Tokenize the given string and returns an Input. """
 
     @yell
-    def process(self, item: str):
-        string, line = item
-
+    def process(self, item: LineExtended):
         # split comma separated strings and key=value pairs
         # (records: , | variables: = | extensions: ;)
-        tokens = [token for token in re.split('[;,=]', string) if token]
-        # create a new Input
-        input_ = Input(tokens, len(tokens), line)
+        tokens = [token for token in re.split('[;,=]', item.string) if token]
 
-        self._push(input_)
+        item = item._replace(tokens=tokens)
+
+        self._push(item)
 
 
 class MarkDuplicatesNode(Node):
@@ -128,10 +130,10 @@ class MarkDuplicatesNode(Node):
         self.global_state.fingerprints = []
 
     @yell
-    def process(self, item: Union[Record, Variable]):
+    def process(self, item: Union[RecordExtended, VariableExtended]):
         # track duplicated lines
         if item.identity in self.global_state.fingerprints:
-            item.duplicated = True
+            item = item._replace(duplicated=True)
         else:
             self.global_state.fingerprints.append(item.identity)
 
@@ -165,7 +167,7 @@ class AggregateNode(Node):
         )
 
     @yell
-    def process(self, item: Union[Record, Variable]):
+    def process(self, item: Union[RecordExtended, VariableExtended]):
         # update Entry's internal storage
         self.entry.put(item)
 
@@ -184,12 +186,10 @@ class ValidateVariablesNode(Node):
     """ For each Input, validate format and push a Variable downstream. """
 
     @yell
-    def process(self, item: Input):
+    def process(self, item: LineExtended):
         faults: List[Fault] = []
 
-        tokens, num_tokens, line = item
-
-        key, value = tokens
+        key, value = item.tokens
 
         # validate given variable key
         faults = check_in_set(
@@ -203,13 +203,12 @@ class ValidateVariablesNode(Node):
         if key.upper() == 'SUBDOMAIN':
             faults = check_domain(value, faults=faults)
 
-        variable = Variable(
-            line=line,
+        variable = VariableExtended(
+            line=item.position,
             key=key,
             value=value,
             num_faults=len(faults),
-            faults=faults,
-            duplicated=False,
+            faults=faults
         )
 
         self._push(variable)
@@ -219,12 +218,10 @@ class ValidateRecordsNode(Node):
     """ For each Input, validate format and push a Record downstream. """
 
     @yell
-    def process(self, item: Input):
+    def process(self, item: LineExtended):
         faults: List[Fault] = []
 
-        tokens, num_tokens, line = item
-
-        domain, publisher_id, relationship, *extra = tokens
+        domain, publisher_id, relationship, *extra = item.tokens
 
         # validate relationship
         faults = check_in_set(
@@ -244,16 +241,15 @@ class ValidateRecordsNode(Node):
         # after Certification ID: should be extensions
         extensions = extra[1:] if extra else []
 
-        record = Record(
-            line=line,
+        record = RecordExtended(
+            line=item.position,
             domain=domain,
             publisher_id=publisher_id,
             relationship=relationship,
             certification_id=certification_id,
             extensions=extensions,
             num_faults=len(faults),
-            faults=faults,
-            duplicated=False,
+            faults=faults
         )
 
         self._push(record)

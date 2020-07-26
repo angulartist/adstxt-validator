@@ -55,9 +55,9 @@ def recursive_parser(url: str = None, sld: bool = False):
 
     # extraction pipeline
     pipe = Pipeline(
-        FilterCommentsNode('remove comments', cs='#')
+        CountLinesNode('add line number')
+        | FilterCommentsNode('remove comments', cs='#')
         | TrimSpacesNode('trim all whitespaces')
-        | CountLinesNode('add line number')
         | FilterEmptyLinesNode('filter out empty line')
         | TokenizeNode('tokenize lines')
         |

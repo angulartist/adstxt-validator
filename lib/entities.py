@@ -63,22 +63,28 @@ Accountability Group (aka TAG), and the TAGID
 would be included here [11].
 '''
 
+Record = namedtuple(
+    'Record',
+    ['line',
+     'domain',
+     'publisher_id',
+     'relationship',
+     'certification_id',
+     'extensions',
+     'faults',
+     'duplicated',
+     'num_faults'],
+    defaults=[0, None, None, None, None, [], [], False, 0]
+)
 
-@dataclass
-class Record:
-    line: int
-    domain: str
-    publisher_id: str
-    relationship: str
-    certification_id: str
-    extensions: list
-    faults: List[Fault]
-    duplicated: bool
-    num_faults: int = 0
 
+class RecordExtended(Record):
     @property
     def identity(self):
         return f'{self.domain}_{self.publisher_id}_{self.relationship}'
+
+    def __repr__(self):
+        return f'RecordExtended: #{self.line}: {self.domain}, {self.publisher_id}'
 
 
 # VARIABLES
@@ -104,37 +110,46 @@ to subdomains. Subdomains should not refer to
 other subdomains. 
 '''
 
+Variable = namedtuple(
+    'Variable', 'line key value faults duplicated num_faults',
+    defaults=[0, None, None, [], False, 0]
+)
 
-@dataclass
-class Variable:
-    line: int
-    key: str
-    value: str
-    faults: List[Fault]
-    duplicated: bool
-    num_faults: int = 0
 
+class VariableExtended(Variable):
     @property
     def identity(self):
         return f'{self.key}_{self.value}'
 
+    def __repr__(self):
+        return f'VariableExtended: #{self.line}: {self.key}: {self.value}'
 
-Input = namedtuple('Input', 'tokens num_slots line')
+
+Line = namedtuple('Line', 'position string tokens', defaults=[0, None, []])
+
+
+class LineExtended(Line):
+    @property
+    def num_tokens(self):
+        return len(self.tokens)
+
+    def __repr__(self):
+        return f'LineExtended: {self.position}, {self.string}'
 
 
 @dataclass(repr=True)
 class Entry:
     source: str
     sub_level_domain: bool
-    recs: List[Record] = field(default_factory=list)
-    vars: List[Variable] = field(default_factory=list)
+    recs: List[RecordExtended] = field(default_factory=list)
+    vars: List[VariableExtended] = field(default_factory=list)
 
-    def put(self, item: Union[Record, Variable]):
+    def put(self, item: Union[RecordExtended, VariableExtended]):
         switcher = {
-            'Record': (
+            'RecordExtended': (
                 lambda x: self.recs.append(x)
             ),
-            'Variable': (
+            'VariableExtended': (
                 lambda x: self.vars.append(x)
             )
         }
